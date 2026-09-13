@@ -1,0 +1,10 @@
+{
+  "checkpoint_loaded": false,
+  "prediction_sha256": "cf6afa6097ef64149f7ce843e9cfb5f822a527f2d1bea2a0a6093a45957576f8",
+  "metric_original": 0.7166666666666667,
+  "metric_replayed": 0.7166666666666667,
+  "absolute_difference": 0.0,
+  "tolerance": 1e-09,
+  "passed": true,
+  "notes": "Replay consumed only predictions.npy + labels.npy + sample_ids.npy + evaluator; no checkpoint."
+}

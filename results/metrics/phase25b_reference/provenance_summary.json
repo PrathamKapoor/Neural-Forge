@@ -1,0 +1,30 @@
+{
+  "run_id": "phase25b_reference_2026-09-14",
+  "status": "COMPLETE",
+  "mlp_reference": "AUTHORITATIVE",
+  "overall_accuracy": 0.7166666666666667,
+  "per_family_accuracy": {
+    "F": 1.0,
+    "R": 0.49166666666666664,
+    "C": 0.5,
+    "FR": 0.775,
+    "RC": 0.55,
+    "FC": 0.9833333333333333,
+    "FRC": 0.7166666666666667
+  },
+  "rc": {
+    "rc_total": 120,
+    "rc_agree_count": 62,
+    "rc_disagree_count": 58,
+    "rc_agree_accuracy": 0.5483870967741935,
+    "rc_disagree_accuracy": 0.5517241379310345
+  },
+  "frozen_replay": true,
+  "checkpoint_reconstruction": true,
+  "independent_evaluator": true,
+  "elapsed_seconds": 13.28,
+  "historical_p20_replay": "NOT_POSSIBLE",
+  "architecture_change": "NONE",
+  "rc_status": "REMAINS_CLOSED",
+  "historical_p20_status": "HISTORICAL_PROVENANCE_INCOMPLETE"
+}

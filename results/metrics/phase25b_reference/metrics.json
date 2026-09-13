@@ -1,0 +1,23 @@
+{
+  "n": 840,
+  "overall_accuracy": 0.7166666666666667,
+  "per_family_accuracy": {
+    "F": 1.0,
+    "R": 0.49166666666666664,
+    "C": 0.5,
+    "FR": 0.775,
+    "RC": 0.55,
+    "FC": 0.9833333333333333,
+    "FRC": 0.7166666666666667
+  },
+  "rc": {
+    "rc_total": 120,
+    "rc_agree_count": 62,
+    "rc_disagree_count": 58,
+    "rc_agree_accuracy": 0.5483870967741935,
+    "rc_disagree_accuracy": 0.5517241379310345
+  },
+  "prediction_hash": "cf6afa6097ef64149f7ce843e9cfb5f822a527f2d1bea2a0a6093a45957576f8",
+  "label_hash": "c48372518b33d9df6a13a9e3a0186064476507f8319ab115404dc210ade99744",
+  "sample_order_hash": "2ef3132bd69a91721da3f2a829d4094ee2fc9a10faa0714fe95be993e7041f87"
+}

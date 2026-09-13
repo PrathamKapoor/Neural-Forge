@@ -1,0 +1,13 @@
+{
+  "run_id": "phase25b_reference_2026-09-14",
+  "architecture": "mlp",
+  "hidden_dim": 24,
+  "depth": 3,
+  "seed": 11,
+  "epochs": 2,
+  "config_hash": "b6b686d2593c46494593d4e51b936e0e84d70d4a732270a0bb8954dd94723d1c",
+  "dataset_hash": "24149eb21a07505f8fc7c3cf711d175476f5d298e4df47bd1c68bc00a232d4a9",
+  "split_hash": "e42013ccb544332a0ee316105a1c5baa73168144ec7083fe0ea71bb09c98928d",
+  "checkpoint_path": "results\\metrics\\phase25b_reference\\checkpoint.pt",
+  "checkpoint_sha256": "d8d6613a2bc6514dc759fe06452832365318f0dd10407b4c6e1a0be95aee8980"
+}

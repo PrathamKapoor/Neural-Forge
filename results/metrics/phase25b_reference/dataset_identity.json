@@ -1,0 +1,26 @@
+{
+  "run_id": "phase25b_reference_2026-09-14",
+  "dataset_version": "phase19-repaired-v1",
+  "construction_version": "phase19-repaired-v1",
+  "benchmark_version_verified": true,
+  "train_size": 840,
+  "test_size": 840,
+  "feature_shape": [
+    840,
+    12,
+    8
+  ],
+  "label_shape": [
+    840
+  ],
+  "num_classes": 2,
+  "families": [
+    "F",
+    "R",
+    "C",
+    "FR",
+    "RC",
+    "FC",
+    "FRC"
+  ]
+}

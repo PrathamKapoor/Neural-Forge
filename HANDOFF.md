@@ -6,6 +6,20 @@ Reference baseline: Phase 25 = repaired Phase 21 full-pipeline results (`results
 No new architecture implemented (`ARCHITECTURE CHANGE: NONE` confirmed by Phase 23 audit + Phase 26 protocol §0, §32).
 No synthetic artifacts (`NO SYNTHETIC` verified by provenance audit from Phase 22/23).
 
+## Phase 25B — Clean MLP reference lineage (COMPLETE, 2026-09-14)
+
+A fresh, authoritative, provenance-complete MLP reference run now exists at
+`results/metrics/phase25b_reference/`. It is a NEW lineage (not historical
+Phase 20 replay); historical Phase 20 remains `HISTORICAL_PROVENANCE_INCOMPLETE`.
+All gates passed: frozen replay `PASSED`, checkpoint reconstruction `PASSED`,
+independent evaluator `AGREES`. `MLP_REFERENCE = AUTHORITATIVE`.
+
+- run_id `phase25b_reference_2026-09-14`; dataset `phase19-repaired-v1`; split persisted (`split_manifest.json`); MLP `hidden_dim=24 depth=3 num_classes=2`; seed 11; 2 epochs (lineage verification).
+- overall 0.7167; F 1.0 / R 0.4917 / C 0.5 / FR 0.775 / RC 0.55 / FC 0.9833 / FRC 0.7167.
+- Preserved: Phase 21 `CASE E`; Phase 23 `CASE G PARTIAL`; `ARCHITECTURE = NONE`; `RC = REMAINS_CLOSED`.
+- `PHASE_26_GATE = OPEN` — the clean compositional reassessment may now plan against this reference instead of the provenance-incomplete Phase 20.
+- Tests: `tests/unit/test_phase25b_reference.py` (10 passed); Phase 21/22 tests still pass (24); `ruff` clean on new files.
+
 ## Continuity chain (used for reconstruction, not synthetic)
 
 `HANDOFF.md` (updated 2026-09-13, Phase 23 state: `CASE G PARTIAL`) → repository inspection (real workspace `C:/Projects/NN`) → `docs/research/log.md` (phases 1–10 completed) → `docs/architecture/phase20_log.md` / `results/metrics/phase20_repaired_portfolio/` (P20 reference, `AMBIGUOUS` portfolio identity, `UNVERIFIED` split identity, `MISSING` original predictions, `RECONSTRUCTED` predictions from `attention_v2` replay) → `results/reports/phase23_provenance_closure.md` (`CASE G PARTIAL`, divergence at `metric/evaluation`, previous unsupported frozen replay claim `REFUTED`, `RECONSTRUCTION: PARTIAL`) → Phase 21 repair (`results/metrics/phase21_rc_diagnosis/` with real `reproduce`/`capacity`/`diagnose`/`finalize`; `tests/phase21/` passes; reproduction gate `PASS` for 17/19 measurements; 2 real divergences at `attention_f` / `attention_rc` independently confirmed; `H1-H7` real, `H8` NOT TESTED) → Phase 26 assessment.

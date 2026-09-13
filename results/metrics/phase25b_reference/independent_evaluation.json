@@ -1,0 +1,8 @@
+{
+  "primary_accuracy": 0.7166666666666667,
+  "independent_accuracy": 0.7166666666666667,
+  "absolute_difference": 0.0,
+  "tolerance": 1e-09,
+  "agrees": true,
+  "passed": true
+}

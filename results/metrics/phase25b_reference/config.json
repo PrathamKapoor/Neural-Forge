@@ -1,0 +1,18 @@
+{
+  "run_id": "phase25b_reference_2026-09-14",
+  "architecture": "mlp",
+  "input_dim": 8,
+  "hidden_dim": 24,
+  "depth": 3,
+  "num_classes": 2,
+  "optimizer": "AdamW",
+  "lr": 0.003,
+  "weight_decay": 0.0001,
+  "batch_size": 60,
+  "epochs": 2,
+  "seed": 11,
+  "dataset_version": "phase19-repaired-v1",
+  "device": "cpu",
+  "python_version": "3.13.14",
+  "torch_version": "2.13.0+cpu"
+}

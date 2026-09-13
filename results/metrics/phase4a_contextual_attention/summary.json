@@ -1,0 +1,125 @@
+{
+  "capacity": {
+    "depths": {
+      "mlp": 3,
+      "graph": 2,
+      "attention": 1
+    },
+    "parameter_counts": {
+      "mlp": 3914,
+      "graph": 3866,
+      "attention": 3314
+    },
+    "max_relative_gap": 0.1532958610117527
+  },
+  "primary": {
+    "mlp": [
+      {
+        "seed": 11,
+        "valid": 0.44166666666666665,
+        "broken_association": 0.4041666666666667,
+        "value_shuffle": 0.44166666666666665,
+        "permuted": 0.44166666666666665,
+        "longer_length": 0.5083333333333333
+      },
+      {
+        "seed": 23,
+        "valid": 0.475,
+        "broken_association": 0.5125,
+        "value_shuffle": 0.475,
+        "permuted": 0.475,
+        "longer_length": 0.5041666666666667
+      },
+      {
+        "seed": 37,
+        "valid": 0.5416666666666666,
+        "broken_association": 0.5291666666666667,
+        "value_shuffle": 0.5416666666666666,
+        "permuted": 0.5416666666666666,
+        "longer_length": 0.5083333333333333
+      }
+    ],
+    "graph": [
+      {
+        "seed": 11,
+        "valid": 0.4375,
+        "broken_association": 0.4083333333333333,
+        "value_shuffle": 0.43333333333333335,
+        "permuted": 0.4375,
+        "longer_length": 0.5041666666666667
+      },
+      {
+        "seed": 23,
+        "valid": 0.475,
+        "broken_association": 0.48333333333333334,
+        "value_shuffle": 0.475,
+        "permuted": 0.4708333333333333,
+        "longer_length": 0.5
+      },
+      {
+        "seed": 37,
+        "valid": 0.5333333333333333,
+        "broken_association": 0.5333333333333333,
+        "value_shuffle": 0.5333333333333333,
+        "permuted": 0.5333333333333333,
+        "longer_length": 0.475
+      }
+    ],
+    "attention": [
+      {
+        "seed": 11,
+        "valid": 0.45416666666666666,
+        "broken_association": 0.42083333333333334,
+        "value_shuffle": 0.4625,
+        "permuted": 0.45416666666666666,
+        "longer_length": 0.5041666666666667
+      },
+      {
+        "seed": 23,
+        "valid": 0.49166666666666664,
+        "broken_association": 0.5041666666666667,
+        "value_shuffle": 0.5,
+        "permuted": 0.49166666666666664,
+        "longer_length": 0.49583333333333335
+      },
+      {
+        "seed": 37,
+        "valid": 0.5333333333333333,
+        "broken_association": 0.5291666666666667,
+        "value_shuffle": 0.5333333333333333,
+        "permuted": 0.5333333333333333,
+        "longer_length": 0.5125
+      }
+    ]
+  },
+  "depth": {
+    "1": [
+      0.45416666666666666,
+      0.49166666666666664,
+      0.5333333333333333
+    ],
+    "2": [
+      0.49166666666666664,
+      0.4625,
+      0.5208333333333334
+    ],
+    "3": [
+      0.49166666666666664,
+      0.49583333333333335,
+      0.525
+    ]
+  },
+  "manifest": {
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "train_lengths": [
+      8,
+      12
+    ],
+    "unseen_test_length": 16,
+    "attention_audit": "one head, no mask, no positional encoding; residual projection then mean-pooling classifier"
+  }
+}

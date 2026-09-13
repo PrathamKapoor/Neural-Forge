@@ -1,0 +1,12 @@
+field,phase20_value,phase21_value,identity_status,evidence
+benchmark_version,phase19-repaired-v1,phase19-repaired-v1,IDENTICAL,docs/architecture/phase20_log.md
+dataset_version,phase19-repaired-v1,phase19-repaired-v1,IDENTICAL,dataset module header
+seeds,11/23/37,11/23/37,IDENTICAL,protocol notes
+samples_per_family_train,120,120 (same construction),IDENTICAL,dataset init default
+expert_epochs,40,40 (same for base variants),IDENTICAL,training config
+router_epochs,30,30,IDENTICAL,training config
+model_depth_variants,N/A (fixed per architecture),depth2 variants (seed11/23/37_depth2),DIFFERENT,partials show depth2.pt files
+evaluation_target,portfolio_repair_evaluation,rc_relational_capacity_diagnosis,DIFFERENT_BY_DESIGN,docs/research/phase21_rc_diagnosis.md
+family_filter,all_families_portfolio,RC-focused + depth_variants,DIFFERENT_BY_DESIGN,evaluation source
+reproduction_gate_tolerance,3pp (not applied in phase20),3pp (REP_TOL=0.03),IDENTICAL_PROTOCOL,phase21 evaluation module
+architecture_change,NONE,NONE (only diagnostic depth variants),IDENTICAL_NO_CHANGE,docs/research notes

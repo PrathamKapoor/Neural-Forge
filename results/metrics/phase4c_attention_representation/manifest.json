@@ -1,0 +1,15 @@
+{
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "probe": "frozen linear 24->2, 30 epochs",
+  "controls": [
+    "random_attention",
+    "label_shuffle",
+    "broken_association",
+    "value_shuffle",
+    "permutation"
+  ]
+}

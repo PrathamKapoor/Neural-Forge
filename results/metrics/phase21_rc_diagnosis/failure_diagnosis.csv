@@ -1,0 +1,8 @@
+seed,category,failed,criterion,observed
+0,reproduction_breach,False,Phase 20 values within 3pp,
+0,capacity_no_signal,True,mean depth RC gain < 1pp,+0.0pp
+0,conversion_gap,False,R decodable but RC-target head weak,R 64.8% vs RC 52.8%
+0,gradient_starvation,False,relational grad share < 5% (reused Phase 16 bar),9.3%
+0,r_change_unresponsive,True,R-swap change rate < 20%,0.0%
+0,head_inexpressive,True,all frozen heads RC < 60%,best 55.0%
+0,disagree_collapse,True,agree−disagree gap ≥ 50pp,96.6pp

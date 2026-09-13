@@ -1,0 +1,5 @@
+evaluator_name,source_path,hash_first32,status,semantic_notes
+Phase20_Evaluator,src/neuroforge/evaluation/phase20_repaired_portfolio.py,5b667a4bc774e097f7ba428e7b40f0b0,VERIFIED_PRESENCE,Real source file verified; metric logic recoverable from source; portfolio-level aggregation (not single-expert)
+Phase21_Evaluator,src/neuroforge/evaluation/phase21_rc_diagnosis.py,1fc9cd36d223bfc4193f68c5c4b94d86,VERIFIED_PRESENCE,Real source file verified; RC-focused diagnostics; broken pipeline produces 0.0 (independently confirmed in 22B audit)
+Phase22B_Evaluator_Independent,results/reports/phase22b_forensics.md,22c9808f12ea5e4dff9a55fff8f4d00d,VERIFIED_REPORT,Independent audit report; confirms metric divergence; previous claim refuted
+Phase23_Canonical_Manual,manual_computation_script,NOT_APPLICABLE,VERIFIED_MANUAL,Manual canonical evaluator computed directly from reconstructed predictions; non-zero metrics verified

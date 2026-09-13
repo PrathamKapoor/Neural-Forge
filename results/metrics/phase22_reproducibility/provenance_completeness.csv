@@ -1,0 +1,18 @@
+dependency,recorded,reconstructable,notes
+benchmark_version,YES,PARTIAL,manifest.json present for both phases; version phase19-repaired-v1 identical
+exact_train_X,NO,NO,no exact serialized dataset hash in artifacts
+exact_val_X,NO,NO,no exact serialized dataset hash
+exact_test_X,NO,NO,no exact serialized dataset hash
+split_manifests,PARTIAL,PARTIAL,split configuration present but no separate split manifest file
+configuration_resolved,YES,PARTIAL,config_diff.csv generated; some fields identical, depth variable differs (Phase 21 H1)
+initialization,RNG_state_not_recorded,NO,RNG audit (22E) required; seed 11/23/37 present but execution order unknown
+training_trajectory,NO,NO,no saved training trajectory/checkpoint sequence
+checkpoint_file,PARTIAL,PARTIAL,Phase 20 partials directory exists; Phase 21 partials directory exists; exact checkpoint identity not fully traced
+checkpoint_selection_policy,PRESENT,PARTIAL,best-val freeze protocol same; exact selection logic not fully audited
+model_state_dict,NO,NO,no saved full state dict with hash audit in artifacts
+evaluation_version,PRESENT,PARTIAL,phase21_rc_diagnosis.py and phase20_repaired_portfolio.py present; metric divergence confirmed
+metric_implementation,PRESENT,DIVERGED,Phase 20 and Phase 21 metric code present; frozen replay shows divergence (0.0 values)
+prediction_artifacts,PRESENT,PRESENT,Phase 20 predictions/artifacts preserved; Phase 21 predictions broken at measurement stage
+environment,PRESENT,PARTIAL,platform Windows-11 CPU Python 3.13 PyTorch 2.13; no CUDA; same environment
+sample_ids,PARTIAL,PARTIAL,controlled_routing dataset uses arange-based IDs; exact ID mapping not fully verified in artifacts
+counterfactual_artifacts,NO,NO,no exact counterfactual artifact with hash audit in results

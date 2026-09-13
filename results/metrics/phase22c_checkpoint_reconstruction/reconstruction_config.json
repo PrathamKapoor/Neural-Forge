@@ -1,0 +1,23 @@
+{
+  "reconstruction_target_checkpoint": "seed11_attention_v2.pt",
+  "reconstruction_target_path": "results/metrics/phase20_repaired_portfolio/partials/seed11_attention_v2.pt",
+  "reconstruction_target_hash_first32": "8b10e2740a851e671dffed298d3560d8",
+  "reconstruction_target_architecture": "attention_v2",
+  "reconstruction_target_depth": 3,
+  "reconstruction_target_seed": 11,
+  "reconstruction_target_description": "Best RC expert per Phase 20 log (55.0% RC best); selected as representative for reconstruction audit; NOT the only Phase 20 reference (portfolio uses multiple experts)",
+  "dataset_version": "phase19-repaired-v1",
+  "dataset_seed_used": 11,
+  "dataset_samples_per_family": 120,
+  "dataset_total_samples": 840,
+  "evaluation_mode": "reconstructed_checkpoint_evaluation",
+  "reconstructed_predictions_path": "results/metrics/phase22c_checkpoint_reconstruction/reconstructed_predictions.csv",
+  "reconstructed_predictions_hash_path": "results/metrics/phase22c_checkpoint_reconstruction/reconstructed_predictions.sha256",
+  "reconstruction_completed": true,
+  "reconstruction_classification": "PARTIAL",
+  "reason_for_partial": "Phase 20 uses portfolio of multiple experts (not single reference); reconstruction performed with best RC expert only; split identity unverified; predictions reconstructed but not saved in Phase 20 artifacts",
+  "checkpoint_identity_status": "AMBIGUOUS",
+  "reproduction_tolerance_pp": 0.03,
+  "replay_type": "checkpoint_replay_not_frozen_prediction_replay",
+  "predictions_generated": true
+}

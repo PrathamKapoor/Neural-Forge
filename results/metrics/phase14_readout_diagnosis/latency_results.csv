@@ -1,0 +1,16 @@
+seed,stage,latency_us
+11,encoder_only,27.60408334628058
+11,encoder_plus_mean_pool,30.349833347524207
+11,encoder_plus_query_pool,33.23049997561611
+11,linear_head_total,29.13716667535482
+11,small_nonlinear_head_total,31.679416642873548
+23,encoder_only,26.13116669332764
+23,encoder_plus_mean_pool,27.041583331689857
+23,encoder_plus_query_pool,31.99908333044732
+23,linear_head_total,29.3055833390099
+23,small_nonlinear_head_total,34.371999997044135
+37,encoder_only,27.807083327691846
+37,encoder_plus_mean_pool,28.748749997854855
+37,encoder_plus_query_pool,30.623999979676835
+37,linear_head_total,29.41050004058828
+37,small_nonlinear_head_total,34.098999979808774

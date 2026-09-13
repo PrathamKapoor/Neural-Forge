@@ -1,0 +1,38 @@
+{
+  "timestamp_utc": "2026-09-04T04:04:00.907020+00:00",
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "torch": "2.13.0+cpu",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "device": "cpu",
+  "git_commit": null,
+  "shape": [
+    12,
+    8
+  ],
+  "control": "node-feature permutation relative to fixed ring topology; GraphBlock external edge randomization unavailable without semantic change",
+  "training": {
+    "optimizer": "AdamW",
+    "lr": 0.003,
+    "epochs": 25,
+    "batch_size": 60,
+    "early_stopping": "best validation accuracy"
+  },
+  "capacity": {
+    "depths": {
+      "mlp": 3,
+      "graph": 2,
+      "attention": 1
+    },
+    "parameter_counts": {
+      "mlp": 3914,
+      "graph": 3866,
+      "attention": 3314
+    },
+    "max_relative_gap": 0.1532958610117527
+  }
+}

@@ -1,0 +1,1356 @@
+{
+  "manifest": {
+    "phase": "Phase 19 \u2014 Mixed-Benchmark Construction Repair and Composition Revalidation",
+    "timestamp": "2026-09-07T20:01:23Z",
+    "python_version": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "torch_version": "2.13.0+cpu",
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "evaluated_families": [
+      "F",
+      "R",
+      "C",
+      "FR",
+      "RC",
+      "FC",
+      "FRC"
+    ],
+    "samples_per_type": 120,
+    "historical_version": "phase9-mixed-original",
+    "repaired_version": "phase19-repaired-v1",
+    "repair": "C\u2192F\u2192R(ch5) reorder: contextual block first, feature offsets after, relational carrier relocated to channel 5. Same RNG values, label algebra unchanged.",
+    "protocol": "Dataset-construction validation only. No expert retraining, no router work, no Phase 10-18 re-run."
+  },
+  "per_seed_results": [
+    {
+      "seed": 11,
+      "bug": {
+        "tested": true,
+        "orig_R": 0.9833333492279053,
+        "orig_RC": 0.40833333134651184,
+        "orig_FRC": 0.5166666507720947,
+        "rep_R_ch5": 0.9750000238418579,
+        "erasure_reproduced": true
+      },
+      "observability": {
+        "tested": true,
+        "r_align_R": 0.9750000238418579,
+        "r_align_RC": 0.9666666388511658,
+        "r_align_FRC": 0.9833333492279053,
+        "r_align_FR": 0.9833333492279053,
+        "f_mag_F": 0.7987709045410156,
+        "f_mag_FR": 0.7988406419754028,
+        "f_mag_FC": 0.8047171235084534,
+        "f_mag_FRC": 0.802433967590332,
+        "c_ret_C": 1.0,
+        "c_ret_RC": 1.0,
+        "c_ret_FC": 1.0,
+        "c_ret_FRC": 1.0
+      },
+      "orig_controls": {
+        "r_align_R": 0.9833333492279053,
+        "r_align_RC": 0.40833333134651184,
+        "r_align_FRC": 0.5166666507720947,
+        "f_mag_F": 0.7987709045410156,
+        "f_mag_FC": 0.11442246288061142,
+        "f_mag_FRC": 0.154872328042984
+      },
+      "dependency_audit": [
+        {
+          "construction": "original",
+          "family": "F",
+          "component": "F",
+          "statistic": "|mean(ch0)| offset magnitude",
+          "carrier_channel": 0,
+          "later_transformation": "contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c)",
+          "observable_rate": 0.7987709045410156
+        },
+        {
+          "construction": "original",
+          "family": "R",
+          "component": "R",
+          "statistic": "sign(mean(ch*roll(ch,-1)))",
+          "carrier_channel": 0,
+          "later_transformation": "contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c)",
+          "observable_rate": 0.9833333492279053
+        },
+        {
+          "construction": "original",
+          "family": "C",
+          "component": "C",
+          "statistic": "query-key cosine match",
+          "carrier_channel": "0:3",
+          "later_transformation": "feature common-mode offsets (repaired) / none (original)",
+          "observable_rate": 1.0
+        },
+        {
+          "construction": "original",
+          "family": "FR",
+          "component": "R",
+          "statistic": "sign(mean(ch*roll(ch,-1)))",
+          "carrier_channel": 0,
+          "later_transformation": "contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c)",
+          "observable_rate": 0.8666666746139526
+        },
+        {
+          "construction": "original",
+          "family": "FR",
+          "component": "F",
+          "statistic": "|mean(ch0)| offset magnitude",
+          "carrier_channel": 0,
+          "later_transformation": "contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c)",
+          "observable_rate": 0.796979546546936
+        },
+        {
+          "construction": "original",
+          "family": "RC",
+          "component": "R",
+          "statistic": "sign(mean(ch*roll(ch,-1)))",
+          "carrier_channel": 0,
+          "later_transformation": "contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c)",
+          "observable_rate": 0.40833333134651184
+        },
+        {
+          "construction": "original",
+          "family": "RC",
+          "component": "C",
+          "statistic": "query-key cosine match",
+          "carrier_channel": "0:3",
+          "later_transformation": "feature common-mode offsets (repaired) / none (original)",
+          "observable_rate": 1.0
+        },
+        {
+          "construction": "original",
+          "family": "FC",
+          "component": "F",
+          "statistic": "|mean(ch0)| offset magnitude",
+          "carrier_channel": 0,
+          "later_transformation": "contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c)",
+          "observable_rate": 0.11442246288061142
+        },
+        {
+          "construction": "original",
+          "family": "FC",
+          "component": "C",
+          "statistic": "query-key cosine match",
+          "carrier_channel": "0:3",
+          "later_transformation": "feature common-mode offsets (repaired) / none (original)",
+          "observable_rate": 1.0
+        },
+        {
+          "construction": "original",
+          "family": "FRC",
+          "component": "R",
+          "statistic": "sign(mean(ch*roll(ch,-1)))",
+          "carrier_channel": 0,
+          "later_transformation": "contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c)",
+          "observable_rate": 0.5166666507720947
+        },
+        {
+          "construction": "original",
+          "family": "FRC",
+          "component": "F",
+          "statistic": "|mean(ch0)| offset magnitude",
+          "carrier_channel": 0,
+          "later_transformation": "contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c)",
+          "observable_rate": 0.154872328042984
+        },
+        {
+          "construction": "original",
+          "family": "FRC",
+          "component": "C",
+          "statistic": "query-key cosine match",
+          "carrier_channel": "0:3",
+          "later_transformation": "feature common-mode offsets (repaired) / none (original)",
+          "observable_rate": 1.0
+        },
+        {
+          "construction": "repaired",
+          "family": "F",
+          "component": "F",
+          "statistic": "|mean(ch0)| offset magnitude",
+          "carrier_channel": 0,
+          "later_transformation": "feature offsets applied after contextual block (common-mode; identity-preserving)",
+          "observable_rate": 0.7987709045410156
+        },
+        {
+          "construction": "repaired",
+          "family": "R",
+          "component": "R",
+          "statistic": "sign(mean(ch*roll(ch,-1)))",
+          "carrier_channel": 5,
+          "later_transformation": "no later write touches ch5 (carrier provably survives)",
+          "observable_rate": 0.9750000238418579
+        },
+        {
+          "construction": "repaired",
+          "family": "C",
+          "component": "C",
+          "statistic": "query-key cosine match",
+          "carrier_channel": "0:3",
+          "later_transformation": "feature common-mode offsets (repaired) / none (original)",
+          "observable_rate": 1.0
+        },
+        {
+          "construction": "repaired",
+          "family": "FR",
+          "component": "R",
+          "statistic": "sign(mean(ch*roll(ch,-1)))",
+          "carrier_channel": 5,
+          "later_transformation": "no later write touches ch5 (carrier provably survives)",
+          "observable_rate": 0.9833333492279053
+        },
+        {
+          "construction": "repaired",
+          "family": "FR",
+          "component": "F",
+          "statistic": "|mean(ch0)| offset magnitude",
+          "carrier_channel": 0,
+          "later_transformation": "feature offsets applied after contextual block (common-mode; identity-preserving)",
+          "observable_rate": 0.7988406419754028
+        },
+        {
+          "construction": "repaired",
+          "family": "RC",
+          "component": "R",
+          "statistic": "sign(mean(ch*roll(ch,-1)))",
+          "carrier_channel": 5,
+          "later_transformation": "no later write touches ch5 (carrier provably survives)",
+          "observable_rate": 0.9666666388511658
+        },
+        {
+          "construction": "repaired",
+          "family": "RC",
+          "component": "C",
+          "statistic": "query-key cosine match",
+          "carrier_channel": "0:3",
+          "later_transformation": "feature common-mode offsets (repaired) / none (original)",
+          "observable_rate": 1.0
+        },
+        {
+          "construction": "repaired",
+          "family": "FC",
+          "component": "F",
+          "statistic": "|mean(ch0)| offset magnitude",
+          "carrier_channel": 0,
+          "later_transformation": "feature offsets applied after contextual block (common-mode; identity-preserving)",
+          "observable_rate": 0.8047171235084534
+        },
+        {
+          "construction": "repaired",
+          "family": "FC",
+          "component": "C",
+          "statistic": "query-key cosine match",
+          "carrier_channel": "0:3",
+          "later_transformation": "feature common-mode offsets (repaired) / none (original)",
+          "observable_rate": 1.0
+        },
+        {
+          "construction": "repaired",
+          "family": "FRC",
+          "component": "R",
+          "statistic": "sign(mean(ch*roll(ch,-1)))",
+          "carrier_channel": 5,
+          "later_transformation": "no later write touches ch5 (carrier provably survives)",
+          "observable_rate": 0.9833333492279053
+        },
+        {
+          "construction": "repaired",
+          "family": "FRC",
+          "component": "F",
+          "statistic": "|mean(ch0)| offset magnitude",
+          "carrier_channel": 0,
+          "later_transformation": "feature offsets applied after contextual block (common-mode; identity-preserving)",
+          "observable_rate": 0.802433967590332
+        },
+        {
+          "construction": "repaired",
+          "family": "FRC",
+          "component": "C",
+          "statistic": "query-key cosine match",
+          "carrier_channel": "0:3",
+          "later_transformation": "feature common-mode offsets (repaired) / none (original)",
+          "observable_rate": 1.0
+        }
+      ],
+      "semantics": {
+        "tested": true,
+        "parity_fact": true,
+        "frc_no_tie": true,
+        "keys_present": true,
+        "detail": "agree 61/120, disagree 59; FRC ties absent: True",
+        "rule_RC": 0.9672131147540983,
+        "c_only_RC": 0.47540983606557374
+      },
+      "counterfactual": {
+        "R_valid_rate": 0.975,
+        "C_valid_rate": 0.9666666666666667,
+        "R_tested": 120,
+        "C_tested": 120
+      },
+      "invariance": {
+        "tested": true,
+        "c_ret_plain": 1.0,
+        "c_ret_perm": 1.0,
+        "c_retrieval_perm_drop": 0.0,
+        "r_align_plain_RC": 0.9666666388511658,
+        "r_align_markvar_RC": 0.824999988079071,
+        "r_align_marker_delta": -0.14166665077209473,
+        "r_align_marker_delta_original": 0.016666680574417114,
+        "r_markvar_R_original": -0.18333333730697632,
+        "r_markvar_R_repaired": -0.15833336114883423,
+        "r_align_perm_repaired_drop": 0.4833333492279053,
+        "r_align_perm_original_drop": 0.46666669845581055,
+        "detail": "C retrieval perm drop +0.000; R-family markvar delta repaired -0.158 vs original -0.183 (RC-family deltas are floor effects, reported in CSV); perm R-drop repaired +0.483 vs original +0.467"
+      },
+      "leakage": {
+        "tested": true,
+        "max_single_channel_label_probe": 0.7666666507720947,
+        "family_probe_repaired": 0.17142857611179352,
+        "family_probe_original": 0.13571429252624512,
+        "family_probe_delta": 0.0357142835855484
+      },
+      "learnability": {
+        "mlp_R": 0.46666666865348816,
+        "mlp_RC": 0.4833333194255829,
+        "mlp_FRC": 0.7333333492279053,
+        "stat_R": 0.9750000238418579,
+        "lagprobe_R": 0.8949999809265137,
+        "rule_RC": 0.9666666666666667,
+        "detail": "rule_RC 0.967; lagprobe_R 0.895; mlp R/RC/FRC [0.467, 0.483, 0.733] (context); stat_R 0.975"
+      },
+      "contract": {
+        "input_shape": [
+          32,
+          12,
+          8
+        ],
+        "marker_present": true,
+        "finite": true,
+        "input_dim_8": true,
+        "mlp": {
+          "ok": true,
+          "logits_shape": [
+            32,
+            2
+          ]
+        },
+        "graph": {
+          "ok": true,
+          "logits_shape": [
+            32,
+            2
+          ]
+        },
+        "attention": {
+          "ok": true,
+          "logits_shape": [
+            32,
+            2
+          ]
+        },
+        "attention_v2": {
+          "ok": true,
+          "logits_shape": [
+            32,
+            2
+          ]
+        },
+        "joint": {
+          "ok": true,
+          "logits_shape": [
+            32,
+            2
+          ]
+        },
+        "joint_co": {
+          "ok": true,
+          "logits_shape": [
+            32,
+            2
+          ]
+        }
+      },
+      "reproducibility": {
+        "identical": true,
+        "detail": "two builds, fixed seed, exact tensor equality"
+      }
+    },
+    {
+      "seed": 23,
+      "bug": {
+        "tested": true,
+        "orig_R": 0.9833333492279053,
+        "orig_RC": 0.550000011920929,
+        "orig_FRC": 0.574999988079071,
+        "rep_R_ch5": 0.9916666746139526,
+        "erasure_reproduced": true
+      },
+      "observability": {
+        "tested": true,
+        "r_align_R": 0.9916666746139526,
+        "r_align_RC": 0.9916666746139526,
+        "r_align_FRC": 0.9833333492279053,
+        "r_align_FR": 0.9833333492279053,
+        "f_mag_F": 0.799633264541626,
+        "f_mag_FR": 0.7988738417625427,
+        "f_mag_FC": 0.799029529094696,
+        "f_mag_FRC": 0.7991762757301331,
+        "c_ret_C": 1.0,
+        "c_ret_RC": 1.0,
+        "c_ret_FC": 1.0,
+        "c_ret_FRC": 1.0
+      },
+      "orig_controls": {
+        "r_align_R": 0.9833333492279053,
+        "r_align_RC": 0.550000011920929,
+        "r_align_FRC": 0.574999988079071,
+        "f_mag_F": 0.799633264541626,
+        "f_mag_FC": 0.13768844306468964,
+        "f_mag_FRC": 0.13985317945480347
+      },
+      "dependency_audit": [
+        {
+          "construction": "original",
+          "family": "F",
+          "component": "F",
+          "statistic": "|mean(ch0)| offset magnitude",
+          "carrier_channel": 0,
+          "later_transformation": "contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c)",
+          "observable_rate": 0.799633264541626
+        },
+        {
+          "construction": "original",
+          "family": "R",
+          "component": "R",
+          "statistic": "sign(mean(ch*roll(ch,-1)))",
+          "carrier_channel": 0,
+          "later_transformation": "contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c)",
+          "observable_rate": 0.9833333492279053
+        },
+        {
+          "construction": "original",
+          "family": "C",
+          "component": "C",
+          "statistic": "query-key cosine match",
+          "carrier_channel": "0:3",
+          "later_transformation": "feature common-mode offsets (repaired) / none (original)",
+          "observable_rate": 1.0
+        },
+        {
+          "construction": "original",
+          "family": "FR",
+          "component": "R",
+          "statistic": "sign(mean(ch*roll(ch,-1)))",
+          "carrier_channel": 0,
+          "later_transformation": "contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c)",
+          "observable_rate": 0.8666666746139526
+        },
+        {
+          "construction": "original",
+          "family": "FR",
+          "component": "F",
+          "statistic": "|mean(ch0)| offset magnitude",
+          "carrier_channel": 0,
+          "later_transformation": "contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c)",
+          "observable_rate": 0.7795630097389221
+        },
+        {
+          "construction": "original",
+          "family": "RC",
+          "component": "R",
+          "statistic": "sign(mean(ch*roll(ch,-1)))",
+          "carrier_channel": 0,
+          "later_transformation": "contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c)",
+          "observable_rate": 0.550000011920929
+        },
+        {
+          "construction": "original",
+          "family": "RC",
+          "component": "C",
+          "statistic": "query-key cosine match",
+          "carrier_channel": "0:3",
+          "later_transformation": "feature common-mode offsets (repaired) / none (original)",
+          "observable_rate": 1.0
+        },
+        {
+          "construction": "original",
+          "family": "FC",
+          "component": "F",
+          "statistic": "|mean(ch0)| offset magnitude",
+          "carrier_channel": 0,
+          "later_transformation": "contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c)",
+          "observable_rate": 0.13768844306468964
+        },
+        {
+          "construction": "original",
+          "family": "FC",
+          "component": "C",
+          "statistic": "query-key cosine match",
+          "carrier_channel": "0:3",
+          "later_transformation": "feature common-mode offsets (repaired) / none (original)",
+          "observable_rate": 1.0
+        },
+        {
+          "construction": "original",
+          "family": "FRC",
+          "component": "R",
+          "statistic": "sign(mean(ch*roll(ch,-1)))",
+          "carrier_channel": 0,
+          "later_transformation": "contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c)",
+          "observable_rate": 0.574999988079071
+        },
+        {
+          "construction": "original",
+          "family": "FRC",
+          "component": "F",
+          "statistic": "|mean(ch0)| offset magnitude",
+          "carrier_channel": 0,
+          "later_transformation": "contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c)",
+          "observable_rate": 0.13985317945480347
+        },
+        {
+          "construction": "original",
+          "family": "FRC",
+          "component": "C",
+          "statistic": "query-key cosine match",
+          "carrier_channel": "0:3",
+          "later_transformation": "feature common-mode offsets (repaired) / none (original)",
+          "observable_rate": 1.0
+        },
+        {
+          "construction": "repaired",
+          "family": "F",
+          "component": "F",
+          "statistic": "|mean(ch0)| offset magnitude",
+          "carrier_channel": 0,
+          "later_transformation": "feature offsets applied after contextual block (common-mode; identity-preserving)",
+          "observable_rate": 0.799633264541626
+        },
+        {
+          "construction": "repaired",
+          "family": "R",
+          "component": "R",
+          "statistic": "sign(mean(ch*roll(ch,-1)))",
+          "carrier_channel": 5,
+          "later_transformation": "no later write touches ch5 (carrier provably survives)",
+          "observable_rate": 0.9916666746139526
+        },
+        {
+          "construction": "repaired",
+          "family": "C",
+          "component": "C",
+          "statistic": "query-key cosine match",
+          "carrier_channel": "0:3",
+          "later_transformation": "feature common-mode offsets (repaired) / none (original)",
+          "observable_rate": 1.0
+        },
+        {
+          "construction": "repaired",
+          "family": "FR",
+          "component": "R",
+          "statistic": "sign(mean(ch*roll(ch,-1)))",
+          "carrier_channel": 5,
+          "later_transformation": "no later write touches ch5 (carrier provably survives)",
+          "observable_rate": 0.9833333492279053
+        },
+        {
+          "construction": "repaired",
+          "family": "FR",
+          "component": "F",
+          "statistic": "|mean(ch0)| offset magnitude",
+          "carrier_channel": 0,
+          "later_transformation": "feature offsets applied after contextual block (common-mode; identity-preserving)",
+          "observable_rate": 0.7988738417625427
+        },
+        {
+          "construction": "repaired",
+          "family": "RC",
+          "component": "R",
+          "statistic": "sign(mean(ch*roll(ch,-1)))",
+          "carrier_channel": 5,
+          "later_transformation": "no later write touches ch5 (carrier provably survives)",
+          "observable_rate": 0.9916666746139526
+        },
+        {
+          "construction": "repaired",
+          "family": "RC",
+          "component": "C",
+          "statistic": "query-key cosine match",
+          "carrier_channel": "0:3",
+          "later_transformation": "feature common-mode offsets (repaired) / none (original)",
+          "observable_rate": 1.0
+        },
+        {
+          "construction": "repaired",
+          "family": "FC",
+          "component": "F",
+          "statistic": "|mean(ch0)| offset magnitude",
+          "carrier_channel": 0,
+          "later_transformation": "feature offsets applied after contextual block (common-mode; identity-preserving)",
+          "observable_rate": 0.799029529094696
+        },
+        {
+          "construction": "repaired",
+          "family": "FC",
+          "component": "C",
+          "statistic": "query-key cosine match",
+          "carrier_channel": "0:3",
+          "later_transformation": "feature common-mode offsets (repaired) / none (original)",
+          "observable_rate": 1.0
+        },
+        {
+          "construction": "repaired",
+          "family": "FRC",
+          "component": "R",
+          "statistic": "sign(mean(ch*roll(ch,-1)))",
+          "carrier_channel": 5,
+          "later_transformation": "no later write touches ch5 (carrier provably survives)",
+          "observable_rate": 0.9833333492279053
+        },
+        {
+          "construction": "repaired",
+          "family": "FRC",
+          "component": "F",
+          "statistic": "|mean(ch0)| offset magnitude",
+          "carrier_channel": 0,
+          "later_transformation": "feature offsets applied after contextual block (common-mode; identity-preserving)",
+          "observable_rate": 0.7991762757301331
+        },
+        {
+          "construction": "repaired",
+          "family": "FRC",
+          "component": "C",
+          "statistic": "query-key cosine match",
+          "carrier_channel": "0:3",
+          "later_transformation": "feature common-mode offsets (repaired) / none (original)",
+          "observable_rate": 1.0
+        }
+      ],
+      "semantics": {
+        "tested": true,
+        "parity_fact": true,
+        "frc_no_tie": true,
+        "keys_present": true,
+        "detail": "agree 61/120, disagree 59; FRC ties absent: True",
+        "rule_RC": 0.9848484848484849,
+        "c_only_RC": 0.5
+      },
+      "counterfactual": {
+        "R_valid_rate": 0.975,
+        "C_valid_rate": 0.9916666666666667,
+        "R_tested": 120,
+        "C_tested": 120
+      },
+      "invariance": {
+        "tested": true,
+        "c_ret_plain": 1.0,
+        "c_ret_perm": 1.0,
+        "c_retrieval_perm_drop": 0.0,
+        "r_align_plain_RC": 0.9916666746139526,
+        "r_align_markvar_RC": 0.800000011920929,
+        "r_align_marker_delta": -0.19166666269302368,
+        "r_align_marker_delta_original": -0.05833333730697632,
+        "r_markvar_R_original": -0.19999998807907104,
+        "r_markvar_R_repaired": -0.23333334922790527,
+        "r_align_perm_repaired_drop": 0.4416666626930237,
+        "r_align_perm_original_drop": 0.42500001192092896,
+        "detail": "C retrieval perm drop +0.000; R-family markvar delta repaired -0.233 vs original -0.200 (RC-family deltas are floor effects, reported in CSV); perm R-drop repaired +0.442 vs original +0.425"
+      },
+      "leakage": {
+        "tested": true,
+        "max_single_channel_label_probe": 0.7666666507720947,
+        "family_probe_repaired": 0.18571428954601288,
+        "family_probe_original": 0.18333333730697632,
+        "family_probe_delta": 0.00238095223903656
+      },
+      "learnability": {
+        "mlp_R": 0.699999988079071,
+        "mlp_RC": 0.550000011920929,
+        "mlp_FRC": 0.8166666626930237,
+        "stat_R": 0.9916666746139526,
+        "lagprobe_R": 0.9100000262260437,
+        "rule_RC": 0.9916666666666667,
+        "detail": "rule_RC 0.992; lagprobe_R 0.910; mlp R/RC/FRC [0.7, 0.55, 0.817] (context); stat_R 0.992"
+      },
+      "contract": {
+        "input_shape": [
+          32,
+          12,
+          8
+        ],
+        "marker_present": true,
+        "finite": true,
+        "input_dim_8": true,
+        "mlp": {
+          "ok": true,
+          "logits_shape": [
+            32,
+            2
+          ]
+        },
+        "graph": {
+          "ok": true,
+          "logits_shape": [
+            32,
+            2
+          ]
+        },
+        "attention": {
+          "ok": true,
+          "logits_shape": [
+            32,
+            2
+          ]
+        },
+        "attention_v2": {
+          "ok": true,
+          "logits_shape": [
+            32,
+            2
+          ]
+        },
+        "joint": {
+          "ok": true,
+          "logits_shape": [
+            32,
+            2
+          ]
+        },
+        "joint_co": {
+          "ok": true,
+          "logits_shape": [
+            32,
+            2
+          ]
+        }
+      },
+      "reproducibility": {
+        "identical": true,
+        "detail": "two builds, fixed seed, exact tensor equality"
+      }
+    },
+    {
+      "seed": 37,
+      "bug": {
+        "tested": true,
+        "orig_R": 0.9666666388511658,
+        "orig_RC": 0.4833333194255829,
+        "orig_FRC": 0.574999988079071,
+        "rep_R_ch5": 1.0,
+        "erasure_reproduced": true
+      },
+      "observability": {
+        "tested": true,
+        "r_align_R": 1.0,
+        "r_align_RC": 0.9583333134651184,
+        "r_align_FRC": 0.9833333492279053,
+        "r_align_FR": 0.9916666746139526,
+        "f_mag_F": 0.8002074956893921,
+        "f_mag_FR": 0.7996675372123718,
+        "f_mag_FC": 0.8034386038780212,
+        "f_mag_FRC": 0.7981001734733582,
+        "c_ret_C": 1.0,
+        "c_ret_RC": 1.0,
+        "c_ret_FC": 1.0,
+        "c_ret_FRC": 1.0
+      },
+      "orig_controls": {
+        "r_align_R": 0.9666666388511658,
+        "r_align_RC": 0.4833333194255829,
+        "r_align_FRC": 0.574999988079071,
+        "f_mag_F": 0.8002074956893921,
+        "f_mag_FC": 0.12347019463777542,
+        "f_mag_FRC": 0.1422112137079239
+      },
+      "dependency_audit": [
+        {
+          "construction": "original",
+          "family": "F",
+          "component": "F",
+          "statistic": "|mean(ch0)| offset magnitude",
+          "carrier_channel": 0,
+          "later_transformation": "contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c)",
+          "observable_rate": 0.8002074956893921
+        },
+        {
+          "construction": "original",
+          "family": "R",
+          "component": "R",
+          "statistic": "sign(mean(ch*roll(ch,-1)))",
+          "carrier_channel": 0,
+          "later_transformation": "contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c)",
+          "observable_rate": 0.9666666388511658
+        },
+        {
+          "construction": "original",
+          "family": "C",
+          "component": "C",
+          "statistic": "query-key cosine match",
+          "carrier_channel": "0:3",
+          "later_transformation": "feature common-mode offsets (repaired) / none (original)",
+          "observable_rate": 1.0
+        },
+        {
+          "construction": "original",
+          "family": "FR",
+          "component": "R",
+          "statistic": "sign(mean(ch*roll(ch,-1)))",
+          "carrier_channel": 0,
+          "later_transformation": "contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c)",
+          "observable_rate": 0.8833333253860474
+        },
+        {
+          "construction": "original",
+          "family": "FR",
+          "component": "F",
+          "statistic": "|mean(ch0)| offset magnitude",
+          "carrier_channel": 0,
+          "later_transformation": "contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c)",
+          "observable_rate": 0.8093503713607788
+        },
+        {
+          "construction": "original",
+          "family": "RC",
+          "component": "R",
+          "statistic": "sign(mean(ch*roll(ch,-1)))",
+          "carrier_channel": 0,
+          "later_transformation": "contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c)",
+          "observable_rate": 0.4833333194255829
+        },
+        {
+          "construction": "original",
+          "family": "RC",
+          "component": "C",
+          "statistic": "query-key cosine match",
+          "carrier_channel": "0:3",
+          "later_transformation": "feature common-mode offsets (repaired) / none (original)",
+          "observable_rate": 1.0
+        },
+        {
+          "construction": "original",
+          "family": "FC",
+          "component": "F",
+          "statistic": "|mean(ch0)| offset magnitude",
+          "carrier_channel": 0,
+          "later_transformation": "contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c)",
+          "observable_rate": 0.12347019463777542
+        },
+        {
+          "construction": "original",
+          "family": "FC",
+          "component": "C",
+          "statistic": "query-key cosine match",
+          "carrier_channel": "0:3",
+          "later_transformation": "feature common-mode offsets (repaired) / none (original)",
+          "observable_rate": 1.0
+        },
+        {
+          "construction": "original",
+          "family": "FRC",
+          "component": "R",
+          "statistic": "sign(mean(ch*roll(ch,-1)))",
+          "carrier_channel": 0,
+          "later_transformation": "contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c)",
+          "observable_rate": 0.574999988079071
+        },
+        {
+          "construction": "original",
+          "family": "FRC",
+          "component": "F",
+          "statistic": "|mean(ch0)| offset magnitude",
+          "carrier_channel": 0,
+          "later_transformation": "contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c)",
+          "observable_rate": 0.1422112137079239
+        },
+        {
+          "construction": "original",
+          "family": "FRC",
+          "component": "C",
+          "statistic": "query-key cosine match",
+          "carrier_channel": "0:3",
+          "later_transformation": "feature common-mode offsets (repaired) / none (original)",
+          "observable_rate": 1.0
+        },
+        {
+          "construction": "repaired",
+          "family": "F",
+          "component": "F",
+          "statistic": "|mean(ch0)| offset magnitude",
+          "carrier_channel": 0,
+          "later_transformation": "feature offsets applied after contextual block (common-mode; identity-preserving)",
+          "observable_rate": 0.8002074956893921
+        },
+        {
+          "construction": "repaired",
+          "family": "R",
+          "component": "R",
+          "statistic": "sign(mean(ch*roll(ch,-1)))",
+          "carrier_channel": 5,
+          "later_transformation": "no later write touches ch5 (carrier provably survives)",
+          "observable_rate": 1.0
+        },
+        {
+          "construction": "repaired",
+          "family": "C",
+          "component": "C",
+          "statistic": "query-key cosine match",
+          "carrier_channel": "0:3",
+          "later_transformation": "feature common-mode offsets (repaired) / none (original)",
+          "observable_rate": 1.0
+        },
+        {
+          "construction": "repaired",
+          "family": "FR",
+          "component": "R",
+          "statistic": "sign(mean(ch*roll(ch,-1)))",
+          "carrier_channel": 5,
+          "later_transformation": "no later write touches ch5 (carrier provably survives)",
+          "observable_rate": 0.9916666746139526
+        },
+        {
+          "construction": "repaired",
+          "family": "FR",
+          "component": "F",
+          "statistic": "|mean(ch0)| offset magnitude",
+          "carrier_channel": 0,
+          "later_transformation": "feature offsets applied after contextual block (common-mode; identity-preserving)",
+          "observable_rate": 0.7996675372123718
+        },
+        {
+          "construction": "repaired",
+          "family": "RC",
+          "component": "R",
+          "statistic": "sign(mean(ch*roll(ch,-1)))",
+          "carrier_channel": 5,
+          "later_transformation": "no later write touches ch5 (carrier provably survives)",
+          "observable_rate": 0.9583333134651184
+        },
+        {
+          "construction": "repaired",
+          "family": "RC",
+          "component": "C",
+          "statistic": "query-key cosine match",
+          "carrier_channel": "0:3",
+          "later_transformation": "feature common-mode offsets (repaired) / none (original)",
+          "observable_rate": 1.0
+        },
+        {
+          "construction": "repaired",
+          "family": "FC",
+          "component": "F",
+          "statistic": "|mean(ch0)| offset magnitude",
+          "carrier_channel": 0,
+          "later_transformation": "feature offsets applied after contextual block (common-mode; identity-preserving)",
+          "observable_rate": 0.8034386038780212
+        },
+        {
+          "construction": "repaired",
+          "family": "FC",
+          "component": "C",
+          "statistic": "query-key cosine match",
+          "carrier_channel": "0:3",
+          "later_transformation": "feature common-mode offsets (repaired) / none (original)",
+          "observable_rate": 1.0
+        },
+        {
+          "construction": "repaired",
+          "family": "FRC",
+          "component": "R",
+          "statistic": "sign(mean(ch*roll(ch,-1)))",
+          "carrier_channel": 5,
+          "later_transformation": "no later write touches ch5 (carrier provably survives)",
+          "observable_rate": 0.9833333492279053
+        },
+        {
+          "construction": "repaired",
+          "family": "FRC",
+          "component": "F",
+          "statistic": "|mean(ch0)| offset magnitude",
+          "carrier_channel": 0,
+          "later_transformation": "feature offsets applied after contextual block (common-mode; identity-preserving)",
+          "observable_rate": 0.7981001734733582
+        },
+        {
+          "construction": "repaired",
+          "family": "FRC",
+          "component": "C",
+          "statistic": "query-key cosine match",
+          "carrier_channel": "0:3",
+          "later_transformation": "feature common-mode offsets (repaired) / none (original)",
+          "observable_rate": 1.0
+        }
+      ],
+      "semantics": {
+        "tested": true,
+        "parity_fact": true,
+        "frc_no_tie": true,
+        "keys_present": true,
+        "detail": "agree 70/120, disagree 50; FRC ties absent: True",
+        "rule_RC": 0.9830508474576272,
+        "c_only_RC": 0.4745762711864407
+      },
+      "counterfactual": {
+        "R_valid_rate": 0.9583333333333334,
+        "C_valid_rate": 0.9583333333333334,
+        "R_tested": 120,
+        "C_tested": 120
+      },
+      "invariance": {
+        "tested": true,
+        "c_ret_plain": 1.0,
+        "c_ret_perm": 1.0,
+        "c_retrieval_perm_drop": 0.0,
+        "r_align_plain_RC": 0.9583333134651184,
+        "r_align_markvar_RC": 0.6916666626930237,
+        "r_align_marker_delta": -0.2666666507720947,
+        "r_align_marker_delta_original": 0.008333355188369751,
+        "r_markvar_R_original": -0.19999998807907104,
+        "r_markvar_R_repaired": -0.24166667461395264,
+        "r_align_perm_repaired_drop": 0.4333333373069763,
+        "r_align_perm_original_drop": 0.3916666507720947,
+        "detail": "C retrieval perm drop +0.000; R-family markvar delta repaired -0.242 vs original -0.200 (RC-family deltas are floor effects, reported in CSV); perm R-drop repaired +0.433 vs original +0.392"
+      },
+      "leakage": {
+        "tested": true,
+        "max_single_channel_label_probe": 0.699999988079071,
+        "family_probe_repaired": 0.17142857611179352,
+        "family_probe_original": 0.22380952537059784,
+        "family_probe_delta": -0.05238094925880432
+      },
+      "learnability": {
+        "mlp_R": 0.5,
+        "mlp_RC": 0.6333333253860474,
+        "mlp_FRC": 0.7666666507720947,
+        "stat_R": 1.0,
+        "lagprobe_R": 0.9150000214576721,
+        "rule_RC": 0.9583333333333334,
+        "detail": "rule_RC 0.958; lagprobe_R 0.915; mlp R/RC/FRC [0.5, 0.633, 0.767] (context); stat_R 1.000"
+      },
+      "contract": {
+        "input_shape": [
+          32,
+          12,
+          8
+        ],
+        "marker_present": true,
+        "finite": true,
+        "input_dim_8": true,
+        "mlp": {
+          "ok": true,
+          "logits_shape": [
+            32,
+            2
+          ]
+        },
+        "graph": {
+          "ok": true,
+          "logits_shape": [
+            32,
+            2
+          ]
+        },
+        "attention": {
+          "ok": true,
+          "logits_shape": [
+            32,
+            2
+          ]
+        },
+        "attention_v2": {
+          "ok": true,
+          "logits_shape": [
+            32,
+            2
+          ]
+        },
+        "joint": {
+          "ok": true,
+          "logits_shape": [
+            32,
+            2
+          ]
+        },
+        "joint_co": {
+          "ok": true,
+          "logits_shape": [
+            32,
+            2
+          ]
+        }
+      },
+      "reproducibility": {
+        "identical": true,
+        "detail": "two builds, fixed seed, exact tensor equality"
+      }
+    }
+  ],
+  "hypotheses": {
+    "H1": {
+      "status": "SUPPORTED",
+      "evidence": "Original: R-align R 97.8% vs RC 48.1%/FRC 55.6%: erasure reproduced."
+    },
+    "H2": {
+      "status": "SUPPORTED",
+      "evidence": "Repaired R-align on RC 97.2% (bar 90%)."
+    },
+    "H3": {
+      "status": "SUPPORTED",
+      "evidence": "Repaired R-align on FRC 98.3% (bar 90%)."
+    },
+    "H4": {
+      "status": "SUPPORTED",
+      "evidence": "All mixed-task components observable."
+    },
+    "H5": {
+      "status": "SUPPORTED",
+      "evidence": "C retrieval perm drop +0.000; R-family markvar delta repaired -0.158 vs original -0.183 (RC-family deltas are floor effects, reported in CSV); perm R-drop repaired +0.483 vs original +0.467"
+    },
+    "H6": {
+      "status": "SUPPORTED",
+      "evidence": "max single-channel label probe 0.744; family delta -0.005."
+    },
+    "H7": {
+      "status": "SUPPORTED",
+      "evidence": "Statistic+retrieval rule RC 97.8% vs C-only 48.3%: RC genuinely requires both."
+    },
+    "H8": {
+      "status": "SUPPORTED",
+      "evidence": "All validity gates pass."
+    }
+  },
+  "verdict_case": "CASE F",
+  "verdict_label": "Benchmark validity fully established and composition track can safely reopen",
+  "recommendation": "Reopen composition with a clean portfolio re-evaluation first; no new architecture yet.",
+  "minimal_intervention": {
+    "intervention": "benchmark_repair",
+    "outcome": "Construction repair (no architecture change)",
+    "detail": "C\u2192F\u2192R(ch5) reorder in a versioned dataset module."
+  },
+  "failure_diagnosis": [
+    {
+      "category": "bug_not_reproduced",
+      "failed": false,
+      "criterion": "original RC/FRC R-align < 60% with R \u2265 90%",
+      "observed": "RC 0.481, FRC 0.556"
+    },
+    {
+      "category": "carrier_unobservable_RC",
+      "failed": false,
+      "criterion": "repaired R-align on RC < 90%",
+      "observed": "0.972"
+    },
+    {
+      "category": "carrier_unobservable_FRC",
+      "failed": false,
+      "criterion": "repaired R-align on FRC < 90%",
+      "observed": "0.983"
+    },
+    {
+      "category": "gate_G1_observability_failed",
+      "failed": false,
+      "criterion": "G1_observability must pass",
+      "observed": "all component carriers observable"
+    },
+    {
+      "category": "gate_G2_no_leakage_failed",
+      "failed": false,
+      "criterion": "G2_no_leakage must pass",
+      "observed": "max single-channel label probe 0.744 (bar 0.9)"
+    },
+    {
+      "category": "gate_G3_no_family_leakage_failed",
+      "failed": false,
+      "criterion": "G3_no_family_leakage must pass",
+      "observed": "family-probe delta repaired\u2212original -0.005 (tol 0.05)"
+    },
+    {
+      "category": "gate_G4_invariance_failed",
+      "failed": false,
+      "criterion": "G4_invariance must pass",
+      "observed": "C retrieval perm drop +0.000; R-family markvar delta repaired -0.158 vs original -0.183 (RC-family deltas are floor effects, reported in CSV); perm R-drop repaired +0.483 vs original +0.467"
+    },
+    {
+      "category": "gate_G5_counterfactual_failed",
+      "failed": false,
+      "criterion": "G5_counterfactual must pass",
+      "observed": "R-valid 0.969, C-valid 0.972 (bar 0.9)"
+    },
+    {
+      "category": "gate_G6_semantics_failed",
+      "failed": false,
+      "criterion": "G6_semantics must pass",
+      "observed": "agree 61/120, disagree 59; FRC ties absent: True"
+    },
+    {
+      "category": "gate_G7_learnability_failed",
+      "failed": false,
+      "criterion": "G7_learnability must pass",
+      "observed": "rule_RC 0.967; lagprobe_R 0.895; mlp R/RC/FRC [0.467, 0.483, 0.733] (context); stat_R 0.975"
+    },
+    {
+      "category": "gate_G8_reproducibility_failed",
+      "failed": false,
+      "criterion": "G8_reproducibility must pass",
+      "observed": "exact tensor equality across rebuilds"
+    }
+  ],
+  "aggregates": {
+    "n_seeds": 3,
+    "bug": {
+      "tested": true,
+      "orig_R": 0.9777777791023254,
+      "orig_RC": 0.4805555542310079,
+      "orig_FRC": 0.555555542310079,
+      "erasure_reproduced": true
+    },
+    "observability": {
+      "tested": true,
+      "r_align_R": 0.9888888994852701,
+      "r_align_RC": 0.9722222089767456,
+      "r_align_FRC": 0.9833333492279053,
+      "r_align_FR": 0.9861111243565878,
+      "f_mag_F": 0.7995372215906779,
+      "f_mag_FR": 0.7991273403167725,
+      "f_mag_FC": 0.8023950854937235,
+      "f_mag_FRC": 0.7999034722646078,
+      "c_ret_C": 1.0,
+      "c_ret_RC": 1.0,
+      "c_ret_FC": 1.0,
+      "c_ret_FRC": 1.0
+    },
+    "invariance": {
+      "tested": true,
+      "c_ret_plain": 1.0,
+      "c_ret_perm": 1.0,
+      "c_retrieval_perm_drop": 0.0,
+      "r_align_plain_RC": 0.9722222089767456,
+      "r_align_markvar_RC": 0.7722222208976746,
+      "r_align_marker_delta": -0.19999998807907104,
+      "r_align_marker_delta_original": -0.011111100514729818,
+      "r_markvar_R_original": -0.19444443782170615,
+      "r_markvar_R_repaired": -0.2111111283302307,
+      "r_align_perm_repaired_drop": 0.45277778307596844,
+      "r_align_perm_original_drop": 0.4277777870496114,
+      "detail": "C retrieval perm drop +0.000; R-family markvar delta repaired -0.158 vs original -0.183 (RC-family deltas are floor effects, reported in CSV); perm R-drop repaired +0.483 vs original +0.467"
+    },
+    "leakage": {
+      "tested": true,
+      "max_single_channel_label_probe": 0.7444444298744202,
+      "family_probe_repaired": 0.17619048058986664,
+      "family_probe_original": 0.18095238506793976,
+      "family_probe_delta": -0.00476190447807312
+    },
+    "counterfactual": {
+      "tested": true,
+      "R_valid_rate": 0.9694444444444444,
+      "C_valid_rate": 0.9722222222222222
+    },
+    "semantics": {
+      "tested": true,
+      "parity_fact": true,
+      "rule_RC": 0.9783708156867368,
+      "c_only_RC": 0.48332870241733816,
+      "frc_no_tie": true,
+      "keys_present": true,
+      "detail": "agree 61/120, disagree 59; FRC ties absent: True"
+    },
+    "learnability": {
+      "tested": true,
+      "mlp_R": 0.5555555522441864,
+      "mlp_RC": 0.5555555522441864,
+      "mlp_FRC": 0.7722222208976746,
+      "stat_R": 0.9888888994852701,
+      "lagprobe_R": 0.9066666762034098,
+      "rule_RC": 0.9722222222222222,
+      "detail": "rule_RC 0.967; lagprobe_R 0.895; mlp R/RC/FRC [0.467, 0.483, 0.733] (context); stat_R 0.975"
+    },
+    "reproducibility": {
+      "identical": true,
+      "detail": "exact tensor equality across rebuilds"
+    },
+    "gates": {
+      "G1_observability": {
+        "passed": true,
+        "detail": "all component carriers observable"
+      },
+      "G2_no_leakage": {
+        "passed": true,
+        "detail": "max single-channel label probe 0.744 (bar 0.9)"
+      },
+      "G3_no_family_leakage": {
+        "passed": true,
+        "detail": "family-probe delta repaired\u2212original -0.005 (tol 0.05)"
+      },
+      "G4_invariance": {
+        "passed": true,
+        "detail": "C retrieval perm drop +0.000; R-family markvar delta repaired -0.158 vs original -0.183 (RC-family deltas are floor effects, reported in CSV); perm R-drop repaired +0.483 vs original +0.467"
+      },
+      "G5_counterfactual": {
+        "passed": true,
+        "detail": "R-valid 0.969, C-valid 0.972 (bar 0.9)"
+      },
+      "G6_semantics": {
+        "passed": true,
+        "detail": "agree 61/120, disagree 59; FRC ties absent: True"
+      },
+      "G7_learnability": {
+        "passed": true,
+        "detail": "rule_RC 0.967; lagprobe_R 0.895; mlp R/RC/FRC [0.467, 0.483, 0.733] (context); stat_R 0.975"
+      },
+      "G8_reproducibility": {
+        "passed": true,
+        "detail": "exact tensor equality across rebuilds"
+      }
+    },
+    "hypotheses": {
+      "H1": {
+        "status": "SUPPORTED",
+        "evidence": "Original: R-align R 97.8% vs RC 48.1%/FRC 55.6%: erasure reproduced."
+      },
+      "H2": {
+        "status": "SUPPORTED",
+        "evidence": "Repaired R-align on RC 97.2% (bar 90%)."
+      },
+      "H3": {
+        "status": "SUPPORTED",
+        "evidence": "Repaired R-align on FRC 98.3% (bar 90%)."
+      },
+      "H4": {
+        "status": "SUPPORTED",
+        "evidence": "All mixed-task components observable."
+      },
+      "H5": {
+        "status": "SUPPORTED",
+        "evidence": "C retrieval perm drop +0.000; R-family markvar delta repaired -0.158 vs original -0.183 (RC-family deltas are floor effects, reported in CSV); perm R-drop repaired +0.483 vs original +0.467"
+      },
+      "H6": {
+        "status": "SUPPORTED",
+        "evidence": "max single-channel label probe 0.744; family delta -0.005."
+      },
+      "H7": {
+        "status": "SUPPORTED",
+        "evidence": "Statistic+retrieval rule RC 97.8% vs C-only 48.3%: RC genuinely requires both."
+      },
+      "H8": {
+        "status": "SUPPORTED",
+        "evidence": "All validity gates pass."
+      }
+    }
+  },
+  "generated_figures": [
+    "figures\\phase19_benchmark_validation\\bug_reproduction.png",
+    "figures\\phase19_benchmark_validation\\observability_r.png",
+    "figures\\phase19_benchmark_validation\\observability_fc.png",
+    "figures\\phase19_benchmark_validation\\before_after.png",
+    "figures\\phase19_benchmark_validation\\counterfactual_validity.png",
+    "figures\\phase19_benchmark_validation\\learnability.png",
+    "figures\\phase19_benchmark_validation\\validity_gates.png",
+    "figures\\phase19_benchmark_validation\\hypothesis_verdicts.png",
+    "figures\\phase19_benchmark_validation\\seed_stability.png"
+  ]
+}

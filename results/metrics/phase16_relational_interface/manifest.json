@@ -1,0 +1,25 @@
+{
+  "phase": "Phase 16 \u2014 Embedded Relational Path vs Dedicated Graph Diagnosis",
+  "timestamp": "2026-09-07T16:27:58Z",
+  "python_version": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "torch_version": "2.13.0+cpu",
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "evaluated_families": [
+    "F",
+    "R",
+    "C",
+    "FR",
+    "RC",
+    "FC",
+    "FRC"
+  ],
+  "samples_per_type": 120,
+  "jointco_epochs": 40,
+  "batch_size": 60,
+  "protocol": "16A baselines reuse the exact Phase 15 protocol/cache (executed measurements, evals re-run). 16F/16G use a custom trainer mirroring _train_joint_on_mixed (same optimizer/lr/budget/val selection). 16C/16D/16E/16I train only small heads on frozen states with one shared head protocol. Router frozen; no learned adjacency."
+}

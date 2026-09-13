@@ -1,0 +1,13 @@
+seed,check,value
+11,r_align_R,0.9750000238418579
+11,r_align_RC,0.9666666388511658
+11,r_align_FRC,0.9833333492279053
+11,smoke_passed,1.0
+23,r_align_R,0.9916666746139526
+23,r_align_RC,0.9916666746139526
+23,r_align_FRC,0.9833333492279053
+23,smoke_passed,1.0
+37,r_align_R,1.0
+37,r_align_RC,0.9583333134651184
+37,r_align_FRC,0.9833333492279053
+37,smoke_passed,1.0

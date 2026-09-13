@@ -1,0 +1,59 @@
+{
+  "manifest_version": "phase22b_forensics_actual",
+  "audit_timestamp": "2026-09-11",
+  "audit_script": "src/neuroforge/evaluation/phase22b_forensics.py",
+  "artifacts_created_in_this_audit": [
+    "artifact_hashes.csv",
+    "dataset_forensics.csv",
+    "split_forensics.csv",
+    "config_forensics.csv",
+    "evaluation_filter_trace.csv",
+    "metric_replay.csv",
+    "sample_trace.csv",
+    "provenance_completeness.csv",
+    "first_divergence.json",
+    "summary.json"
+  ],
+  "artifacts_read_for_evidence": [
+    "results/metrics/phase20_repaired_portfolio/summary.json",
+    "results/metrics/phase21_rc_diagnosis/summary.json",
+    "docs/architecture/phase20_log.md",
+    "docs/research/phase21_rc_diagnosis.md",
+    "src/neuroforge/datasets/phase9_mixed_repaired.py",
+    "src/neuroforge/evaluation/phase20_repaired_portfolio.py",
+    "src/neuroforge/evaluation/phase21_rc_diagnosis.py",
+    "src/neuroforge/training/phase20_repaired_portfolio.py",
+    "src/neuroforge/training/phase21_rc_diagnosis.py",
+    "scripts/phase21_rc_diagnosis.py",
+    "scripts/phase22_audit_provenance.py"
+  ],
+  "computation_performed": [
+    "SHA-256 of 16 artifacts",
+    "Dataset identity verification (seed 11/23/37) with SHA-256",
+    "Split identity inspection (UNVERIFIED)",
+    "Configuration identity extraction from source",
+    "Checkpoint identity verification",
+    "Prediction artifact search (0 results)",
+    "Filter trace computation from dataset",
+    "Frozen replay from loaded checkpoint (attention_v2, seed=11)",
+    "Metric comparison between replay and Phase21 artifacts",
+    "Previous claim audit (contradiction found)"
+  ],
+  "results_verified_by_computation": [
+    "Artifact hashes are real SHA-256 values (not truncated fakes)",
+    "Dataset is deterministic per seed with real hash differences across seeds",
+    "Split identity unrecoverable from saved artifacts",
+    "Phase20 predictions MISSING (only .pt checkpoints exist)",
+    "Phase20 replay from checkpoint produces RC_accuracy=0.517, RC_agree=1.0",
+    "Phase21 artifacts show RC_accuracy=0.0 (verified broken)",
+    "Previous frozen replay claim unsupported (contradictory evidence)"
+  ],
+  "status_of_previous_artifacts": {
+    "artifact_hashes.csv": "REPLACED_WITH_REAL_HASHES",
+    "dataset_identity.csv": "REPLACED_WITH_ACTUAL_DATASET_FORENSICS",
+    "metric_replay.csv": "REPLACED_WITH_ACTUAL_METRIC_REPLAY_FROM_CHECKPOINT",
+    "sample_trace.csv": "REPLACED_WITH_ACTUAL_TRACE_NO_MANUFACTURED_PREDICTIONS",
+    "first_divergence.json": "REPLACED_WITH_ACTUAL_DIVERGENCE_EVIDENCE",
+    "summary.json": "REPLACED_WITH_EVIDENCE_FIRST_SUMMARY"
+  }
+}

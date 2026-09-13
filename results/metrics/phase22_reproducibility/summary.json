@@ -1,0 +1,17 @@
+{
+  "phase": "Phase 22",
+  "status": "FAIL_CLOSED",
+  "reproduction_gate": "FAILED",
+  "programmatic_case": "CASE E / G hybrid",
+  "first_divergence_stage": "metric/evaluation",
+  "evidence": "Phase 20 predictions preserved; Phase 21 evaluator produces 0.0/MISSING for RC agreement (98.0% -> 0.0%), RC disagreement (1.3% -> 0.0%), RC best (55.0% -> MISSING/0.0%), family-level accuracies (all broken). Divergence flags confirm 0 metrics passing.",
+  "protocol_constraints": {
+    "no_new_architecture": true,
+    "phase_5_preserved": true,
+    "phase_20_preserved": true,
+    "benchmark_unmodified": true,
+    "reproduction_gate_enforced": true
+  },
+  "recommendation": "Fix measurement/evaluation pipeline before reopening RC scientific diagnosis; no architecture change supported.",
+  "next_action": "Audit metric implementation divergence (\u00a722G); if fixed, rerun frozen replay (\u00a722H); only then proceed to Phase 21 H1-H8."
+}

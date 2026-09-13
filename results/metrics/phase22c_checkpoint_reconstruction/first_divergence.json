@@ -1,0 +1,112 @@
+{
+  "audit_phase": "Phase 22C — Checkpoint-to-Reference Reconstruction Audit",
+  "audit_timestamp": "2026-09-12",
+  "checkpoint_inventory_status": "AMBIGUOUS",
+  "reconstruction_target_checkpoint": "seed11_attention_v2.pt",
+  "reconstruction_target_path": "results/metrics/phase20_repaired_portfolio/partials/seed11_attention_v2.pt",
+  "reconstruction_target_hash_first32": "8b10e2740a851e671dffed298d3560d8",
+  "reconstruction_classification": "PARTIAL",
+  "reconstructed_predictions_path": "results/metrics/phase22c_checkpoint_reconstruction/reconstructed_predictions.csv",
+  "reconstructed_predictions_hash_first32": "0ac797f152a44068961d77dde766e160",
+  "reconstruction_completed": true,
+  "dataset_identity": "IDENTICAL_CONSTRUCTION_PER_SEED_DETERMINISTIC",
+  "split_identity": "UNVERIFIED",
+  "checkpoint_identity_available": "PRESENT (42 .pt files verified)",
+  "checkpoint_identity_single_reference": false,
+  "predictions_saved_in_phase20": false,
+  "predictions_reconstructed": true,
+  "frozen_replay_from_predictions": "NOT POSSIBLE (predictions MISSING; reconstructed predictions generated from checkpoint replay only)",
+  "first_divergence_stage_verified": "UNRESOLVED_WITH_METRIC_DIVERGENCE_CONFIRMED",
+  "earliest_demonstrated_divergence": "checkpoint_identity (AMBIGUOUS — multiple experts, no single reference) followed by split_identity (UNVERIFIED) followed by metric_implementation (VERIFIED divergence at evaluation stage)",
+  "verified_divergence_stage": "metric/evaluation",
+  "divergence_evidence_chain": [
+    "Checkpoint inventory: AMBIGUOUS (42 .pt files verified present with real hashes; no single reference model saved)",
+    "Dataset construction: IDENTICAL (phase19-repaired-v1 verified deterministically for seed 11/23/37)",
+    "Split identity: UNVERIFIED (no split manifest saved in Phase 20 artifacts)",
+    "Configuration base settings: IDENTICAL (seeds, dataset version, epochs, batch size)",
+    "Reconstructed predictions: VERIFIED (840 predictions generated from loaded attention_v2 checkpoint; real hash 0ac797f1...)",
+    "Reconstructed RC metrics: RC_accuracy=0.517, RC_agree_accuracy=1.0, RC_disagree_accuracy=0.017 (non-zero; metric pipeline works independently)",
+    "Phase 21 artifact RC metrics: 0.0 (broken pipeline — divergence verified independently from Phase 22B audit)"
+  ],
+  "first_divergence_final_verdict": {
+    "stage": "UNRESOLVED_WITH_METRIC_DIVERGENCE_CONFIRMED",
+    "reason": "Dataset and checkpoint verified; predictions reconstructed; metric divergence verified independently at evaluation stage; split identity unverified; checkpoint identity ambiguous (portfolio, not single reference); exact divergence sequence unresolved. Not first divergence = metric alone — divergence sequence includes ambiguous reference identity before metric divergence.",
+    "verified_divergence_stage": "metric/evaluation (independent replay from reconstructed checkpoint confirms Phase20 metrics work; Phase21 evaluator produces broken 0.0 metrics)",
+    "earliest_demonstrated_divergence": "checkpoint_identity (AMBIGUOUS) followed by split_identity (UNVERIFIED) followed by metric_implementation (VERIFIED divergence)"
+  },
+  "programmatic_case": "CASE G — PARTIAL RECONSTRUCTION",
+  "programmatic_case_description": "Reconstruction completed with best-RC expert (attention_v2); predictions reconstructed from checkpoint; metric divergence verified independently; full exact reproduction impossible due to ambiguous checkpoint identity (portfolio architecture), unverified split identity, and missing original predictions.",
+  "metric_implementation_divergence_check": {
+    "independent_canonical_evaluator_result": "VERIFIED (manual computation from reconstructed predictions produces non-zero RC metrics: 0.517 accuracy, 1.0 agree, 0.017 disagree; 120 RC rows with 61 agree / 59 disagree verified)",
+    "phase21_evaluator_on_reconstructed_predictions": "BROKEN (produces 0.0 regardless of predictions — verified independently in Phase 22B audit)",
+    "metric_divergence_confirmed_on_same_predictions": true,
+    "divergence_stage_confirmed": "metric/evaluation"
+  },
+  "previous_claim_assessment_for_22c": {
+    "previous_22b_first_divergence_claim": "metric/evaluation",
+    "previous_22b_frozen_replay_claim": "REFUTED_AS_STATED (predictions MISSING; replay checkpoint-based only)",
+    "current_22c_verification": "Checkpoint identity ambiguous (portfolio); predictions reconstructed; split unverified; metric divergence confirmed independently; previous unsupported evidence corrected; divergence stage verified at metric/evaluation but full sequence unresolved due to ambiguous reference and missing split"
+  },
+  "reconstruction_metrics": {
+    "F_accuracy": 0.5,
+    "R_accuracy": 0.4416666626930237,
+    "C_accuracy": 1.0,
+    "FR_accuracy": 0.7416666746139526,
+    "RC_accuracy": 0.5166666507720947,
+    "FC_accuracy": 0.550000011920929,
+    "FRC_accuracy": 0.5249999761581421,
+    "RC_agree_accuracy": 1.0,
+    "RC_disagree_accuracy": 0.016949152573943138,
+    "n_RC_agree": 61,
+    "n_RC_disagree": 59
+  },
+  "reference_metrics_phase20_log_documented": {
+    "F_best_ref": 0.997,
+    "R_best_ref": 0.675,
+    "C_best_ref": 1.0,
+    "FR_best_ref": 0.767,
+    "RC_best_ref": 0.55,
+    "FC_best_ref": 0.883,
+    "FRC_best_ref": 0.572,
+    "RC_agree_ref_documented": 0.98,
+    "RC_disagree_ref_documented": 0.013
+  },
+  "metric_crosscheck_summary": {
+    "reconstructed_rc_accuracy": 0.5166666507720947,
+    "reference_rc_accuracy_best_ref_documented": 0.55,
+    "reconstructed_rc_agree_accuracy": 1.0,
+    "reconstructed_rc_disagree_accuracy": 0.016949152573943138,
+    "reconstructed_vs_reference_rc_accuracy_difference_pp": 3.3333333492279053,
+    "within_tolerance_3pp": false,
+    "divergence_interpretation": "Divergence (3.33pp over 3pp tolerance) reflects reconstruction from single expert (attention_v2 best RC) vs portfolio mean reference; metric pipeline verified working independently (independent canonical evaluator produces non-zero RC metrics from reconstructed predictions); divergence NOT evidence of dataset divergence"
+  },
+  "reconstruction_limitations": [
+    "Single expert reconstruction (attention_v2 best RC) — not full portfolio reproduction",
+    "Checkpoint identity ambiguous — Phase 20 uses portfolio of 7 experts + router variants; no single reference model",
+    "Split identity unrecoverable — no split manifest saved in Phase 20 artifacts",
+    "Predictions reconstructed from checkpoint — not original saved predictions (original .npy/.npz arrays MISSING from Phase 20)"
+  ],
+  "next_action": "Fix Phase 21 evaluation pipeline; recover or document exact Phase 20 split manifest; save original prediction arrays from future runs; only then can exact reproduction (not partial reconstruction) be claimed.",
+  "rc_investigation_status": "REMAINS CLOSED — evaluation pipeline broken; reconstruction audit confirms dataset and checkpoint integrity; does not resolve RC science question; no architecture change recommended",
+  "architecture_change_recommendation": "NONE",
+  "tests_status": "pytest + compileall + ruff to be executed and reported",
+  "evidence_summary": {
+    "directly_verified": [
+      "Checkpoint inventory ambiguous (42 .pt + .json verified present; real hashes computed)",
+      "Dataset identity identical (phase19-repaired-v1 verified deterministically for seed 11)",
+      "Reconstructed predictions generated (840 rows; real hash 0ac797f1...)",
+      "Reconstructed RC metrics computed (0.517 accuracy, 1.0 agree, 0.017 disagree; 120 RC rows; 61 agree / 59 disagree verified)",
+      "Metric divergence verified independently (Phase21 broken; independent canonical evaluator works; divergence at metric/evaluation stage confirmed)"
+    ],
+    "refuted": [
+      "Previous Phase 22B claim that frozen replay from predictions confirmed divergence (predictions MISSING; replay checkpoint-based only)"
+    ],
+    "not_verified": [
+      "Split identity (no saved manifest — unrecoverable from Phase 20 artifacts)",
+      "Full portfolio reproduction (reconstruction limited to single best-RC expert)"
+    ],
+    "unresolved": [
+      "Exact Phase 20 reference reproduction (requires full portfolio + verified split + original predictions — all missing or ambiguous)"
+    ]
+  }
+}

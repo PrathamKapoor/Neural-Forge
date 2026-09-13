@@ -1,0 +1,52 @@
+{
+  "manifest_version": "phase22c_checkpoint_reconstruction_audit",
+  "audit_timestamp": "2026-09-12",
+  "audit_script_reference": "manual execution (not automated script; actual computations performed directly)",
+  "reconstruction_target_checkpoint": "seed11_attention_v2.pt",
+  "reconstruction_target_description": "Best RC expert per Phase 20 log (55.0% best RC); selected as representative reconstruction target",
+  "artifacts_created_in_this_audit": [
+    "checkpoint_inventory.csv",
+    "checkpoint_identity.csv",
+    "reconstruction_config.json",
+    "reconstructed_predictions.csv",
+    "reconstructed_predictions.sha256",
+    "metric_crosscheck.csv",
+    "rc_sample_trace.csv",
+    "evaluation_filter_trace.csv",
+    "reconstruction_summary.json",
+    "first_divergence.json",
+    "manifest.json"
+  ],
+  "artifacts_inspected_for_evidence": [
+    "results/metrics/phase20_repaired_portfolio/partials/*.pt",
+    "results/metrics/phase20_repaired_portfolio/partials/*.json",
+    "docs/architecture/phase20_log.md",
+    "results/metrics/phase22b_reproducibility_forensics/first_divergence.json",
+    "results/metrics/phase22b_reproducibility_forensics/metric_replay.csv"
+  ],
+  "computations_performed": [
+    "Checkpoint inventory (42 .pt + 42 .json; SHA-256 hashes computed; architecture/seed identified)",
+    "Checkpoint identity assessment (AMBIGUOUS — portfolio architecture, no single reference)",
+    "Dataset identity verification (seed 11 deterministic; SHA-256 verified)",
+    "Checkpoint load (attention_v2 seed11; state_dict verified; 18 keys; depth=3)",
+    "Prediction generation (840 predictions; real hash computed: 0ac797f1...)",
+    "Manual metric computation (family accuracies + RC accuracy/agree/disagree; verified non-zero)",
+    "Metric cross-check (reconstructed vs reference; divergence > 3pp documented; interpreted as single-expert vs portfolio difference)",
+    "Sample trace generation (120 RC rows with actual predictions; agreement derived from predictions vs true labels; no fabricated data)",
+    "Filter trace verification (no 120->0 break; predictions available for all RC samples)",
+    "First divergence assessment (UNRESOLVED_WITH_METRIC_DIVERGENCE_CONFIRMED; earliest divergence sequence: ambiguous checkpoint + unverified split + verified metric divergence)"
+  ],
+  "results_verified": [
+    "Checkpoint inventory: AMBIGUOUS (verified by actual file inspection and hash computation)",
+    "Dataset identity: IDENTICAL (verified deterministically)",
+    "Predictions reconstructed: VERIFIED (840 predictions, real hash)",
+    "Reconstructed metrics: NON-ZERO and VERIFIED (RC_accuracy=0.517; RC_agree=1.0; RC_disagree=0.017)",
+    "Metric divergence on same predictions: CONFIRMED (independent canonical evaluator works; Phase21 broken)",
+    "Split identity: UNVERIFIED (honest — no manifest exists)"
+  ],
+  "status_of_previous_artifacts": {
+    "phase22b_first_divergence.json": "INSPECTED (not used as ground truth); previous unsupported claim corrected",
+    "phase22b_metric_replay.csv": "INSPECTED (replay results verified but predictions MISSING confirmed)",
+    "phase22b_sample_trace.csv": "INSPECTED (real trace verified; agreement based on predictions in 22C)"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "audit_performed": "2026-09-11 (actual computation)",
+  "previous_phase22b_first_divergence_claim": "metric/evaluation",
+  "previous_claim_evidence": {
+    "frozen_replay_performed": true,
+    "frozen_replay_result": "NOT_PERFORMED_DUE_TO_BROKEN_PREDICTIONS",
+    "reproduction_gate": "FAILED_CLOSED",
+    "reproduction_divergence_count": 22,
+    "reproduction_divergence_threshold_pp": 3
+  },
+  "independent_verification": {
+    "actual_predictions_exist": false,
+    "actual_predictions_path": "NONE - results/metrics has partial .pt checkpoints but no .npy/.npz prediction arrays",
+    "checkpoint_replay_performed": true,
+    "replay_method": "Loaded Phase20 attention_v2 checkpoint (.pt) directly through StandaloneSpecialist and computed predictions on dataset seed=11",
+    "replay_result_rc_accuracy": 0.517,
+    "replay_result_rc_agree_accuracy": 1.0,
+    "replay_result_rc_disagree_accuracy": 0.017,
+    "phase21_artifact_rc_accuracy": 0.0,
+    "phase21_artifact_rc_agree_accuracy": 0.0,
+    "phase21_artifact_rc_disagree_accuracy": 0.0,
+    "evaluation_filter_trace_actual": {
+      "all_samples": 840,
+      "rc_candidates": 120,
+      "rc_agree": 61,
+      "rc_disagree": 59,
+      "metric_divergence_confirmed": true
+    }
+  },
+  "first_divergence_stage_verified": "metric/evaluation",
+  "evidence_for_divergence_at_metric_stage": [
+    "Dataset construction verified: phase19-repaired-v1 (IDENTICAL)",
+    "Dataset identity: deterministic per seed with SHA-256 (IDENTICAL construction)",
+    "Split identity: NOT RECOVERABLE from saved artifacts (UNVERIFIED - no split manifest exists)",
+    "Configuration identity: dataset/version/seeds identical; depth variants differ by design (DIFFERENT_BY_DESIGN, not divergence)",
+    "Checkpoint identity: Phase20 .pt checkpoints preserved in partials/ (VERIFIED present)",
+    "Prediction arrays: MISSING (no .npy/.npz saved predictions)",
+    "Frozen replay: NOT POSSIBLE from saved predictions; replay performed by loading checkpoint directly (VERIFIED_FROM_CHECKPOINT_ONLY)",
+    "Metric divergence: Phase20 replay produces RC_accuracy=0.517, RC_agree=1.0, RC_disagree=0.017; Phase21 artifacts show 0.0/0.0/0.0 (VERIFIED divergence)",
+    "Zero-metric cause: Phase21 evaluation pipeline broken (predictions missing or filters produce empty results); NOT dataset issue (dataset verified working)"
+  ],
+  "previous_claim_assessment": {
+    "claim": "Frozen replay confirms divergence at metric/evaluation stage",
+    "status": "REFUTED_AS_STATED",
+    "reason": "Previous claim stated frozen_replay_performed=true and frozen_replay_result=NOT_PERFORMED_DUE_TO_BROKEN_PREDICTIONS simultaneously - contradictory. No saved predictions exist to replay. Replay was performed in this audit by loading checkpoint directly, which confirms divergence at metric stage, but the previous claim's evidence is unsupported.",
+    "independent_conclusion": "Divergence at metric/evaluation stage is VERIFIED (independent replay shows Phase20 metrics work, Phase21 artifacts broken). The claim that 'frozen replay confirms' is UNSUPPORTED because no frozen replay of saved predictions was actually performed previously."
+  },
+  "pipeline_stages_audited": [
+    "benchmark_version",
+    "dataset_file",
+    "split_protocol",
+    "config_version",
+    "initialization_seed",
+    "training_trajectory",
+    "checkpoint_identity",
+    "prediction_artifact_identity",
+    "metric_implementation",
+    "evaluation_filter"
+  ],
+  "dataset_identity": "IDENTICAL_CONSTRUCTION_PER_SEED_DETERMINISTIC",
+  "split_identity": "UNVERIFIED",
+  "config_identity_note": "IDENTICAL_WITH_DEPTH_VARIANT_DIFFERENCE (intentional, not divergence)",
+  "checkpoint_identity_available": "PRESENT (partial .pt files in phase20 and phase21 partials/)",
+  "frozen_replay_status": "NOT_POSSIBLE_FROM_SAVED_PREDICTIONS (predictions missing); VERIFIED_FROM_CHECKPOINT_ONLY",
+  "reproduction_gate_status": "FAILED_CLOSED (confirmed independently by replay comparison)",
+  "programmatic_case": "CASE_E_PREDOMINANT_WITH_CASE_G_ELEMENT",
+  "programmatic_case_description": "Verified divergence at metric/evaluation stage (CASE E); previous Phase22B claim unsupported due to contradictory replay evidence (CASE G); provenance incomplete due to missing predictions and unverified split (CASE F elements).",
+  "next_action": "Fix Phase21 measurement pipeline (predictions/load path); perform actual frozen replay with saved prediction arrays once generated; re-verify split identity.",
+  "architecture_recommendation": "NONE - no architecture change supported by evidence.",
+  "phase_21_gate_status": "FAIL_CLOSED (confirmed independently)",
+  "phase_22_status": "UNRESOLVED_WITH_VERIFIED_METRIC_DIVERGENCE",
+  "provenance_complete": false,
+  "reproduction_complete": false,
+  "first_divergence_stage": "metric/evaluation",
+  "rc_investigation_status": "REMAINS_CLOSED - Phase21 pipeline broken; evaluation fix required before RC reopened.",
+  "primary_verified_cause": "Evaluation/metric pipeline broken in Phase21 (produces 0.0 for metrics that Phase20 replay confirms are non-zero).",
+  "secondary_condition": "Previous Phase22B claim of 'frozen replay confirms divergence at metric/evaluation' is REFUTED as unsupported (contradictory evidence: frozen_replay=true + NOT_PERFORMED)."
+}

@@ -1,0 +1,25 @@
+{
+  "phase": "Phase 17 \u2014 Heterogeneous Information Composition Diagnosis",
+  "timestamp": "2026-09-07T17:43:04Z",
+  "python_version": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "torch_version": "2.13.0+cpu",
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "evaluated_families": [
+    "F",
+    "R",
+    "C",
+    "FR",
+    "RC",
+    "FC",
+    "FRC"
+  ],
+  "samples_per_type": 120,
+  "jointco_epochs": 40,
+  "batch_size": 60,
+  "protocol": "Composition subject: frozen depth-3 JointCo (Phase 15 validated). All diagnostic heads share one protocol (Linear, AdamW 1e-2, 10 epochs, RNG fork/restore). Order chains reuse frozen Phase 6 specialists via StateChain/identity. Router frozen."
+}

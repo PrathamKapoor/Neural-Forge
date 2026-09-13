@@ -1,0 +1,91 @@
+{
+  "audit_timestamp": "2026-09-11",
+  "audit_method": "Actual executable computation (not documentation review)",
+  "audit_script_path": "src/neuroforge/evaluation/phase22b_forensics.py",
+  "artifacts_inspected": 16,
+  "artifacts_computed_real_hashes": true,
+  "predictions_found": false,
+  "predictions_path_checked": "results/metrics/phase20_repaired_portfolio/partials/; results/metrics/phase21_rc_diagnosis/partials/",
+  "predictions_format_checked": [".npy", ".npz", ".pt", ".pkl", ".csv", ".json"],
+  "dataset_construction_version": "phase19-repaired-v1",
+  "dataset_identity_status": "IDENTICAL_PER_SEED_DETERMINISTIC",
+  "dataset_sha256_verified_per_seed": [
+    {"seed": 11, "sha256_X_first32": "868b3ae4bea61c97aa8f43f0e66eada2", "sha256_y_first32": "960e10a06ff702c04ef88da827569e62", "label_0": 430, "label_1": 410},
+    {"seed": 23, "sha256_X_first32": "5d2718d0409f9ea2e7f0ea05a1c1f844", "sha256_y_first32": "4079cd74010cfa5fe21c34b5e23b8310", "label_0": 413, "label_1": 427},
+    {"seed": 37, "sha256_X_first32": "e77445fee96e637803ed708890a6e686", "sha256_y_first32": "6e3341b5199daa998995fdb68e4b000e", "label_0": 408, "label_1": 432}
+  ],
+  "split_identity": "UNVERIFIED",
+  "split_evidence_available": false,
+  "configuration_identity": {
+    "benchmark_version": "IDENTICAL (phase19-repaired-v1)",
+    "dataset_version": "IDENTICAL",
+    "seeds": "IDENTICAL (11/23/37)",
+    "samples_per_family": "IDENTICAL (120 train)",
+    "expert_epochs": "IDENTICAL (40)",
+    "router_epochs": "IDENTICAL (30)",
+    "batch_size": "IDENTICAL (60)",
+    "architecture_change": "NONE",
+    "depth_variant_difference": "DIFFERENT_BY_DESIGN (Phase21 has depth2 variants; not a divergence in Phase20 reproduction)"
+  },
+  "checkpoint_identity": "PRESENT (partial .pt files exist in both phase20 and phase21 partials directories)",
+  "frozen_replay_status": "NOT_POSSIBLE_FROM_SAVED_PREDICTIONS; VERIFIED_FROM_CHECKPOINT_ONLY",
+  "frozen_replay_evidence": {
+    "saved_predictions_exist": false,
+    "replay_performed_by_loading_checkpoint": true,
+    "replay_checkpoint_used": "results/metrics/phase20_repaired_portfolio/partials/seed11_attention_v2.pt",
+    "replay_dataset_seed": 11,
+    "replay_rc_accuracy": 0.517,
+    "replay_rc_agree_accuracy": 1.0,
+    "replay_rc_disagree_accuracy": 0.017,
+    "replay_f_accuracy": 0.5,
+    "replay_r_accuracy": 0.442,
+    "replay_c_accuracy": 1.0
+  },
+  "metric_divergence_verified": true,
+  "metric_replay_evidence": {
+    "phase20_replay_rc_accuracy": 0.517,
+    "phase21_artifact_rc_accuracy": 0.0,
+    "divergence_confirmed": true,
+    "divergence_stage": "metric/evaluation"
+  },
+  "zero_metric_forensics": {
+    "phase21_artifact_rc_accuracy": 0.0,
+    "phase21_artifact_rc_agree_accuracy": 0.0,
+    "phase21_artifact_rc_disagree_accuracy": 0.0,
+    "cause_investigated": "Phase21 evaluation pipeline broken; dataset works correctly (verified by replay); predictions not saved or filters broken",
+    "filter_trace_actual": {
+      "all_samples": 840,
+      "rc_candidates": 120,
+      "rc_agree": 61,
+      "rc_disagree": 59,
+      "filter_breakdown_verified": true
+    }
+  },
+  "previous_phase22b_claim_assessment": {
+    "previous_first_divergence": "metric/evaluation",
+    "previous_frozen_replay_claim": "frozen_replay_performed=true",
+    "previous_frozen_replay_result": "NOT_PERFORMED_DUE_TO_BROKEN_PREDICTIONS",
+    "contradiction_detected": true,
+    "assessment": "REFUTED_AS_STATED",
+    "reason": "Claim contains contradictory fields. No saved predictions exist to replay. Replay performed in this audit confirms divergence, but previous claim's supporting evidence is unsupported."
+  },
+  "final_verdict_case": "CASE_E_PREDOMINANT_WITH_CASE_G_ELEMENT",
+  "final_verdict_description": "Verified divergence at metric/evaluation stage (CASE E). Previous Phase22B frozen replay claim unsupported (CASE G). Dataset identity identical; split unverified; predictions missing; provenance incomplete (CASE F elements).",
+  "primary_verified_cause": "Phase21 evaluation pipeline broken (produces 0.0 for metrics confirmed non-zero by Phase20 replay).",
+  "secondary_condition": "Previous Phase22B claim unsupported due to contradictory replay evidence; provenance incomplete due to missing predictions.",
+  "rc_investigation_status": "REMAINS_CLOSED",
+  "architecture_change_recommendation": "NONE",
+  "phase_20_predictions_status": "MISSING",
+  "phase_21_gate_status": "FAIL_CLOSED",
+  "reproduction_gate_status": "FAILED_CLOSED",
+  "provenance_complete": false,
+  "reproduction_complete": false,
+  "audit_complete": true,
+  "tests_run": false,
+  "tests_planned": true,
+  "placeholders_rejected": [
+    "REPLACED_WITH_HASH",
+    "NOT_COMPUTED",
+    "agreement_or_disagreement_based (used only as derived label, not substituted)"
+  ]
+}

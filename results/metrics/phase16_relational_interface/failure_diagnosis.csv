@@ -1,0 +1,10 @@
+category,failed,criterion,observed
+input_mismatch,False,joint vs native input shapes differ,shapes_equal=True
+computation_gap,True,graph-on-joint R gain <= 0pp over embedded,-9.2pp
+coadaptation_suppression,False,rel-focused training >2pp worse than joint (suppression inverted),-1.7pp
+pre_computation_loss,True,pre-relational probe < 65%,57.2%
+post_computation_loss,False,post-fusion probe >=5pp below post-relational,post 85.0% vs fusion 83.9%
+compositional_transfer_failure,True,R gain >= 2pp but RC and FRC gains < 1pp,"R +5.0pp, RC +0.3pp, FRC -0.6pp"
+seed_instability,True,any R seed-SD >= 5pp,trained/baseline; trained/rel_focused; trained/rel_first
+gradient_starvation,False,relational grad share < 5% of total,6.0%
+latency_regression,True,candidate latency > 1.5x baseline,1.86x

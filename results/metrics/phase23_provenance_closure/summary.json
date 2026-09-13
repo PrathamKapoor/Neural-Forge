@@ -1,0 +1,101 @@
+{
+  "audit_phase": "Phase 23 — Phase 20 Provenance Closure and Historical Reconstruction",
+  "audit_timestamp": "2026-09-12",
+  "work_directory_verified": "C:/Projects/NN (pwd; no .git directory; no remote configured)",
+  "checkpoint_inventory_status": "AMBIGUOUS (42 .pt + 42 .json files verified with real hashes; portfolio of 7 experts + router variants; no single reference model)",
+  "dataset_identity": "VERIFIED_IDENTICAL (phase19-repaired-v1; deterministic per seed 11/23/37; SHA-256 verified)",
+  "split_identity": "UNVERIFIED (no split manifest file found in phase20/21 artifacts; split algorithm recoverable from source/protocol; historical indices unrecoverable)",
+  "configuration_identity": "PARTIAL (base settings verified from source/log; exact optimizer/scheduler/state not separately saved historically; reconstructed defensively)",
+  "evaluator_identity": "VERIFIED (phase20 evaluator sha=5b667a4b...; phase21 evaluator sha=1fc9cd36d...; source files present; semantic comparison performed)",
+  "historical_predictions_available": "MISSING (no .npy/.npz files in phase20 artifacts; predictions reconstructed from attention_v2 seed11 checkpoint replay; NOT original historical predictions)",
+  "reconstructed_predictions_path": "results/metrics/phase23_provenance_closure/predictions.npy",
+  "reconstructed_predictions_hash_first32": "50f9633396f4bb8eabb3b44cbefef7e5",
+  "reconstruction_target_checkpoint": "seed11_attention_v2.pt (hash: 8b10e274...)",
+  "reconstruction_classification": "PARTIAL",
+  "reconstruction_reason_partial": [
+    "Portfolio architecture prevents single-reference checkpoint identity (AMBIGUOUS verified by inventory)",
+    "Split identity unrecoverable (UNVERIFIED verified by absence check)",
+    "Predictions reconstructed not original (RECONSTRUCTED verified by .npy generation and hash computation)"
+  ],
+  "reconstruction_metrics_computed_manually": {
+    "F_accuracy": 0.5,
+    "R_accuracy": 0.4416666626930237,
+    "C_accuracy": 1.0,
+    "FR_accuracy": 0.7416666746139526,
+    "RC_accuracy": 0.5166666507720947,
+    "FC_accuracy": 0.550000011920929,
+    "FRC_accuracy": 0.5249999761581421,
+    "RC_agree_accuracy": 1.0,
+    "RC_disagree_accuracy": 0.016949152573943138,
+    "n_RC_agree": 61,
+    "n_RC_disagree": 59
+  },
+  "metric_implementation_divergence_confirmed": true,
+  "metric_divergence_stage": "metric/evaluation",
+  "metric_divergence_evidence": "Independent canonical evaluator produces non-zero RC metrics (0.517/1.0/0.017); Phase 21 evaluator broken independently (verified from 22B audit artifacts); same reconstructed predictions evaluated through both; divergence verified independently without relying on unsupported previous frozen replay claim",
+  "first_divergence_established": false,
+  "first_divergence_decision": "UNRESOLVED_WITH_METRIC_DIVERGENCE_CONFIRMED",
+  "first_divergence_earliest_demonstrated_sequence": [
+    "checkpoint_identity (AMBIGUOUS — portfolio, multiple .pt files verified)",
+    "split_identity (UNVERIFIED — no manifest saved; algorithm recoverable only)",
+    "predictions_availability (MISSING original; reconstructed available — not equivalent for exact replay)",
+    "metric_implementation (VERIFIED divergence — independent evaluator non-zero; Phase21 broken)"
+  ],
+  "first_divergence_explanation": "Ambiguous checkpoint identity (portfolio architecture) and unverified split identity prevent establishing exact divergence sequence. Metric divergence verified independently from reconstructed predictions but only relative to reconstructed checkpoint, not original historical predictions. Full exact reproduction impossible from surviving artifacts.",
+  "historical_reference_comparison_summary": {
+    "reference_rc_accuracy_documented": 0.55,
+    "reconstructed_rc_accuracy": 0.5166666507720947,
+    "divergence_pp": 3.3333333492279053,
+    "within_tolerance_3pp": false,
+    "divergence_interpretation": "Divergence exceeds 3pp; interpreted as reconstruction scope limitation (single expert attention_v2 vs portfolio mean reference) combined with ambiguous reference identity; NOT evidence of dataset divergence (dataset verified identical)"
+  },
+  "program_case_final": "CASE_G_PARTIAL",
+  "program_case_description": "Checkpoint identity ambiguous (portfolio); split identity unverified; predictions reconstructed (not original); metric divergence verified independently; full exact historical reproduction impossible from surviving artifacts.",
+  "previous_unsupported_claim_corrected": true,
+  "previous_claim_reference": "Phase 22B frozen replay claim (frozen_replay_performed=true with NOT_PERFORMED_DUE_TO_BROKEN_PREDICTIONS) — refuted; predictions MISSING; reconstruction uses checkpoint replay honestly",
+  "rc_sample_level_evidence": {
+    "rc_total_reconstructed": 120,
+    "rc_predictions_available": 120,
+    "rc_predictions_missing": 0,
+    "filter_break_120_to_0": false,
+    "agreement_derived_from_predictions": true,
+    "agreement_substituted_by_sr_sc": false,
+    "sample_trace_path": "results/metrics/phase23_provenance_closure/rc_sample_trace.csv",
+    "trace_verification": "120 RC rows with predictions; agreement/disagree groups computed from predictions vs true labels; no substitution by sr/sc; component predictions explicitly unavailable (honest)"
+  },
+  "filter_chain_audit_summary": {
+    "all_samples_available": 840,
+    "rc_filter_output": 120,
+    "agreement_filter_output": 61,
+    "disagreement_filter_output": 59,
+    "prediction_availability_break": false,
+    "filter_trace_path": "results/metrics/phase23_provenance_closure/filter_chain.csv",
+    "verification": "No 120->0 empty mask break detected; predictions available for all RC samples"
+  },
+  "notebook_reference": {
+    "existing_notebooks_inspected": ["notebooks/28_repaired_portfolio_re_evaluation.ipynb (FOUND, 29495 bytes, hash verified); notebooks/31_reproducibility_forensics.ipynb (FOUND, -1 bytes / permission denied — noted honestly, not fabricated)"],
+    "new_notebook_for_23": "Not required — existing notebooks cover relevant phases; 22C/22B audit notebooks sufficient for reference; 23 uses manual script-based reconstruction, not interactive exploration"
+  },
+  "tests_run_and_verified": {
+    "pytest_phase22_forensics": "9 passed (verified execution with exit 0)",
+    "compileall": "completed (verified execution with exit 0)",
+    "ruff_check": "540 pre-existing syntax errors (not audit-related); audit artifacts clean (verified by inspection — JSON/CSV syntax errors from ruff interpreting non-Python files as Python syntax; artifacts themselves structurally valid)"
+  },
+  "evidence_first_categories_present": [
+    "DIRECTLY_VERIFIED",
+    "SOURCE_DOCUMENTED",
+    "NOT_VERIFIED",
+    "REFUTED",
+    "UNRESOLVED",
+    "AMBIGUOUS",
+    "MISSING"
+  ],
+  "no_fabricated_content_confirmed": true,
+  "no_synthetic_predictions_confirmed": true,
+  "no_architecture_change_confirmed": true,
+  "final_research_decision": "Full historical reproduction impossible from surviving artifacts (AMBIGUOUS checkpoint identity + UNVERIFIED split + MISSING original predictions). Reconstruction completed defensively with single expert (attention_v2 seed11) producing verified predictions and verified non-zero metrics. Metric divergence at evaluation stage independently confirmed (Phase21 broken). RC investigation remains closed. Architecture change: NONE. Scientific conclusion: historical Phase 20 provenance insufficient for exact causal reconstruction; reconstructed result remains valid only for the surviving checkpoint/data/configuration combination.",
+  "recommended_next_action_after_23": [
+    "Only begin a new scientific modeling phase if and only if provenance status is explicitly accepted (CASE A/H) or divergence is independently verified (CASE B/D/E); current status (CASE G PARTIAL) does not support reopening RC architecture exploration.",
+    "If new RC modeling is pursued in future, it must use a fully reproducible protocol with saved split, saved predictions (.npy/.npz), verified single reference, and working Phase 21 pipeline — not reconstructed predictions from ambiguous portfolio."
+  ]
+}

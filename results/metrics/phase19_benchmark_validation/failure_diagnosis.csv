@@ -1,0 +1,12 @@
+seed,category,failed,criterion,observed
+0,bug_not_reproduced,False,original RC/FRC R-align < 60% with R ≥ 90%,"RC 0.481, FRC 0.556"
+0,carrier_unobservable_RC,False,repaired R-align on RC < 90%,0.972
+0,carrier_unobservable_FRC,False,repaired R-align on FRC < 90%,0.983
+0,gate_G1_observability_failed,False,G1_observability must pass,all component carriers observable
+0,gate_G2_no_leakage_failed,False,G2_no_leakage must pass,max single-channel label probe 0.744 (bar 0.9)
+0,gate_G3_no_family_leakage_failed,False,G3_no_family_leakage must pass,family-probe delta repaired−original -0.005 (tol 0.05)
+0,gate_G4_invariance_failed,False,G4_invariance must pass,"C retrieval perm drop +0.000; R-family markvar delta repaired -0.158 vs original -0.183 (RC-family deltas are floor effects, reported in CSV); perm R-drop repaired +0.483 vs original +0.467"
+0,gate_G5_counterfactual_failed,False,G5_counterfactual must pass,"R-valid 0.969, C-valid 0.972 (bar 0.9)"
+0,gate_G6_semantics_failed,False,G6_semantics must pass,"agree 61/120, disagree 59; FRC ties absent: True"
+0,gate_G7_learnability_failed,False,G7_learnability must pass,"rule_RC 0.967; lagprobe_R 0.895; mlp R/RC/FRC [0.467, 0.483, 0.733] (context); stat_R 0.975"
+0,gate_G8_reproducibility_failed,False,G8_reproducibility must pass,exact tensor equality across rebuilds

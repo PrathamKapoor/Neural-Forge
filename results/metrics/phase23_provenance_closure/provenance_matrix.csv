@@ -1,0 +1,12 @@
+Component,Required,Found,Exact_Identity,Hash_Status,Status,Notes
+Dataset,yes,FOUND,IDENTICAL,VERIFIED,Dataset identity verified (phase19-repaired-v1 deterministic; SHA-256 per seed),No split manifest; dataset construction verified only
+Train_Split,yes,MISSING,UNVERIFIED,N/A,UNVERIFIED,No saved split file in phase20 artifacts; split algorithm inferred but historical indices unrecoverable
+Validation_Split,yes,MISSING,UNVERIFIED,N/A,UNVERIFIED,Same as train split — no manifest saved
+Checkpoint,yes,FOUND,AMBIGUOUS,VERIFIED,AMBIGUOUS,Multiple .pt files (attention, attention_v2, depth3, graph, joint, joint_co, mlp, router); best RC = attention_v2 seed11 selected defensively; not a single reference
+Model_Config,yes,PARTIAL,PARTIAL,VERIFIED,PARTIAL,Architecture/hidden/depth verified from checkpoint state; full config file not separately saved historically; reconstructed defensively
+Training_Config,yes,PARTIAL,PARTIAL,VERIFIED,PARTIAL,Epoch/batch/version inferred from docs/log; exact optimizer/scheduler state not saved separately
+Evaluation_Config,yes,FOUND,IDENTICAL,VERIFIED,IDENTICAL,Evaluator source files verified present (sha=5b667a4..., 1fc9cd36...); metric logic recoverable
+Prediction_Artifact,yes,MISSING,MISSING,N/A,MISSING,No .npy/.npz predictions saved; predictions reconstructed from checkpoint replay (.npy generated in phase23); NOT original historical predictions
+Seed,yes,PARTIAL,VERIFIED,N/A,VERIFIED,Dataset seeds 11/23/37 verified deterministically; exact historical evaluation seed not independently recoverable beyond dataset seed
+Preprocessing,yes,FOUND,IDENTICAL,VERIFIED,IDENTICAL,Dataset module verifies repaired construction (RELATIONAL_CHANNEL=5; repair verified in phase19)
+Evaluator_Version,yes,FOUND,VERIFIED,VERIFIED,VERIFIED,Phase20 and Phase21 evaluator source files verified with real hashes; semantic comparison performed

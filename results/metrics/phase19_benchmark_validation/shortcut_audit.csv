@@ -1,0 +1,13 @@
+seed,metric,value
+11,max_single_channel_label_probe,0.7666666507720947
+11,family_probe_repaired,0.17142857611179352
+11,family_probe_original,0.13571429252624512
+11,family_probe_delta,0.0357142835855484
+23,max_single_channel_label_probe,0.7666666507720947
+23,family_probe_repaired,0.18571428954601288
+23,family_probe_original,0.18333333730697632
+23,family_probe_delta,0.00238095223903656
+37,max_single_channel_label_probe,0.699999988079071
+37,family_probe_repaired,0.17142857611179352
+37,family_probe_original,0.22380952537059784
+37,family_probe_delta,-0.05238094925880432

@@ -1,0 +1,25 @@
+seed,category,status,evidence
+11,EXPERT_CAPABILITY,PARTIALLY SUPPORTED,Oracle ceiling on mixed = 66.7% essentially equal to Phase 10 single-expert ceiling = 66.7%; no multi-expert combination materially exceeds the best single expert.
+11,REPRESENTATION_TRANSFER,SUPPORTED,Final-target decodability at 'after_blocks' is high (max 65.6%); intermediate state contains sufficient task information.
+11,AGGREGATION,SUPPORTED,Aggregation method spread = 18.8% > 5pp; aggregation choice matters.
+11,COMPOSITION_ORDER,SUPPORTED,"Order differs > 5pp in 9/21 (mixed family, order) pairs."
+11,ROUTER_SELECTION,SUPPORTED,Mean mixed-family useful-composition recovery = 36.7% is low; router selection is a bottleneck.
+11,BENCHMARK_SEMANTICS,SUPPORTED,"9/9 (family, component) pairs show that removing the component flips the target > 10% of the time; the mixed benchmark genuinely requires multi-component reasoning."
+11,ROUTING_REPRESENTATION,PARTIALLY SUPPORTED,Router representation decodes 7-family at 49.3% (chance = 14.3%); some signal.
+11,COMPUTE_ECONOMICS,NOT TESTED,Compute economics requires full accuracy comparison across policies.
+23,EXPERT_CAPABILITY,PARTIALLY SUPPORTED,Oracle ceiling on mixed = 66.5% essentially equal to Phase 10 single-expert ceiling = 66.5%; no multi-expert combination materially exceeds the best single expert.
+23,REPRESENTATION_TRANSFER,SUPPORTED,Final-target decodability at 'after_blocks' is high (max 66.5%); intermediate state contains sufficient task information.
+23,AGGREGATION,SUPPORTED,Aggregation method spread = 19.6% > 5pp; aggregation choice matters.
+23,COMPOSITION_ORDER,SUPPORTED,"Order differs > 5pp in 11/21 (mixed family, order) pairs."
+23,ROUTER_SELECTION,PARTIALLY SUPPORTED,Mean mixed-family useful-composition recovery = 43.8%; partial.
+23,BENCHMARK_SEMANTICS,SUPPORTED,"9/9 (family, component) pairs show that removing the component flips the target > 10% of the time; the mixed benchmark genuinely requires multi-component reasoning."
+23,ROUTING_REPRESENTATION,PARTIALLY SUPPORTED,Router representation decodes 7-family at 48.0% (chance = 14.3%); some signal.
+23,COMPUTE_ECONOMICS,NOT TESTED,Compute economics requires full accuracy comparison across policies.
+37,EXPERT_CAPABILITY,PARTIALLY SUPPORTED,Oracle ceiling on mixed = 66.2% essentially equal to Phase 10 single-expert ceiling = 66.0%; no multi-expert combination materially exceeds the best single expert.
+37,REPRESENTATION_TRANSFER,SUPPORTED,Final-target decodability at 'after_blocks' is high (max 66.3%); intermediate state contains sufficient task information.
+37,AGGREGATION,SUPPORTED,Aggregation method spread = 20.1% > 5pp; aggregation choice matters.
+37,COMPOSITION_ORDER,SUPPORTED,"Order differs > 5pp in 10/21 (mixed family, order) pairs."
+37,ROUTER_SELECTION,PARTIALLY SUPPORTED,Mean mixed-family useful-composition recovery = 64.4%; partial.
+37,BENCHMARK_SEMANTICS,SUPPORTED,"9/9 (family, component) pairs show that removing the component flips the target > 10% of the time; the mixed benchmark genuinely requires multi-component reasoning."
+37,ROUTING_REPRESENTATION,PARTIALLY SUPPORTED,Router representation decodes 7-family at 48.9% (chance = 14.3%); some signal.
+37,COMPUTE_ECONOMICS,NOT TESTED,Compute economics requires full accuracy comparison across policies.

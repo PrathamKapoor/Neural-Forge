@@ -1,0 +1,8 @@
+attribute,phase20_value,phase21_value,status
+benchmark_version,phase19-repaired-v1,phase19-repaired-v1,IDENTICAL
+relational_channel,5,5,IDENTICAL
+construction_order,C_first_F_after_R_ch5,C_first_F_after_R_ch5,IDENTICAL
+dataset_file_version,phase9_mixed_repaired.py,phase9_mixed_repaired.py,IDENTICAL
+exact_train_X_hash,NOT COMPUTED (artifact audit only),NOT COMPUTED,NOT VERIFIED
+exact_val_X_hash,NOT COMPUTED,NOT COMPUTED,NOT VERIFIED
+exact_test_X_hash,NOT COMPUTED,NOT COMPUTED,NOT VERIFIED

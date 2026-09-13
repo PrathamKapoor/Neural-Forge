@@ -1,0 +1,11 @@
+stage,description,rows_before,rows_after,filter_type,evidence_path,status,details
+all_samples,reconstructed dataset (seed 11),840,840,none,reconstruction_config,reconstructed,Full dataset reconstructed from phase19-repaired-v1
+family_filter_all,all families present,840,840,none,reconstructed_predictions,verified,All 7 families present (F,R,C,FR,RC,FC,FRC)
+family_filter_RC,filter to RC family,840,120,index filter,reconstructed_predictions,verified,120 RC rows reconstructed
+agreement_filter,agree cases (sr==sc),120,61,equality filter,reconstructed_predictions,verified,61 agree rows verified (matches dataset construction)
+disagreement_filter,disagree cases (sr!=sc),120,59,equality filter,reconstructed_predictions,verified,59 disagree rows verified
+prediction_availability,checkpoint predictions available,120,120,checkpoint_loaded,reconstructed_predictions,verified,All RC predictions reconstructed from loaded attention_v2 checkpoint
+metric_rc_accuracy,reconstructed RC accuracy from predictions,120,1 value,reconstructed_predictions,verified,RC_accuracy=0.517 (reconstructed)
+metric_rc_agree_accuracy,reconstructed agree accuracy,61,1 value,reconstructed_predictions,verified,RC_agree_accuracy=1.0 (reconstructed)
+metric_rc_disagree_accuracy,reconstructed disagree accuracy,59,1 value,reconstructed_predictions,verified,RC_disagree_accuracy=0.017 (reconstructed)
+filter_break_check,no 120->0 break,reconstructed_predictions,N/A,N/A,reconstructed_predictions,verified,No empty mask; predictions available for all RC samples

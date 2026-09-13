@@ -1,0 +1,22 @@
+seed,family,router_accuracy,ceiling_accuracy,best_single_expert,failure_mode,description
+11,F,1.0,1.0,mlp,Success — Robust Generalization,Router achieves 100.0% >= 85.0% threshold.
+11,R,0.7833333611488342,0.7833333611488342,graph,Failure D — Single-Expert Compositional Limitation,Best single-expert ceiling is bounded at 78.3% < 85.0%. Task genuinely requires multi-expert composition.
+11,C,1.0,1.0,attention_v2,Success — Robust Generalization,Router achieves 100.0% >= 85.0% threshold.
+11,FR,0.6916666626930237,0.7416666746139526,mlp,Failure D — Single-Expert Compositional Limitation,Best single-expert ceiling is bounded at 74.2% < 85.0%. Task genuinely requires multi-expert composition.
+11,RC,0.5083333253860474,0.6000000238418579,graph,Failure D — Single-Expert Compositional Limitation,Best single-expert ceiling is bounded at 60.0% < 85.0%. Task genuinely requires multi-expert composition.
+11,FC,0.5,0.5166666507720947,graph,Failure A — Expert Incapability,No existing expert can solve the task (best single expert: 51.7% < 60%).
+11,FRC,0.8083333373069763,0.8083333373069763,attention_v2,Failure D — Single-Expert Compositional Limitation,Best single-expert ceiling is bounded at 80.8% < 85.0%. Task genuinely requires multi-expert composition.
+23,F,1.0,1.0,mlp,Success — Robust Generalization,Router achieves 100.0% >= 85.0% threshold.
+23,R,0.7833333611488342,0.7833333611488342,graph,Failure D — Single-Expert Compositional Limitation,Best single-expert ceiling is bounded at 78.3% < 85.0%. Task genuinely requires multi-expert composition.
+23,C,0.9916666746139526,0.9916666746139526,attention_v2,Success — Robust Generalization,Router achieves 99.2% >= 85.0% threshold.
+23,FR,0.6916666626930237,0.7333333492279053,mlp,Failure D — Single-Expert Compositional Limitation,Best single-expert ceiling is bounded at 73.3% < 85.0%. Task genuinely requires multi-expert composition.
+23,RC,0.5083333253860474,0.5583333373069763,graph,Failure A — Expert Incapability,No existing expert can solve the task (best single expert: 55.8% < 60%).
+23,FC,0.5166666507720947,0.5333333611488342,mlp,Failure A — Expert Incapability,No existing expert can solve the task (best single expert: 53.3% < 60%).
+23,FRC,0.8333333134651184,0.8333333134651184,attention_v2,Failure D — Single-Expert Compositional Limitation,Best single-expert ceiling is bounded at 83.3% < 85.0%. Task genuinely requires multi-expert composition.
+37,F,1.0,1.0,mlp,Success — Robust Generalization,Router achieves 100.0% >= 85.0% threshold.
+37,R,0.7333333492279053,0.7333333492279053,graph,Failure D — Single-Expert Compositional Limitation,Best single-expert ceiling is bounded at 73.3% < 85.0%. Task genuinely requires multi-expert composition.
+37,C,0.9916666746139526,1.0,attention_v2,Success — Robust Generalization,Router achieves 99.2% >= 85.0% threshold.
+37,FR,0.5,0.7749999761581421,mlp,Failure D — Single-Expert Compositional Limitation,Best single-expert ceiling is bounded at 77.5% < 85.0%. Task genuinely requires multi-expert composition.
+37,RC,0.5916666388511658,0.5916666388511658,attention_v2,Failure A — Expert Incapability,No existing expert can solve the task (best single expert: 59.2% < 60%).
+37,FC,0.5,0.5,mlp,Failure A — Expert Incapability,No existing expert can solve the task (best single expert: 50.0% < 60%).
+37,FRC,0.7749999761581421,0.7749999761581421,attention_v2,Failure D — Single-Expert Compositional Limitation,Best single-expert ceiling is bounded at 77.5% < 85.0%. Task genuinely requires multi-expert composition.

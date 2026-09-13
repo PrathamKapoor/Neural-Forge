@@ -1,0 +1,26 @@
+{
+  "phase": "Phase 19 \u2014 Mixed-Benchmark Construction Repair and Composition Revalidation",
+  "timestamp": "2026-09-07T20:01:23Z",
+  "python_version": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "torch_version": "2.13.0+cpu",
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "evaluated_families": [
+    "F",
+    "R",
+    "C",
+    "FR",
+    "RC",
+    "FC",
+    "FRC"
+  ],
+  "samples_per_type": 120,
+  "historical_version": "phase9-mixed-original",
+  "repaired_version": "phase19-repaired-v1",
+  "repair": "C\u2192F\u2192R(ch5) reorder: contextual block first, feature offsets after, relational carrier relocated to channel 5. Same RNG values, label algebra unchanged.",
+  "protocol": "Dataset-construction validation only. No expert retraining, no router work, no Phase 10-18 re-run."
+}

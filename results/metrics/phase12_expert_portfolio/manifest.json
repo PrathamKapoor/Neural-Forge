@@ -1,0 +1,53 @@
+{
+  "phase": "Phase 12 \u2014 Expert Portfolio Expansion and Compositional Capability",
+  "timestamp": "2026-09-07T02:24:02Z",
+  "python_version": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "torch_version": "2.13.0+cpu",
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "expert_portfolio_existing": [
+    "mlp",
+    "graph",
+    "attention",
+    "attention_v2"
+  ],
+  "expert_portfolio_expanded": [
+    "mlp",
+    "graph",
+    "attention",
+    "attention_v2",
+    "joint",
+    "control"
+  ],
+  "raw_flops": {
+    "mlp": 8928.0,
+    "graph": 8112.0,
+    "attention": 39168.0,
+    "attention_v2": 46296.0,
+    "joint": 14976.0
+  },
+  "router_flops": 1052.0,
+  "evaluated_families": [
+    "F",
+    "R",
+    "C",
+    "FR",
+    "RC",
+    "FC",
+    "FRC"
+  ],
+  "samples_per_type": 120,
+  "parameter_counts": {
+    "mlp": 3914,
+    "graph": 3866,
+    "attention": 3314,
+    "attention_v2": 3914,
+    "joint": 4493,
+    "control": 5114
+  },
+  "parameter_matching_gap": 0.1382150011128422
+}

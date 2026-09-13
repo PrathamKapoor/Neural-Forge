@@ -1,0 +1,1183 @@
+{
+  "per_seed": {
+    "11": {
+      "random": {
+        "route_accuracy": 0.3361110985279083,
+        "per_route_accuracy": {
+          "mlp": 0.30000001192092896,
+          "graph": 0.4000000059604645,
+          "attention": 0.3083333373069763
+        },
+        "confusion_matrix": [
+          [
+            36,
+            47,
+            37
+          ],
+          [
+            36,
+            48,
+            36
+          ],
+          [
+            36,
+            47,
+            37
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.30000001192092896,
+          "graph": 0.39444443583488464,
+          "attention": 0.3055555522441864
+        },
+        "prediction_accuracy": 0.6555555462837219,
+        "estimated_compute": 2.0055556297302246,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.0
+      },
+      "static_mlp": {
+        "route_accuracy": 0.3333333432674408,
+        "per_route_accuracy": {
+          "mlp": 1.0,
+          "graph": 0.0,
+          "attention": 0.0
+        },
+        "confusion_matrix": [
+          [
+            120,
+            0,
+            0
+          ],
+          [
+            120,
+            0,
+            0
+          ],
+          [
+            120,
+            0,
+            0
+          ]
+        ],
+        "utilization": {
+          "mlp": 1.0,
+          "graph": 0.0,
+          "attention": 0.0
+        },
+        "prediction_accuracy": 0.6777777671813965,
+        "estimated_compute": 1.0,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.0
+      },
+      "oracle": {
+        "route_accuracy": 1.0,
+        "per_route_accuracy": {
+          "mlp": 1.0,
+          "graph": 1.0,
+          "attention": 1.0
+        },
+        "confusion_matrix": [
+          [
+            120,
+            0,
+            0
+          ],
+          [
+            0,
+            120,
+            0
+          ],
+          [
+            0,
+            0,
+            120
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.3333333432674408,
+          "graph": 0.3333333432674408,
+          "attention": 0.3333333432674408
+        },
+        "prediction_accuracy": 1.0,
+        "estimated_compute": 2.0,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.0
+      },
+      "learned_natural_supervised_hard": {
+        "route_accuracy": 0.7611111402511597,
+        "per_route_accuracy": {
+          "mlp": 0.6499999761581421,
+          "graph": 1.0,
+          "attention": 0.6333333253860474
+        },
+        "confusion_matrix": [
+          [
+            78,
+            0,
+            42
+          ],
+          [
+            0,
+            120,
+            0
+          ],
+          [
+            41,
+            3,
+            76
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.3305555582046509,
+          "graph": 0.34166666865348816,
+          "attention": 0.32777777314186096
+        },
+        "prediction_accuracy": 0.8777777552604675,
+        "estimated_compute": 1.9972221851348877,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.5144000169821084
+      },
+      "learned_explicit_supervised_hard": {
+        "route_accuracy": 1.0,
+        "per_route_accuracy": {
+          "mlp": 1.0,
+          "graph": 1.0,
+          "attention": 1.0
+        },
+        "confusion_matrix": [
+          [
+            120,
+            0,
+            0
+          ],
+          [
+            0,
+            120,
+            0
+          ],
+          [
+            0,
+            0,
+            120
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.3333333432674408,
+          "graph": 0.3333333432674408,
+          "attention": 0.3333333432674408
+        },
+        "prediction_accuracy": 1.0,
+        "estimated_compute": 2.0,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.672199996188283
+      },
+      "learned_natural_indirect_soft": {
+        "route_accuracy": 0.7083333134651184,
+        "per_route_accuracy": {
+          "mlp": 0.625,
+          "graph": 0.9583333134651184,
+          "attention": 0.5416666865348816
+        },
+        "confusion_matrix": [
+          [
+            75,
+            0,
+            45
+          ],
+          [
+            0,
+            115,
+            5
+          ],
+          [
+            54,
+            1,
+            65
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.3583333194255829,
+          "graph": 0.3222222328186035,
+          "attention": 0.3194444477558136
+        },
+        "prediction_accuracy": 0.6666666865348816,
+        "estimated_compute": 1.9995113611221313,
+        "average_active_modules": 3.0,
+        "entropy": 1.087301254272461,
+        "router_batch_ms": 0.6282000103965402
+      },
+      "learned_natural_indirect_hard": {
+        "route_accuracy": 0.7083333134651184,
+        "per_route_accuracy": {
+          "mlp": 0.625,
+          "graph": 0.9583333134651184,
+          "attention": 0.5416666865348816
+        },
+        "confusion_matrix": [
+          [
+            75,
+            0,
+            45
+          ],
+          [
+            0,
+            115,
+            5
+          ],
+          [
+            54,
+            1,
+            65
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.3583333194255829,
+          "graph": 0.3222222328186035,
+          "attention": 0.3194444477558136
+        },
+        "prediction_accuracy": 0.8500000238418579,
+        "estimated_compute": 1.961111068725586,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.9244999964721501
+      },
+      "small_router_supervised": {
+        "route_accuracy": 0.7444444298744202,
+        "per_route_accuracy": {
+          "mlp": 0.6333333253860474,
+          "graph": 1.0,
+          "attention": 0.6000000238418579
+        },
+        "confusion_matrix": [
+          [
+            76,
+            1,
+            43
+          ],
+          [
+            0,
+            120,
+            0
+          ],
+          [
+            44,
+            4,
+            72
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.3333333432674408,
+          "graph": 0.3472222089767456,
+          "attention": 0.3194444477558136
+        },
+        "prediction_accuracy": 0.8694444298744202,
+        "estimated_compute": 1.9861111640930176,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.6612999713979661
+      },
+      "temperature_half_supervised": {
+        "route_accuracy": 0.7611111402511597,
+        "per_route_accuracy": {
+          "mlp": 0.6499999761581421,
+          "graph": 1.0,
+          "attention": 0.6333333253860474
+        },
+        "confusion_matrix": [
+          [
+            78,
+            0,
+            42
+          ],
+          [
+            0,
+            120,
+            0
+          ],
+          [
+            41,
+            3,
+            76
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.3305555582046509,
+          "graph": 0.34166666865348816,
+          "attention": 0.32777777314186096
+        },
+        "prediction_accuracy": 0.8777777552604675,
+        "estimated_compute": 1.9972221851348877,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.501000031363219
+      },
+      "compute_aware_indirect_hard": {
+        "route_accuracy": 0.7055555582046509,
+        "per_route_accuracy": {
+          "mlp": 0.7333333492279053,
+          "graph": 0.9833333492279053,
+          "attention": 0.4000000059604645
+        },
+        "confusion_matrix": [
+          [
+            88,
+            0,
+            32
+          ],
+          [
+            0,
+            118,
+            2
+          ],
+          [
+            72,
+            0,
+            48
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.4444444477558136,
+          "graph": 0.32777777314186096,
+          "attention": 0.22777777910232544
+        },
+        "prediction_accuracy": 0.8694444298744202,
+        "estimated_compute": 1.7833333015441895,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.5487999878823757
+      }
+    },
+    "23": {
+      "random": {
+        "route_accuracy": 0.31111112236976624,
+        "per_route_accuracy": {
+          "mlp": 0.2916666567325592,
+          "graph": 0.2750000059604645,
+          "attention": 0.36666667461395264
+        },
+        "confusion_matrix": [
+          [
+            35,
+            45,
+            40
+          ],
+          [
+            39,
+            33,
+            48
+          ],
+          [
+            43,
+            33,
+            44
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.32499998807907104,
+          "graph": 0.3083333373069763,
+          "attention": 0.36666667461395264
+        },
+        "prediction_accuracy": 0.6222222447395325,
+        "estimated_compute": 2.0416667461395264,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.0
+      },
+      "static_mlp": {
+        "route_accuracy": 0.3333333432674408,
+        "per_route_accuracy": {
+          "mlp": 1.0,
+          "graph": 0.0,
+          "attention": 0.0
+        },
+        "confusion_matrix": [
+          [
+            120,
+            0,
+            0
+          ],
+          [
+            120,
+            0,
+            0
+          ],
+          [
+            120,
+            0,
+            0
+          ]
+        ],
+        "utilization": {
+          "mlp": 1.0,
+          "graph": 0.0,
+          "attention": 0.0
+        },
+        "prediction_accuracy": 0.6694444417953491,
+        "estimated_compute": 1.0,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.0
+      },
+      "oracle": {
+        "route_accuracy": 1.0,
+        "per_route_accuracy": {
+          "mlp": 1.0,
+          "graph": 1.0,
+          "attention": 1.0
+        },
+        "confusion_matrix": [
+          [
+            120,
+            0,
+            0
+          ],
+          [
+            0,
+            120,
+            0
+          ],
+          [
+            0,
+            0,
+            120
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.3333333432674408,
+          "graph": 0.3333333432674408,
+          "attention": 0.3333333432674408
+        },
+        "prediction_accuracy": 1.0,
+        "estimated_compute": 2.0,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.0
+      },
+      "learned_natural_supervised_hard": {
+        "route_accuracy": 0.769444465637207,
+        "per_route_accuracy": {
+          "mlp": 0.6000000238418579,
+          "graph": 1.0,
+          "attention": 0.7083333134651184
+        },
+        "confusion_matrix": [
+          [
+            72,
+            1,
+            47
+          ],
+          [
+            0,
+            120,
+            0
+          ],
+          [
+            33,
+            2,
+            85
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.2916666567325592,
+          "graph": 0.34166666865348816,
+          "attention": 0.36666667461395264
+        },
+        "prediction_accuracy": 0.8666666746139526,
+        "estimated_compute": 2.075000047683716,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.6067000213079154
+      },
+      "learned_explicit_supervised_hard": {
+        "route_accuracy": 1.0,
+        "per_route_accuracy": {
+          "mlp": 1.0,
+          "graph": 1.0,
+          "attention": 1.0
+        },
+        "confusion_matrix": [
+          [
+            120,
+            0,
+            0
+          ],
+          [
+            0,
+            120,
+            0
+          ],
+          [
+            0,
+            0,
+            120
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.3333333432674408,
+          "graph": 0.3333333432674408,
+          "attention": 0.3333333432674408
+        },
+        "prediction_accuracy": 1.0,
+        "estimated_compute": 2.0,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.5132000078447163
+      },
+      "learned_natural_indirect_soft": {
+        "route_accuracy": 0.7138888835906982,
+        "per_route_accuracy": {
+          "mlp": 0.2083333283662796,
+          "graph": 1.0,
+          "attention": 0.9333333373069763
+        },
+        "confusion_matrix": [
+          [
+            25,
+            13,
+            82
+          ],
+          [
+            0,
+            120,
+            0
+          ],
+          [
+            0,
+            8,
+            112
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.0694444477558136,
+          "graph": 0.3916666805744171,
+          "attention": 0.5388888716697693
+        },
+        "prediction_accuracy": 0.6694444417953491,
+        "estimated_compute": 2.006964683532715,
+        "average_active_modules": 3.0,
+        "entropy": 0.9633877277374268,
+        "router_batch_ms": 0.4389999667182565
+      },
+      "learned_natural_indirect_hard": {
+        "route_accuracy": 0.7138888835906982,
+        "per_route_accuracy": {
+          "mlp": 0.2083333283662796,
+          "graph": 1.0,
+          "attention": 0.9333333373069763
+        },
+        "confusion_matrix": [
+          [
+            25,
+            13,
+            82
+          ],
+          [
+            0,
+            120,
+            0
+          ],
+          [
+            0,
+            8,
+            112
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.0694444477558136,
+          "graph": 0.3916666805744171,
+          "attention": 0.5388888716697693
+        },
+        "prediction_accuracy": 0.824999988079071,
+        "estimated_compute": 2.469444513320923,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.4440000047907233
+      },
+      "small_router_supervised": {
+        "route_accuracy": 0.7666666507720947,
+        "per_route_accuracy": {
+          "mlp": 0.49166667461395264,
+          "graph": 1.0,
+          "attention": 0.8083333373069763
+        },
+        "confusion_matrix": [
+          [
+            59,
+            4,
+            57
+          ],
+          [
+            0,
+            120,
+            0
+          ],
+          [
+            17,
+            6,
+            97
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.21111111342906952,
+          "graph": 0.3611111044883728,
+          "attention": 0.4277777671813965
+        },
+        "prediction_accuracy": 0.8638888597488403,
+        "estimated_compute": 2.2166666984558105,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.5080000264570117
+      },
+      "temperature_half_supervised": {
+        "route_accuracy": 0.769444465637207,
+        "per_route_accuracy": {
+          "mlp": 0.6000000238418579,
+          "graph": 1.0,
+          "attention": 0.7083333134651184
+        },
+        "confusion_matrix": [
+          [
+            72,
+            1,
+            47
+          ],
+          [
+            0,
+            120,
+            0
+          ],
+          [
+            33,
+            2,
+            85
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.2916666567325592,
+          "graph": 0.34166666865348816,
+          "attention": 0.36666667461395264
+        },
+        "prediction_accuracy": 0.8666666746139526,
+        "estimated_compute": 2.075000047683716,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.5197999998927116
+      },
+      "compute_aware_indirect_hard": {
+        "route_accuracy": 0.7166666388511658,
+        "per_route_accuracy": {
+          "mlp": 0.36666667461395264,
+          "graph": 0.9916666746139526,
+          "attention": 0.7916666865348816
+        },
+        "confusion_matrix": [
+          [
+            44,
+            8,
+            68
+          ],
+          [
+            0,
+            119,
+            1
+          ],
+          [
+            20,
+            5,
+            95
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.17777778208255768,
+          "graph": 0.36666667461395264,
+          "attention": 0.4555555582046509
+        },
+        "prediction_accuracy": 0.8305555582046509,
+        "estimated_compute": 2.277777671813965,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.5378999630920589
+      }
+    },
+    "37": {
+      "random": {
+        "route_accuracy": 0.3722222149372101,
+        "per_route_accuracy": {
+          "mlp": 0.3166666626930237,
+          "graph": 0.38333332538604736,
+          "attention": 0.4166666567325592
+        },
+        "confusion_matrix": [
+          [
+            38,
+            35,
+            47
+          ],
+          [
+            38,
+            46,
+            36
+          ],
+          [
+            36,
+            34,
+            50
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.31111112236976624,
+          "graph": 0.3194444477558136,
+          "attention": 0.36944442987442017
+        },
+        "prediction_accuracy": 0.6694444417953491,
+        "estimated_compute": 2.058333396911621,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.0
+      },
+      "static_mlp": {
+        "route_accuracy": 0.3333333432674408,
+        "per_route_accuracy": {
+          "mlp": 1.0,
+          "graph": 0.0,
+          "attention": 0.0
+        },
+        "confusion_matrix": [
+          [
+            120,
+            0,
+            0
+          ],
+          [
+            120,
+            0,
+            0
+          ],
+          [
+            120,
+            0,
+            0
+          ]
+        ],
+        "utilization": {
+          "mlp": 1.0,
+          "graph": 0.0,
+          "attention": 0.0
+        },
+        "prediction_accuracy": 0.6499999761581421,
+        "estimated_compute": 1.0,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.0
+      },
+      "oracle": {
+        "route_accuracy": 1.0,
+        "per_route_accuracy": {
+          "mlp": 1.0,
+          "graph": 1.0,
+          "attention": 1.0
+        },
+        "confusion_matrix": [
+          [
+            120,
+            0,
+            0
+          ],
+          [
+            0,
+            120,
+            0
+          ],
+          [
+            0,
+            0,
+            120
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.3333333432674408,
+          "graph": 0.3333333432674408,
+          "attention": 0.3333333432674408
+        },
+        "prediction_accuracy": 1.0,
+        "estimated_compute": 2.0,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.0
+      },
+      "learned_natural_supervised_hard": {
+        "route_accuracy": 0.7138888835906982,
+        "per_route_accuracy": {
+          "mlp": 0.6000000238418579,
+          "graph": 1.0,
+          "attention": 0.5416666865348816
+        },
+        "confusion_matrix": [
+          [
+            72,
+            1,
+            47
+          ],
+          [
+            0,
+            120,
+            0
+          ],
+          [
+            53,
+            2,
+            65
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.3472222089767456,
+          "graph": 0.34166666865348816,
+          "attention": 0.31111112236976624
+        },
+        "prediction_accuracy": 0.8277778029441833,
+        "estimated_compute": 1.9638888835906982,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.7362999604083598
+      },
+      "learned_explicit_supervised_hard": {
+        "route_accuracy": 1.0,
+        "per_route_accuracy": {
+          "mlp": 1.0,
+          "graph": 1.0,
+          "attention": 1.0
+        },
+        "confusion_matrix": [
+          [
+            120,
+            0,
+            0
+          ],
+          [
+            0,
+            120,
+            0
+          ],
+          [
+            0,
+            0,
+            120
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.3333333432674408,
+          "graph": 0.3333333432674408,
+          "attention": 0.3333333432674408
+        },
+        "prediction_accuracy": 1.0,
+        "estimated_compute": 2.0,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.5258999881334603
+      },
+      "learned_natural_indirect_soft": {
+        "route_accuracy": 0.6888889074325562,
+        "per_route_accuracy": {
+          "mlp": 0.8666666746139526,
+          "graph": 0.9916666746139526,
+          "attention": 0.2083333283662796
+        },
+        "confusion_matrix": [
+          [
+            104,
+            1,
+            15
+          ],
+          [
+            0,
+            119,
+            1
+          ],
+          [
+            92,
+            3,
+            25
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.5444444417953491,
+          "graph": 0.34166666865348816,
+          "attention": 0.11388888955116272
+        },
+        "prediction_accuracy": 0.675000011920929,
+        "estimated_compute": 2.000478744506836,
+        "average_active_modules": 3.0,
+        "entropy": 1.0777689218521118,
+        "router_batch_ms": 0.5949999904260039
+      },
+      "learned_natural_indirect_hard": {
+        "route_accuracy": 0.6888889074325562,
+        "per_route_accuracy": {
+          "mlp": 0.8666666746139526,
+          "graph": 0.9916666746139526,
+          "attention": 0.2083333283662796
+        },
+        "confusion_matrix": [
+          [
+            104,
+            1,
+            15
+          ],
+          [
+            0,
+            119,
+            1
+          ],
+          [
+            92,
+            3,
+            25
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.5444444417953491,
+          "graph": 0.34166666865348816,
+          "attention": 0.11388888955116272
+        },
+        "prediction_accuracy": 0.8305555582046509,
+        "estimated_compute": 1.5694444179534912,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.44059997890144587
+      },
+      "small_router_supervised": {
+        "route_accuracy": 0.6944444179534912,
+        "per_route_accuracy": {
+          "mlp": 0.574999988079071,
+          "graph": 1.0,
+          "attention": 0.5083333253860474
+        },
+        "confusion_matrix": [
+          [
+            69,
+            1,
+            50
+          ],
+          [
+            0,
+            120,
+            0
+          ],
+          [
+            54,
+            5,
+            61
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.34166666865348816,
+          "graph": 0.3499999940395355,
+          "attention": 0.3083333373069763
+        },
+        "prediction_accuracy": 0.8194444179534912,
+        "estimated_compute": 1.9666666984558105,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.47099997755140066
+      },
+      "temperature_half_supervised": {
+        "route_accuracy": 0.7138888835906982,
+        "per_route_accuracy": {
+          "mlp": 0.6000000238418579,
+          "graph": 1.0,
+          "attention": 0.5416666865348816
+        },
+        "confusion_matrix": [
+          [
+            72,
+            1,
+            47
+          ],
+          [
+            0,
+            120,
+            0
+          ],
+          [
+            53,
+            2,
+            65
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.3472222089767456,
+          "graph": 0.34166666865348816,
+          "attention": 0.31111112236976624
+        },
+        "prediction_accuracy": 0.8277778029441833,
+        "estimated_compute": 1.9638888835906982,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.5519000114873052
+      },
+      "compute_aware_indirect_hard": {
+        "route_accuracy": 0.7166666388511658,
+        "per_route_accuracy": {
+          "mlp": 0.6916666626930237,
+          "graph": 0.9750000238418579,
+          "attention": 0.4833333194255829
+        },
+        "confusion_matrix": [
+          [
+            83,
+            0,
+            37
+          ],
+          [
+            0,
+            117,
+            3
+          ],
+          [
+            62,
+            0,
+            58
+          ]
+        ],
+        "utilization": {
+          "mlp": 0.4027777910232544,
+          "graph": 0.32499998807907104,
+          "attention": 0.27222222089767456
+        },
+        "prediction_accuracy": 0.8333333134651184,
+        "estimated_compute": 1.869444489479065,
+        "average_active_modules": 1.0,
+        "entropy": 3.6841362316408777e-07,
+        "router_batch_ms": 0.49649999709799886
+      }
+    }
+  },
+  "aggregate": {
+    "random": {
+      "route_accuracy_mean": 0.33981481194496155,
+      "route_accuracy_std": 0.030723436144146014,
+      "prediction_accuracy_mean": 0.6490740776062012,
+      "prediction_accuracy_std": 0.02426913782683383,
+      "estimated_compute_mean": 2.0351852575937905,
+      "estimated_compute_std": 0.026979259580088556,
+      "router_batch_ms_mean": 0.0,
+      "router_batch_ms_std": 0.0
+    },
+    "static_mlp": {
+      "route_accuracy_mean": 0.3333333432674408,
+      "route_accuracy_std": 0.0,
+      "prediction_accuracy_mean": 0.6657407283782959,
+      "prediction_accuracy_std": 0.014254456788655369,
+      "estimated_compute_mean": 1.0,
+      "estimated_compute_std": 0.0,
+      "router_batch_ms_mean": 0.0,
+      "router_batch_ms_std": 0.0
+    },
+    "oracle": {
+      "route_accuracy_mean": 1.0,
+      "route_accuracy_std": 0.0,
+      "prediction_accuracy_mean": 1.0,
+      "prediction_accuracy_std": 0.0,
+      "estimated_compute_mean": 2.0,
+      "estimated_compute_std": 0.0,
+      "router_batch_ms_mean": 0.0,
+      "router_batch_ms_std": 0.0
+    },
+    "learned_natural_supervised_hard": {
+      "route_accuracy_mean": 0.7481481631596884,
+      "route_accuracy_std": 0.029960553323279942,
+      "prediction_accuracy_mean": 0.8574074109395345,
+      "prediction_accuracy_std": 0.02625450972217863,
+      "estimated_compute_mean": 2.0120370388031006,
+      "estimated_compute_std": 0.057017827154621475,
+      "router_batch_ms_mean": 0.6191333328994612,
+      "router_batch_ms_std": 0.11147123687746872
+    },
+    "learned_explicit_supervised_hard": {
+      "route_accuracy_mean": 1.0,
+      "route_accuracy_std": 0.0,
+      "prediction_accuracy_mean": 1.0,
+      "prediction_accuracy_std": 0.0,
+      "estimated_compute_mean": 2.0,
+      "estimated_compute_std": 0.0,
+      "router_batch_ms_mean": 0.5704333307221532,
+      "router_batch_ms_std": 0.08836098134869826
+    },
+    "learned_natural_indirect_soft": {
+      "route_accuracy_mean": 0.7037037014961243,
+      "route_accuracy_std": 0.013127249605858364,
+      "prediction_accuracy_mean": 0.6703703800837199,
+      "prediction_accuracy_std": 0.004243123764732606,
+      "estimated_compute_mean": 2.002318263053894,
+      "estimated_compute_std": 0.004052884787747441,
+      "router_batch_ms_mean": 0.5540666558469335,
+      "router_batch_ms_std": 0.10102384640166749
+    },
+    "learned_natural_indirect_hard": {
+      "route_accuracy_mean": 0.7037037014961243,
+      "route_accuracy_std": 0.013127249605858364,
+      "prediction_accuracy_mean": 0.83518519004186,
+      "prediction_accuracy_std": 0.013127283239354227,
+      "estimated_compute_mean": 2.0,
+      "estimated_compute_std": 0.4512585784747987,
+      "router_batch_ms_mean": 0.6030333267214397,
+      "router_batch_ms_std": 0.27840349290996896
+    },
+    "small_router_supervised": {
+      "route_accuracy_mean": 0.7351851662000021,
+      "route_accuracy_std": 0.036990717770414266,
+      "prediction_accuracy_mean": 0.8509259025255839,
+      "prediction_accuracy_std": 0.027404908191822893,
+      "estimated_compute_mean": 2.0564815203348794,
+      "estimated_compute_std": 0.13906469817392522,
+      "router_batch_ms_mean": 0.5467666584687928,
+      "router_batch_ms_std": 0.10089926031767209
+    },
+    "temperature_half_supervised": {
+      "route_accuracy_mean": 0.7481481631596884,
+      "route_accuracy_std": 0.029960553323279942,
+      "prediction_accuracy_mean": 0.8574074109395345,
+      "prediction_accuracy_std": 0.02625450972217863,
+      "estimated_compute_mean": 2.0120370388031006,
+      "estimated_compute_std": 0.057017827154621475,
+      "router_batch_ms_mean": 0.5242333475810786,
+      "router_batch_ms_std": 0.025737966566000366
+    },
+    "compute_aware_indirect_hard": {
+      "route_accuracy_mean": 0.7129629453023275,
+      "route_accuracy_std": 0.0064149854022530145,
+      "prediction_accuracy_mean": 0.8444444338480631,
+      "prediction_accuracy_std": 0.02169513383365412,
+      "estimated_compute_mean": 1.9768518209457397,
+      "estimated_compute_std": 0.2641421207654372,
+      "router_batch_ms_mean": 0.5277333160241445,
+      "router_batch_ms_std": 0.02759244087543046
+    }
+  },
+  "manifest": {
+    "timestamp_utc": "2026-09-04T02:42:05.922184+00:00",
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "samples_train": 360,
+    "samples_test": 360,
+    "epochs": 40,
+    "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+    "torch": "2.13.0+cpu",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "device": "cpu",
+    "oracle": "generator family 0/1/2",
+    "natural_descriptor": "sequence mean,std,adjacent product,endpoint product",
+    "gradient_estimators": {
+      "supervised": "cross-entropy logits",
+      "indirect": "straight-through hard forward / soft backward"
+    }
+  }
+}

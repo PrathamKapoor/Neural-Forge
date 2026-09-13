@@ -1,0 +1,20 @@
+artifact_name,relative_path,status,bytes,sha256_first32,sha256_display_truncated,evidence_note
+phase20_summary,results/metrics/phase20_repaired_portfolio/summary.json,FOUND,51136,a95fc7977c7cdead678180d1aad8b117,a95fc7977c7cdead...984184066709f2a9,Real hash computed programmatically; file verified present
+phase20_manifest,results/metrics/phase20_repaired_portfolio/manifest.json,FOUND,1047,2834474cf89f83561692dba6e6114b21,2834474cf89f8356...612e018bdf4e2667,Real hash computed programmatically; file verified present
+phase20_log,docs/architecture/phase20_log.md,FOUND,4400,a4b842ada63587b402d051b0f444f477,a4b842ada63587b4...892e039529865476,Real hash computed programmatically; file verified present
+phase20_report,results/reports/phase20_repaired_portfolio.md,FOUND,4502,721991e04728c7981f77309f912b14dc,721991e04728c798...ab359df8b6157871,Real hash computed programmatically; file verified present
+phase21_summary,results/metrics/phase21_rc_diagnosis/summary.json,FOUND,10866,07a06d17e480e6b5886d74b1e01fcf6d,07a06d17e480e6b5...c11adf15176c4a72,Real hash computed programmatically; file verified present
+phase21_manifest,results/metrics/phase21_rc_diagnosis/manifest.json,FOUND,808,1b2e5faea8d6d8fbc3d30d4cce610d79,1b2e5faea8d6d8fb...83814165e6199f34,Real hash computed programmatically; file verified present
+benchmark_source,src/neuroforge/datasets/phase9_mixed_repaired.py,FOUND,6739,a42b17e1a1d563bdb67c3777b71421c3,a42b17e1a1d563bd...04d42ba1c006a81e,Real hash computed programmatically; file verified present
+phase20_evaluator_py,src/neuroforge/evaluation/phase20_repaired_portfolio.py,FOUND,14154,5b667a4bc774e097f7ba428e7b40f0b0,5b667a4bc774e097...176fd5b1a992d12c,Real hash computed programmatically; file verified present
+phase21_evaluator_py,src/neuroforge/evaluation/phase21_rc_diagnosis.py,FOUND,22844,1fc9cd36d223bfc4193f68c5c4b94d86,1fc9cd36d223bfc4...cf31f73fe82f3df0,Real hash computed programmatically; file verified present
+prev_first_divergence,results/metrics/phase22b_reproducibility_forensics/first_divergence.json,FOUND,5294,3b4b6a6bdca2df7817c39a767990c579,3b4b6a6bdca2df78...f9158793116373be,Real hash computed programmatically; file verified present
+prev_metric_replay,results/metrics/phase22b_reproducibility_forensics/metric_replay.csv,FOUND,1999,db829575b3a93943f143fa22ad292b4d,db829575b3a93943...53d50a546c0d602f,Real hash computed programmatically; file verified present
+prev_summary_22b,results/metrics/phase22b_reproducibility_forensics/summary.json,FOUND,4792,707218071325c69542a8504aa20a77db,707218071325c695...5022e03758ea9207,Real hash computed programmatically; file verified present
+prev_sample_trace_22b,results/metrics/phase22b_reproducibility_forensics/sample_trace.csv,FOUND,4045,af8223893aa87993398a600528eb8350,af8223893aa87993...ca7a660a269c888b,Real hash computed programmatically; file verified present
+prev_artifact_hashes,results/metrics/phase22b_reproducibility_forensics/artifact_hashes.csv,FOUND,2364,655c23a4766d0eaa544bddd70a3c5146,655c23a4766d0eaa...ed3e803923023436,Real hash computed programmatically; file verified present
+prev_provenance,results/metrics/phase22b_reproducibility_forensics/provenance_completeness.csv,FOUND,2151,2b20d39acc9ed9eeb218d5ab77cdf098,2b20d39acc9ed9ee...d992aaad83e7c215,Real hash computed programmatically; file verified present
+audit_22b_report,results/reports/phase22b_forensics.md,FOUND,15115,22c9808f12ea5e4dff9a55fff8f4d00d,22c9808f12ea5e4d...843578039bea6b2a,Real hash computed programmatically; file verified present
+audit_22c_report,results/reports/phase22c_checkpoint_reconstruction.md,FOUND,7810,c74f52a8f0adb76ca119d26c3cf3ae6b,c74f52a8f0adb76c...556718a362abaa08,Real hash computed programmatically; file verified present
+notebook_28,notebooks/28_repaired_portfolio_re_evaluation.ipynb,FOUND,29495,3974a153996e0714317726f6c962ec66,3974a153996e0714...7dc9f9621824888d,Real hash computed programmatically; file verified present
+notebook_31,notebooks/31_reproducibility_forensics.ipynb,FOUND,-1,N/A,N/A,PRESENT — read error: [Errno 13] Permission denied: 'notebooks\\31_reproducibility_forensics.ipynb'; no synthetic replacement

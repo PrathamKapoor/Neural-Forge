@@ -1,0 +1,11 @@
+Metric,Historical_Phase20_Reference_Documented,Reconstructed_Value,Absolute_Difference,Within_3pp_Tolerance,Difference_Interpretation,Status
+F_accuracy,0.997 (portfolio best mlp from phase20 log),0.5,0.497,NO,Difference reflects single-expert (attention_v2) vs portfolio best single expert (mlp); reconstruction scope limited; NOT evidence of dataset divergence,DIVERGED
+R_accuracy,0.675 (portfolio best depth3 from phase20 log),0.4416666626930237,0.2333333373069763,NO,Difference reflects single-expert vs portfolio best pure R; reconstruction limited; NOT dataset divergence,DIVERGED
+C_accuracy,1.0 (portfolio best attention_v2 from phase20 log),1.0,0.0,YES,Matches exactly; no divergence at C metric,MATCH
+FR_accuracy,0.767 (portfolio mean from phase20 log),0.7416666746139526,0.025333325386047363,YES,Within 3pp tolerance; reconstruction close to portfolio reference,WITHIN_TOL
+RC_accuracy,0.55 (portfolio best attention_v2 from phase20 log; 55.0% RC best documented),0.5166666507720947,0.03333334922790527,NO,Diverges by 3.33pp (>3pp); divergence is single-expert vs portfolio mean (reconstruction scope); metric pipeline verified non-zero; NOT evidence of dataset divergence,DIVERGED
+FC_accuracy,0.883 (portfolio best attention_v2 from phase20 log),0.550000011920929,0.33299998807907104,NO,Difference reflects reconstruction scope (attention_v2 only) vs portfolio reference; NOT dataset divergence,DIVERGED
+FRC_accuracy,0.572 (portfolio mean from phase20 log),0.5249999761581421,0.04700002384185791,NO,Diverges; reconstruction scope limited; NOT dataset divergence,DIVERGED
+RC_agree_accuracy,0.98 (documented agreement rate from phase20 log),1.0,0.02,YES,Within 3pp; agreement rate reconstructed accurately from predictions,MATCH
+RC_disagree_accuracy,0.013 (documented disagreement rate from phase20 log),0.016949152573943138,0.003949152576123137,YES,Within 3pp (difference 0.39pp); disagreement rate reconstructed accurately,MATCH
+reproduction_class,PARTIAL (verified by reconstruction_summary),PARTIAL,0.0,YES,Reconstruction uses single expert; split unverified; predictions reconstructed not original; exact reproduction impossible,VERIFIED_PARTIAL

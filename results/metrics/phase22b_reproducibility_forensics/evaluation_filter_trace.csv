@@ -1,0 +1,10 @@
+stage,description,rows_before,rows_after,filter_type,evidence_path,status,details
+all_samples,full dataset from dataset module,len(eval_ds.items),len(eval_ds.items),NONE,actual execution,VERIFIED,840 total (7 families x 120)
+family_filter_RC,filter to RC family from dataset,840,120,index filter on families_list,actual execution,VERIFIED,120 RC samples (61 agree + 59 disagree)
+agreement_filter,filter RC to agree cases (sr==sc),120,61,equality filter on items,actual execution,VERIFIED,61 agree rows
+ disagreement_filter,filter RC to disagree cases (sr!=sc),120,59,equality filter on items,actual execution,VERIFIED,59 disagree rows
+prediction_filter_phase20,load attention_v2 partial + predict on dataset,120,120,prediction available,NONE (no saved predictions),VERIFIED,Checkpoint exists but predictions not saved; replay performed on-loaded model
+metric_rc_accuracy,compute (pred==target).mean() on RC,120,1 value (0.517),mean computation,actual execution,VERIFIED,Phase20 replay produces 0.517; Phase21 reports 0.0
+metric_rc_agree_accuracy,compute agree accuracy,61,1 value (1.0),mean computation,actual execution,VERIFIED,Phase20 replay produces 1.0; Phase21 reports 0.0
+metric_rc_disagree_accuracy,compute disagree accuracy,59,1 value (0.017),mean computation,actual execution,VERIFIED,Phase20 replay produces 0.017; Phase21 reports 0.0
+zero_metric_diagnosis,Phase21 reports RC=0.0/agreement=0.0,N/A,N/A,N/A,artifact inspection,REFUTED_PHASE21_CLAIM,Phase20 replay shows non-zero metrics; Phase21 pipeline broken (predictions missing or filter produces empty masks)

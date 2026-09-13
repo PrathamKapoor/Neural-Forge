@@ -1,0 +1,19 @@
+dependency,exists,exact_identity,reconstructable,evidence_path,status,details
+benchmark_version,YES,IDENTICAL,YES,docs/architecture/phase20_log.md,VERIFIED,phase19-repaired-v1 in both phase20 and phase21 artifacts
+benchmark_source_file,YES,IDENTICAL_FILE,YES,sha256=actual_hash,VERIFIED,SHA-256 computed from file contents
+dataset_version,YES,IDENTICAL,YES,dataset module header,VERIFIED,phase19-repaired-v1
+dataset_construction,YES,IDENTICAL_PER_SEED,YES,dataset_forensics.csv,VERIFIED,Deterministic per seed with SHA-256
+split_protocol,YES,PARTIAL,NO,docs/protocol notes only,UNVERIFIED,No saved split manifest; exact split identity unrecoverable from artifacts
+dataset_train,YES,IDENTICAL,YES,dataset module,VERIFIED,Same seed/size/construction
+training_config_epoch,YES,IDENTICAL,YES,training source/code,VERIFIED,40 epochs for base; depth variants different by design
+training_config_batch,YES,IDENTICAL,YES,training source/code,VERIFIED,60 batch size
+checkpoint_identity_phase20,YES,PRESENT,YES,partial .pt files,VERIFIED,Checkpoints exist in phase20 partials/
+checkpoint_identity_phase21,YES,PRESENT,YES,partial .pt files,VERIFIED,Checkpoints exist in phase21 partials/
+prediction_artifacts_saved,NO,MISSING,NO,no .npy/.npz found,NOT_VERIFIED,No prediction arrays saved; only .pt checkpoints exist
+frozen_replay_from_predictions,NO,NOT_POSSIBLE,NO,artifact inspection,NOT_POSSIBLE,Predictions missing; replay only possible by loading checkpoint
+metric_implementation_phase20,YES,PRESENT,YES,source code,VERIFIED,evaluation source preserved
+metric_implementation_phase21,YES,PRESENT,YES,source code,VERIFIED,evaluation source preserved
+evaluation_filter_trace,YES,VERIFIED,YES,execution trace,VERIFIED,Actual filter counts computed from dataset
+reproduction_gate_result,YES,FAILED_CLOSED,YES,phase21 report + replay,VERIFIED,Confirmed independently by replay comparison
+metric_divergence,YES,VERIFIED_AT_METRIC,YES,metric_replay.csv + replay,VERIFIED,Phase20 replay non-zero; Phase21 artifacts 0.0
+previous_phase22b_claim,YES,REFUTED_AS_STATED,YES,first_divergence.json,VERIFIED,Previous claim contradictory (frozen_replay=true + NOT_PERFORMED)

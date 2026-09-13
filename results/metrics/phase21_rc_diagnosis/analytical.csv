@@ -1,0 +1,10 @@
+seed,predictor,RC,RC_agree,RC_disagree
+11,R_only,1.0,1.0,1.0
+11,C_only,0.5083333253860474,1.0,0.0
+11,oracle_combo,1.0,1.0,1.0
+23,R_only,1.0,1.0,1.0
+23,C_only,0.5083333253860474,1.0,0.0
+23,oracle_combo,1.0,1.0,1.0
+37,R_only,1.0,1.0,1.0
+37,C_only,0.5833333134651184,1.0,0.0
+37,oracle_combo,1.0,1.0,1.0

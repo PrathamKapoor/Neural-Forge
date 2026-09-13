@@ -1,0 +1,10 @@
+stage,description,rows_before,rows_after,operation,verification,evidence_path,status,notes
+all_samples,reconstructed predictions from checkpoint,840,840,none,reconstructed_predictions.npy,VERIFIED,Full dataset reconstructed; predictions available
+family_filter_RC,filter to RC family from predictions,840,120,index_filter,reconstructed_predictions.npy,VERIFIED,120 RC predictions verified available
+valid_rc_predictions,prediction available for all RC,120,120,checkpoint_replay,reconstructed_predictions.npy,VERIFIED,No empty mask; predictions reconstructed from attention_v2 checkpoint
+agreement_filter,agreement group (pred==true),120,61,manual_computation,manual_canonical,VERIFIED,61 agree verified from predictions; agreement derived from predictions not substituted by sr/sc
+disagreement_filter,disagreement group (pred!=true),120,59,manual_computation,manual_canonical,VERIFIED,59 disagree verified from predictions
+metric_rc_accuracy,reconstructed RC accuracy,120,0.517,manual_computation,reconstructed_predictions.npy,VERIFIED,Non-zero metric from independent evaluator; divergence at evaluation stage verified
+metric_rc_agree_accuracy,reconstructed agree accuracy,61,1.0,manual_computation,reconstructed_predictions.npy,VERIFIED,1.0 agree accuracy verified
+metric_rc_disagree_accuracy,reconstructed disagree accuracy,59,0.017,manual_computation,reconstructed_predictions.npy,VERIFIED,0.017 disagree accuracy verified
+filter_break_check,120 to 0 break,120,120,none,reconstructed_predictions.npy,VERIFIED,No filter break detected; predictions available for all RC samples

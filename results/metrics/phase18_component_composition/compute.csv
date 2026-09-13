@@ -1,0 +1,10 @@
+seed,condition,params
+11,graph,3866
+11,baseline,6464
+11,depth3,10016
+23,graph,3866
+23,baseline,6464
+23,depth3,10016
+37,graph,3866
+37,baseline,6464
+37,depth3,10016

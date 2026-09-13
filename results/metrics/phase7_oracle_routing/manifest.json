@@ -1,0 +1,45 @@
+{
+  "timestamp_utc": "2026-09-05T14:36:36.410226+00:00",
+  "experiment_name": "Phase 7 Oracle Routing and Fixed-Best Selection",
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "torch": "2.13.0+cpu",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "device": "cpu",
+  "git_commit": null,
+  "input_contract": {
+    "shape": [
+      12,
+      8
+    ],
+    "marker_channel": 4,
+    "marker_value": 1.0,
+    "families": [
+      "feature",
+      "relational",
+      "contextual"
+    ]
+  },
+  "expert_depths": {
+    "mlp": 3,
+    "graph": 2,
+    "attention": 1,
+    "attention_v2": 3
+  },
+  "expert_parameters": {
+    "mlp": 3914,
+    "graph": 3866,
+    "attention": 3314,
+    "attention_v2": 3914
+  },
+  "verdict": {
+    "case": "Case D",
+    "description": "Oracle routing improves both accuracy (+23.5%) and compute efficiency (-54.4% FLOPs) compared with the strongest fixed architecture (Fixed Attention V2).",
+    "routing_gate_status": "OPEN FOR LEARNED-ROUTING EXPERIMENT",
+    "justification": "The central research question is supported: selecting the specialized expert by construction produces a definitive performance-compute Pareto advance over the best fixed architecture. Phase 8 learned routing is now scientifically warranted."
+  }
+}

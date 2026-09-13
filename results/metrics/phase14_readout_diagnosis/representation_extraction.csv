@@ -1,0 +1,4 @@
+seed,representations,shape
+11,"input,feat_delta,rel_delta,ctx_delta,scaled_sum,fused_delta,block_output","[B, S, 24] (all) + per-position broadcast"
+23,"input,feat_delta,rel_delta,ctx_delta,scaled_sum,fused_delta,block_output","[B, S, 24] (all) + per-position broadcast"
+37,"input,feat_delta,rel_delta,ctx_delta,scaled_sum,fused_delta,block_output","[B, S, 24] (all) + per-position broadcast"

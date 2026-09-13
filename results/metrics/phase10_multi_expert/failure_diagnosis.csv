@@ -1,0 +1,22 @@
+seed,family,k1_accuracy,multi_accuracy,ceiling_accuracy,best_single_expert,failure_mode,description
+11,F,0.3083333373069763,0.8999999761581421,1.0,mlp,Failure C — Aggregation Failure,"Combining multiple experts yields 90.0%, failing to meaningfully exceed single-expert ceiling (100.0%)."
+11,R,0.7416666746139526,0.6416666507720947,0.7416666746139526,graph,Failure C — Aggregation Failure,"Combining multiple experts yields 64.2%, failing to meaningfully exceed single-expert ceiling (74.2%)."
+11,C,0.5,0.4416666626930237,1.0,attention_v2,Failure A — Expert Incapability,No combination of experts achieves >60% (best combo: 44.2%).
+11,FR,0.5083333253860474,0.6166666746139526,0.7416666746139526,mlp,Failure C — Aggregation Failure,"Combining multiple experts yields 61.7%, failing to meaningfully exceed single-expert ceiling (74.2%)."
+11,RC,0.6083333492279053,0.5583333373069763,0.6083333492279053,graph,Failure A — Expert Incapability,No combination of experts achieves >60% (best combo: 55.8%).
+11,FC,0.49166667461395264,0.5083333253860474,0.5083333253860474,attention_v2,Failure A — Expert Incapability,No combination of experts achieves >60% (best combo: 50.8%).
+11,FRC,0.5249999761581421,0.5083333253860474,0.8083333373069763,attention_v2,Failure A — Expert Incapability,No combination of experts achieves >60% (best combo: 50.8%).
+23,F,0.3083333373069763,1.0,1.0,mlp,Failure C — Aggregation Failure,"Combining multiple experts yields 100.0%, failing to meaningfully exceed single-expert ceiling (100.0%)."
+23,R,0.7416666746139526,0.6666666865348816,0.7833333611488342,graph,Failure C — Aggregation Failure,"Combining multiple experts yields 66.7%, failing to meaningfully exceed single-expert ceiling (78.3%)."
+23,C,0.5,0.4833333194255829,0.9916666746139526,attention_v2,Failure A — Expert Incapability,No combination of experts achieves >60% (best combo: 48.3%).
+23,FR,0.5083333253860474,0.699999988079071,0.7333333492279053,mlp,Failure C — Aggregation Failure,"Combining multiple experts yields 70.0%, failing to meaningfully exceed single-expert ceiling (73.3%)."
+23,RC,0.6083333492279053,0.5583333373069763,0.5583333373069763,graph,Failure A — Expert Incapability,No combination of experts achieves >60% (best combo: 55.8%).
+23,FC,0.49166667461395264,0.5,0.5333333611488342,mlp,Failure A — Expert Incapability,No combination of experts achieves >60% (best combo: 50.0%).
+23,FRC,0.5249999761581421,0.4833333194255829,0.8333333134651184,attention_v2,Failure A — Expert Incapability,No combination of experts achieves >60% (best combo: 48.3%).
+37,F,0.3083333373069763,0.8333333134651184,1.0,mlp,Failure C — Aggregation Failure,"Combining multiple experts yields 83.3%, failing to meaningfully exceed single-expert ceiling (100.0%)."
+37,R,0.7416666746139526,0.5416666865348816,0.6916666626930237,graph,Failure A — Expert Incapability,No combination of experts achieves >60% (best combo: 54.2%).
+37,C,0.5,0.5833333134651184,1.0,attention_v2,Failure A — Expert Incapability,No combination of experts achieves >60% (best combo: 58.3%).
+37,FR,0.5083333253860474,0.5666666626930237,0.7749999761581421,mlp,Failure A — Expert Incapability,No combination of experts achieves >60% (best combo: 56.7%).
+37,RC,0.6083333492279053,0.46666666865348816,0.5916666388511658,attention_v2,Failure A — Expert Incapability,No combination of experts achieves >60% (best combo: 46.7%).
+37,FC,0.49166667461395264,0.4833333194255829,0.5,mlp,Failure A — Expert Incapability,No combination of experts achieves >60% (best combo: 48.3%).
+37,FRC,0.5249999761581421,0.5416666865348816,0.7749999761581421,attention_v2,Failure A — Expert Incapability,No combination of experts achieves >60% (best combo: 54.2%).

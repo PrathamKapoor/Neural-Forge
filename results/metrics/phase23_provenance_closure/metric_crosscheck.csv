@@ -1,0 +1,12 @@
+Metric,Historical_Reference_Documented,Reconstructed_Value,Absolute_Delta,Within_3pp_Tolerance,Status,Evaluator_Used,Notes
+F_accuracy,0.997,0.5,0.497,NO,DIVERGED,manual_canonical,Reconstruction uses single expert (attention_v2); reference is portfolio mean; divergence reflects portfolio vs single-expert not dataset divergence
+R_accuracy,0.675,0.4416666626930237,0.23333333730697632,NO,DIVERGED,manual_canonical,Same explanation; reference best pure R (depth3 67.5%) vs reconstructed attention_v2 (44.2%)
+C_accuracy,1.0,1.0,0.0,YES,MATCH,manual_canonical,C accuracy matches reference exactly; no divergence at C metric
+FR_accuracy,0.767,0.7416666746139526,0.025333325386047363,YES,WITHIN_TOL,manual_canonical,FR reconstructed within 3pp of portfolio reference
+RC_accuracy,0.55,0.5166666507720947,0.03333334922790527,NO,DIVERGED,manual_canonical,Reconstructed RC diverges by 3.33pp (>3pp tolerance); divergence is single-expert vs portfolio mean; metric pipeline verified working (non-zero); Phase21 broken independently confirmed
+FC_accuracy,0.883,0.550000011920929,0.33299998807907104,NO,DIVERGED,manual_canonical,Divergence reflects reconstruction scope (attention_v2 only) vs portfolio reference
+FRC_accuracy,0.572,0.5249999761581421,0.04700002384185791,NO,DIVERGED,manual_canonical,Same explanation
+RC_agree_accuracy,0.98,1.0,0.02,YES,WITHIN_TOL,manual_canonical,Agreement accuracy 1.0 vs reference 0.98 (within tolerance; actual agreement count verified 61/120)
+RC_disagree_accuracy,0.013,0.016949152573943138,0.003949152576123137,YES,WITHIN_TOL,manual_canonical,Disagreement accuracy 0.017 vs reference 0.013 (within 3pp; actual disagreement count verified 59/120)
+metric_divergence_stage,metric/evaluation,metric/evaluation,0.0,YES,VERIFIED,independent_canonical + phase21_broken,Same predictions (reconstructed) produce non-zero metrics through independent evaluator; Phase21 evaluator produces 0.0 independently (verified in 22B audit); divergence at metric/evaluation stage independently confirmed without relying on previous unsupported frozen replay claim
+reproduction_classification,PARTIAL,PARTIAL,0.0,YES,VERIFIED,reconstruction_summary,Reconstruction uses single expert; split unverified; predictions reconstructed not original; exact reproduction impossible

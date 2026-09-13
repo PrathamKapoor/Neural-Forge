@@ -1,0 +1,15 @@
+version,family,n,label_balance
+original,F,120,0.5
+repaired,F,120,0.5
+original,R,120,0.5916666388511658
+repaired,R,120,0.5916666388511658
+original,C,120,0.5
+repaired,C,120,0.5
+original,FR,120,0.4416666626930237
+repaired,FR,120,0.4416666626930237
+original,RC,120,0.40833333134651184
+repaired,RC,120,0.40833333134651184
+original,FC,120,0.5
+repaired,FC,120,0.5
+original,FRC,120,0.4749999940395355
+repaired,FRC,120,0.4749999940395355

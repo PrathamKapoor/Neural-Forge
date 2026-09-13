@@ -1,0 +1,44 @@
+{
+  "phase": "Phase 13 \u2014 Joint Expert Co-Adaptation and Relational Compositional Diagnosis",
+  "timestamp": "2026-09-07T04:50:29Z",
+  "python_version": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "torch_version": "2.13.0+cpu",
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "evaluated_families": [
+    "F",
+    "R",
+    "C",
+    "FR",
+    "RC",
+    "FC",
+    "FRC"
+  ],
+  "samples_per_type": 120,
+  "baseline_epochs": 20,
+  "extended_epochs": 40,
+  "conditions": [
+    {
+      "label": "13A_baseline",
+      "architecture": "joint",
+      "epochs": 20,
+      "description": "Phase 12 Joint baseline reproduction (mixed F+R+C, frozen)."
+    },
+    {
+      "label": "13B_extended_training",
+      "architecture": "joint",
+      "epochs": 40,
+      "description": "Same architecture, doubled training budget."
+    },
+    {
+      "label": "13C_coadaptation",
+      "architecture": "joint_co",
+      "epochs": 40,
+      "description": "JointCo: same 3 branches + inter-branch fusion (H*3 -> H)."
+    }
+  ]
+}

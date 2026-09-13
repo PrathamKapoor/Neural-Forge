@@ -1,0 +1,9 @@
+seed,category,failed,criterion,observed
+0,pure_capability_failure,True,a pure family best < 80%,"F 100.0%, R 67.5%, C 100.0%"
+0,mixed_capability_failure,False,best-per-family mixed mean < 60%,74.1%
+0,composition_no_gain,True,fixed composition gains < 3pp on both RC and FRC,"RC +0.0pp, FRC -0.8pp"
+0,routing_no_gain,False,learned routing gain < 2pp over best fixed expert,+2.5pp
+0,single_component_collapse,True,agree−disagree gap ≥ 50pp,96.6pp
+0,ceiling_unmoved,True,portfolio vs single-expert ceiling < 2pp,-1.3pp
+0,seed_instability,True,any seed-SD ≥ 5pp,RC/oracle_k=2; RC/learned
+0,smoke_failed,False,repaired-validity smoke must pass,all seeds pass repaired-validity smoke

@@ -1,0 +1,659 @@
+{
+  "capacity": {
+    "depths": {
+      "mlp": 3,
+      "graph": 2,
+      "attention": 1
+    },
+    "parameter_counts": {
+      "mlp": 3914,
+      "graph": 3866,
+      "attention": 3314
+    },
+    "max_relative_gap": 0.1532958610117527
+  },
+  "cells": {
+    "mlp__feature": {
+      "architecture": "mlp",
+      "family": "feature",
+      "per_seed": [
+        {
+          "seed": 11,
+          "validation_accuracy": 1.0,
+          "test_accuracy": 1.0,
+          "test_loss": 0.4798641875386238,
+          "training_seconds": 1.2062373000080697,
+          "parameters": 3914,
+          "estimated_forward_flops": 8928.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 1.9626700028311461,
+          "samples_per_second": 30570.600209637974,
+          "peak_python_memory_bytes": 2552.0
+        },
+        {
+          "seed": 23,
+          "validation_accuracy": 1.0,
+          "test_accuracy": 1.0,
+          "test_loss": 0.38525815308094025,
+          "training_seconds": 1.140723299991805,
+          "parameters": 3914,
+          "estimated_forward_flops": 8928.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 2.0157799997832626,
+          "samples_per_second": 29765.1529464779,
+          "peak_python_memory_bytes": 2552.0
+        },
+        {
+          "seed": 37,
+          "validation_accuracy": 1.0,
+          "test_accuracy": 1.0,
+          "test_loss": 0.10838206857442856,
+          "training_seconds": 1.2716995000373572,
+          "parameters": 3914,
+          "estimated_forward_flops": 8928.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 2.1008800016716123,
+          "samples_per_second": 28559.46077465617,
+          "peak_python_memory_bytes": 2552.0
+        }
+      ],
+      "mean_test_accuracy": 1.0,
+      "std_test_accuracy": 0.0
+    },
+    "graph__feature": {
+      "architecture": "graph",
+      "family": "feature",
+      "per_seed": [
+        {
+          "seed": 11,
+          "validation_accuracy": 1.0,
+          "test_accuracy": 1.0,
+          "test_loss": 0.3069492280483246,
+          "training_seconds": 1.0661031000199728,
+          "parameters": 3866,
+          "estimated_forward_flops": 8112.0,
+          "activation_elements": 864.0,
+          "batch_latency_ms": 2.1357899997383356,
+          "samples_per_second": 28092.64956168483,
+          "peak_python_memory_bytes": 2024.0
+        },
+        {
+          "seed": 23,
+          "validation_accuracy": 1.0,
+          "test_accuracy": 1.0,
+          "test_loss": 0.2839135453104973,
+          "training_seconds": 1.077264000021387,
+          "parameters": 3866,
+          "estimated_forward_flops": 8112.0,
+          "activation_elements": 864.0,
+          "batch_latency_ms": 1.922219997504726,
+          "samples_per_second": 31213.908958333206,
+          "peak_python_memory_bytes": 2024.0
+        },
+        {
+          "seed": 37,
+          "validation_accuracy": 1.0,
+          "test_accuracy": 1.0,
+          "test_loss": 0.36490652710199356,
+          "training_seconds": 1.1168681999552064,
+          "parameters": 3866,
+          "estimated_forward_flops": 8112.0,
+          "activation_elements": 864.0,
+          "batch_latency_ms": 1.8928299949038774,
+          "samples_per_second": 31698.567838390023,
+          "peak_python_memory_bytes": 2024.0
+        }
+      ],
+      "mean_test_accuracy": 1.0,
+      "std_test_accuracy": 0.0
+    },
+    "attention__feature": {
+      "architecture": "attention",
+      "family": "feature",
+      "per_seed": [
+        {
+          "seed": 11,
+          "validation_accuracy": 0.75,
+          "test_accuracy": 0.75,
+          "test_loss": 0.6077455282211304,
+          "training_seconds": 1.028959799965378,
+          "parameters": 3314,
+          "estimated_forward_flops": 39168.0,
+          "activation_elements": 576.0,
+          "batch_latency_ms": 1.7395999981090426,
+          "samples_per_second": 34490.687551862735,
+          "peak_python_memory_bytes": 2728.0
+        },
+        {
+          "seed": 23,
+          "validation_accuracy": 0.75,
+          "test_accuracy": 0.75,
+          "test_loss": 0.39007654786109924,
+          "training_seconds": 1.1594740999862552,
+          "parameters": 3314,
+          "estimated_forward_flops": 39168.0,
+          "activation_elements": 576.0,
+          "batch_latency_ms": 2.703789999941364,
+          "samples_per_second": 22191.072532001817,
+          "peak_python_memory_bytes": 2728.0
+        },
+        {
+          "seed": 37,
+          "validation_accuracy": 0.75,
+          "test_accuracy": 0.75,
+          "test_loss": 0.6238657981157303,
+          "training_seconds": 1.5220933000091463,
+          "parameters": 3314,
+          "estimated_forward_flops": 39168.0,
+          "activation_elements": 576.0,
+          "batch_latency_ms": 1.834680000320077,
+          "samples_per_second": 32703.250697414504,
+          "peak_python_memory_bytes": 2728.0
+        }
+      ],
+      "mean_test_accuracy": 0.75,
+      "std_test_accuracy": 0.0
+    },
+    "mlp__relational": {
+      "architecture": "mlp",
+      "family": "relational",
+      "per_seed": [
+        {
+          "seed": 11,
+          "validation_accuracy": 0.5916666666666667,
+          "test_accuracy": 0.5916666666666667,
+          "test_loss": 0.6637701690196991,
+          "training_seconds": 1.4400771000073291,
+          "parameters": 3914,
+          "estimated_forward_flops": 8928.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 2.8404900047462434,
+          "samples_per_second": 21123.116046789306,
+          "peak_python_memory_bytes": 2552.0
+        },
+        {
+          "seed": 23,
+          "validation_accuracy": 0.625,
+          "test_accuracy": 0.6375,
+          "test_loss": 0.6520760655403137,
+          "training_seconds": 1.4597624999587424,
+          "parameters": 3914,
+          "estimated_forward_flops": 8928.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 1.9551000033970922,
+          "samples_per_second": 30688.967262926064,
+          "peak_python_memory_bytes": 2552.0
+        },
+        {
+          "seed": 37,
+          "validation_accuracy": 0.65,
+          "test_accuracy": 0.5958333333333333,
+          "test_loss": 0.679278239607811,
+          "training_seconds": 1.4981216000160202,
+          "parameters": 3914,
+          "estimated_forward_flops": 8928.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 2.2033600020222366,
+          "samples_per_second": 27231.137873489668,
+          "peak_python_memory_bytes": 2552.0
+        }
+      ],
+      "mean_test_accuracy": 0.6083333333333333,
+      "std_test_accuracy": 0.025344843876242557
+    },
+    "graph__relational": {
+      "architecture": "graph",
+      "family": "relational",
+      "per_seed": [
+        {
+          "seed": 11,
+          "validation_accuracy": 0.725,
+          "test_accuracy": 0.6625,
+          "test_loss": 0.6196583807468414,
+          "training_seconds": 1.2828049000236206,
+          "parameters": 3866,
+          "estimated_forward_flops": 8112.0,
+          "activation_elements": 864.0,
+          "batch_latency_ms": 2.1399400022346526,
+          "samples_per_second": 28038.169265187076,
+          "peak_python_memory_bytes": 2024.0
+        },
+        {
+          "seed": 23,
+          "validation_accuracy": 0.7583333333333333,
+          "test_accuracy": 0.7458333333333333,
+          "test_loss": 0.5742897242307663,
+          "training_seconds": 1.287226299988106,
+          "parameters": 3866,
+          "estimated_forward_flops": 8112.0,
+          "activation_elements": 864.0,
+          "batch_latency_ms": 1.7446600017137825,
+          "samples_per_second": 34390.65487892305,
+          "peak_python_memory_bytes": 2024.0
+        },
+        {
+          "seed": 37,
+          "validation_accuracy": 0.75,
+          "test_accuracy": 0.7333333333333333,
+          "test_loss": 0.5789653211832047,
+          "training_seconds": 1.3455104000167921,
+          "parameters": 3866,
+          "estimated_forward_flops": 8112.0,
+          "activation_elements": 864.0,
+          "batch_latency_ms": 2.5228200014680624,
+          "samples_per_second": 23782.909587321017,
+          "peak_python_memory_bytes": 2024.0
+        }
+      ],
+      "mean_test_accuracy": 0.7138888888888889,
+      "std_test_accuracy": 0.04494080468712066
+    },
+    "attention__relational": {
+      "architecture": "attention",
+      "family": "relational",
+      "per_seed": [
+        {
+          "seed": 11,
+          "validation_accuracy": 0.6083333333333333,
+          "test_accuracy": 0.5333333333333333,
+          "test_loss": 0.6949812173843384,
+          "training_seconds": 1.2069253999507055,
+          "parameters": 3314,
+          "estimated_forward_flops": 39168.0,
+          "activation_elements": 576.0,
+          "batch_latency_ms": 1.7153099994175136,
+          "samples_per_second": 34979.099999635546,
+          "peak_python_memory_bytes": 2728.0
+        },
+        {
+          "seed": 23,
+          "validation_accuracy": 0.55,
+          "test_accuracy": 0.55,
+          "test_loss": 0.6893310397863388,
+          "training_seconds": 1.1915517000015825,
+          "parameters": 3314,
+          "estimated_forward_flops": 39168.0,
+          "activation_elements": 576.0,
+          "batch_latency_ms": 1.9098300021141768,
+          "samples_per_second": 31416.4087555333,
+          "peak_python_memory_bytes": 2728.0
+        },
+        {
+          "seed": 37,
+          "validation_accuracy": 0.65,
+          "test_accuracy": 0.4708333333333333,
+          "test_loss": 0.7061765342950821,
+          "training_seconds": 1.1442802000092342,
+          "parameters": 3314,
+          "estimated_forward_flops": 39168.0,
+          "activation_elements": 576.0,
+          "batch_latency_ms": 1.6669199976604432,
+          "samples_per_second": 35994.52888213666,
+          "peak_python_memory_bytes": 2728.0
+        }
+      ],
+      "mean_test_accuracy": 0.5180555555555556,
+      "std_test_accuracy": 0.04173605333699091
+    },
+    "mlp__contextual": {
+      "architecture": "mlp",
+      "family": "contextual",
+      "per_seed": [
+        {
+          "seed": 11,
+          "validation_accuracy": 0.5333333333333333,
+          "test_accuracy": 0.4583333333333333,
+          "test_loss": 0.7011680603027344,
+          "training_seconds": 1.3517371999914758,
+          "parameters": 3914,
+          "estimated_forward_flops": 8928.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 2.0344300020951778,
+          "samples_per_second": 29492.290193424404,
+          "peak_python_memory_bytes": 2552.0
+        },
+        {
+          "seed": 23,
+          "validation_accuracy": 0.5666666666666667,
+          "test_accuracy": 0.475,
+          "test_loss": 0.700866311788559,
+          "training_seconds": 1.389510600012727,
+          "parameters": 3914,
+          "estimated_forward_flops": 8928.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 2.1503200056031346,
+          "samples_per_second": 27902.82369305811,
+          "peak_python_memory_bytes": 2552.0
+        },
+        {
+          "seed": 37,
+          "validation_accuracy": 0.525,
+          "test_accuracy": 0.4708333333333333,
+          "test_loss": 0.7064676731824875,
+          "training_seconds": 1.2348625999875367,
+          "parameters": 3914,
+          "estimated_forward_flops": 8928.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 1.5345700026955456,
+          "samples_per_second": 39098.900600563764,
+          "peak_python_memory_bytes": 2552.0
+        }
+      ],
+      "mean_test_accuracy": 0.46805555555555556,
+      "std_test_accuracy": 0.008673608331108886
+    },
+    "graph__contextual": {
+      "architecture": "graph",
+      "family": "contextual",
+      "per_seed": [
+        {
+          "seed": 11,
+          "validation_accuracy": 0.5083333333333333,
+          "test_accuracy": 0.5041666666666667,
+          "test_loss": 0.6997060179710388,
+          "training_seconds": 1.0975822000182234,
+          "parameters": 3866,
+          "estimated_forward_flops": 8112.0,
+          "activation_elements": 864.0,
+          "batch_latency_ms": 1.7405500053428113,
+          "samples_per_second": 34471.86223654784,
+          "peak_python_memory_bytes": 2024.0
+        },
+        {
+          "seed": 23,
+          "validation_accuracy": 0.5833333333333334,
+          "test_accuracy": 0.45416666666666666,
+          "test_loss": 0.7023507952690125,
+          "training_seconds": 1.0734077000524849,
+          "parameters": 3866,
+          "estimated_forward_flops": 8112.0,
+          "activation_elements": 864.0,
+          "batch_latency_ms": 2.1464699995703995,
+          "samples_per_second": 27952.87146431516,
+          "peak_python_memory_bytes": 2024.0
+        },
+        {
+          "seed": 37,
+          "validation_accuracy": 0.5166666666666667,
+          "test_accuracy": 0.45,
+          "test_loss": 0.7051927149295807,
+          "training_seconds": 1.0724079000065103,
+          "parameters": 3866,
+          "estimated_forward_flops": 8112.0,
+          "activation_elements": 864.0,
+          "batch_latency_ms": 1.776279998011887,
+          "samples_per_second": 33778.458388967614,
+          "peak_python_memory_bytes": 2024.0
+        }
+      ],
+      "mean_test_accuracy": 0.46944444444444444,
+      "std_test_accuracy": 0.03014240890862597
+    },
+    "attention__contextual": {
+      "architecture": "attention",
+      "family": "contextual",
+      "per_seed": [
+        {
+          "seed": 11,
+          "validation_accuracy": 0.5166666666666667,
+          "test_accuracy": 0.5041666666666667,
+          "test_loss": 0.7009850293397903,
+          "training_seconds": 1.0386618999764323,
+          "parameters": 3314,
+          "estimated_forward_flops": 39168.0,
+          "activation_elements": 576.0,
+          "batch_latency_ms": 1.8786500033456832,
+          "samples_per_second": 31937.827638541585,
+          "peak_python_memory_bytes": 2728.0
+        },
+        {
+          "seed": 23,
+          "validation_accuracy": 0.6166666666666667,
+          "test_accuracy": 0.4875,
+          "test_loss": 0.7204059660434723,
+          "training_seconds": 1.0437073999783024,
+          "parameters": 3314,
+          "estimated_forward_flops": 39168.0,
+          "activation_elements": 576.0,
+          "batch_latency_ms": 2.0989400043617934,
+          "samples_per_second": 28585.857563967715,
+          "peak_python_memory_bytes": 2728.0
+        },
+        {
+          "seed": 37,
+          "validation_accuracy": 0.5416666666666666,
+          "test_accuracy": 0.4625,
+          "test_loss": 0.7054647505283356,
+          "training_seconds": 1.023490399995353,
+          "parameters": 3314,
+          "estimated_forward_flops": 39168.0,
+          "activation_elements": 576.0,
+          "batch_latency_ms": 1.769479998620227,
+          "samples_per_second": 33908.26686189486,
+          "peak_python_memory_bytes": 2728.0
+        }
+      ],
+      "mean_test_accuracy": 0.4847222222222222,
+      "std_test_accuracy": 0.020971762320196506
+    }
+  },
+  "matrix": {
+    "mlp": [
+      1.0,
+      0.6083333333333333,
+      0.46805555555555556
+    ],
+    "graph": [
+      1.0,
+      0.7138888888888889,
+      0.46944444444444444
+    ],
+    "attention": [
+      0.75,
+      0.5180555555555556,
+      0.4847222222222222
+    ]
+  },
+  "specialization": {
+    "winners": [
+      "mlp",
+      "graph",
+      "attention"
+    ],
+    "margins": {
+      "feature": 0.0,
+      "relational": 0.105555555556,
+      "contextual": 0.015277777778
+    },
+    "means": {
+      "mlp": 0.6921296296296297,
+      "graph": 0.7277777777777777,
+      "attention": 0.5842592592592593
+    }
+  },
+  "controls": {
+    "relational_node_feature_permutation": {
+      "mlp__relational": {
+        "original_accuracy": 0.6083333333333333,
+        "controlled_accuracy": 0.6083333333333333,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.5916666666666667
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.6375
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.5958333333333333
+          }
+        ]
+      },
+      "graph__relational": {
+        "original_accuracy": 0.7138888888888889,
+        "controlled_accuracy": 0.5527777777777778,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.5875
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.5833333333333334
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.4875
+          }
+        ]
+      },
+      "attention__relational": {
+        "original_accuracy": 0.5180555555555556,
+        "controlled_accuracy": 0.5180555555555556,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.5333333333333333
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.55
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.4708333333333333
+          }
+        ]
+      }
+    },
+    "contextual_query_key_negation": {
+      "mlp__contextual": {
+        "original_accuracy": 0.46805555555555556,
+        "controlled_accuracy": 0.4763888888888889,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.48333333333333334
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.4791666666666667
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.4666666666666667
+          }
+        ]
+      },
+      "graph__contextual": {
+        "original_accuracy": 0.46944444444444444,
+        "controlled_accuracy": 0.48194444444444445,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.5041666666666667
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.4708333333333333
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.4708333333333333
+          }
+        ]
+      },
+      "attention__contextual": {
+        "original_accuracy": 0.4847222222222222,
+        "controlled_accuracy": 0.4722222222222222,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.48333333333333334
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.4625
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.4708333333333333
+          }
+        ]
+      }
+    }
+  },
+  "shortcut_linear_pooled": {
+    "feature": {
+      "mean_accuracy": 0.5055555502573649,
+      "std_accuracy": 0.009622495309758375,
+      "per_seed": [
+        0.5,
+        0.5166666507720947,
+        0.5
+      ]
+    },
+    "relational": {
+      "mean_accuracy": 0.48333332935969037,
+      "std_accuracy": 0.05120084232264367,
+      "per_seed": [
+        0.5041666626930237,
+        0.42500001192092896,
+        0.5208333134651184
+      ]
+    },
+    "contextual": {
+      "mean_accuracy": 0.48333332935969037,
+      "std_accuracy": 0.0125000029802352,
+      "per_seed": [
+        0.47083333134651184,
+        0.4958333373069763,
+        0.4833333194255829
+      ]
+    }
+  },
+  "oracle_selection": {
+    "executed": false,
+    "reason": "conditional gate evaluated in report after control evidence"
+  },
+  "manifest": {
+    "timestamp_utc": "2026-09-04T04:04:00.907020+00:00",
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+    "torch": "2.13.0+cpu",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "device": "cpu",
+    "git_commit": null,
+    "shape": [
+      12,
+      8
+    ],
+    "control": "node-feature permutation relative to fixed ring topology; GraphBlock external edge randomization unavailable without semantic change",
+    "training": {
+      "optimizer": "AdamW",
+      "lr": 0.003,
+      "epochs": 25,
+      "batch_size": 60,
+      "early_stopping": "best validation accuracy"
+    },
+    "capacity": {
+      "depths": {
+        "mlp": 3,
+        "graph": 2,
+        "attention": 1
+      },
+      "parameter_counts": {
+        "mlp": 3914,
+        "graph": 3866,
+        "attention": 3314
+      },
+      "max_relative_gap": 0.1532958610117527
+    }
+  }
+}

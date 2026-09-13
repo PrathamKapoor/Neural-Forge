@@ -1,0 +1,7 @@
+area,before,after,rationale
+placement order,base→F→R→C,base→C→F→R(ch5),contextual overwrite can no longer erase F/R carriers
+R carrier channel,"ch0 (shared, overwritten)",ch5 (previously pure noise; untouched by C/F writes),provable survival without new channels
+F offsets,ch0/ch1 before C (erased on FC/FRC),ch0/ch1 after C (common-mode; key identity preserved),rescue F on FC/FRC
+C block,last,first (identical writes),no C semantic change; votes/marker/keys untouched
+labels,majority+parity,majority+parity (identical algebra),task semantics preserved
+families/balance/sequences,"7 families, same counts, S=12",unchanged,no benchmark redesign

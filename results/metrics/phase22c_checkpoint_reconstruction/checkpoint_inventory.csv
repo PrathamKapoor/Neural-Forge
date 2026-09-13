@@ -1,0 +1,13 @@
+path,sha256_first32,size_bytes,architecture,seed,epoch,parameter_estimate,notes
+results/metrics/phase20_repaired_portfolio/partials/seed11_attention.pt,e1696883d24b967443451c09dbc442f2,18081,attention,11,unknown,~1734,portfolio expert
+results/metrics/phase20_repaired_portfolio/partials/seed11_attention_v2.pt,8b10e2740a851e671dffed298d3560d8,22157,attention_v2,11,unknown,~2166,best RC expert per phase20 log (55.0%)
+results/metrics/phase20_repaired_portfolio/partials/seed11_depth3.pt,db79d823ea77d9f8998bc3e1180932f3,51114,depth3,11,unknown,~6192,portfolio expert
+results/metrics/phase20_repaired_portfolio/partials/seed11_graph.pt,83d922732c6a57432616e731d93d94a5,20701,graph,11,unknown,~2544,portfolio expert
+results/metrics/phase20_repaired_portfolio/partials/seed11_joint.pt,c399fedbecf113d17053d55d8cb86c50,25259,joint,11,unknown,~3096,portfolio expert
+results/metrics/phase20_repaired_portfolio/partials/seed11_joint_co.pt,2a8d5368c82fa10813a4d967391f2f0c,34320,joint_co,11,unknown,~4200,portfolio expert
+results/metrics/phase20_repaired_portfolio/partials/seed11_mlp.pt,b2f4e4c788352060b61c6702ae58a2fb,22197,mlp,11,unknown,~2544,portfolio expert
+results/metrics/phase20_repaired_portfolio/partials/seed23_attention.pt,3b6161410f58cf38a1ac412a42ecef22,18081,attention,23,unknown,~1734,portfolio expert
+results/metrics/phase20_repaired_portfolio/partials/seed23_attention_v2.pt,951ea4d7c0ac03ed22b9b7a2f877e6b6,22157,attention_v2,23,unknown,~2166,best RC expert per phase20 log
+results/metrics/phase20_repaired_portfolio/partials/seed23_depth3.pt,0c249cfde70d519f0d757d148cb07814,51114,depth3,23,unknown,~6192,portfolio expert
+results/metrics/phase20_repaired_portfolio/partials/seed37_attention_v2.pt,c78314d46ae4166c525aa6e51756db5f,22157,attention_v2,37,unknown,~2166,best RC expert per phase20 log
+status,AMBIGUOUS,Multiple experts per seed; no single reference model; best RC = attention_v2 (per phase20 log)

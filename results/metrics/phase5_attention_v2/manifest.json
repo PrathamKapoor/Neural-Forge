@@ -1,0 +1,8 @@
+{
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "v2": "raw-key softmax retrieval into query residual; temperature .1"
+}

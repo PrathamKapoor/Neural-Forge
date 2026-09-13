@@ -1,0 +1,4 @@
+phase,divergence_stage,programmatic_case,reproduction_gate,status,notes
+Phase 22,reproduction_gate_failed,FAIL_CLOSED,FAIL_CLOSED,Reproduction gate failed; divergence at metric/evaluation stage
+Phase 22,first_divergence,metric_evaluation,UNRESOLVED,First verified divergence at evaluation stage (P21 evaluator produces 0.0 vs P20 predictions present)
+Phase 21,reproduction_gate_failed,FAIL_CLOSED,FAIL_CLOSED,Phase 21 reproduction failed (22 measurements > 3pp; RC core metrics broken)

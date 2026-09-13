@@ -1,0 +1,4 @@
+seed,R_change,R_correct_change,R_incorrect_change,R_n,C_change,C_correct_change,C_incorrect_change,C_n,control_change,control_correct_change,control_incorrect_change,control_n
+11,0.0,0.0,0.0,59,1.0,1.0,0.0,59,0.0,0.0,0.0,59
+23,0.0,0.0,0.0,59,0.9830508474576272,0.9830508474576272,0.0,59,0.0,0.0,0.0,59
+37,0.0,0.0,0.0,50,0.94,0.94,0.0,50,0.04,0.02,0.02,50

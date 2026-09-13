@@ -1,0 +1,10 @@
+seed,category,failed,criterion,observed
+0,component_unavailable,True,best R- or C-component acc < 70%,"R 48.1%, C 99.4%"
+0,joint_unavailable,True,joint (R&C) acc < 60% on RC,43.1%
+0,disagree_collapse,True,agree−disagree gap ≥ 50pp,98.3pp
+0,systematic_favoring,True,disagree preds match one component ≥ 90%,"C 98.8%, R 1.2%"
+0,head_inexpressive,True,linear AND nonlinear fail RC-disagree (<60%),"lin 6.1%, nl 4.5%"
+0,shortcut_incentive,True,model train RC within 3pp of the feasible C-rule (R-rule is label-oracle),model 50.8% vs C-rule 50.0%
+0,semantic_asymmetry,True,"RC-disagree labels equal R by construction (verify, not fail)","parity_fact=True, erasure=True, align R/RC/FRC=[97.8, 48.1, 55.6]"
+0,counterfactual_unresponsive,True,R-swap changes prediction < 20% while C-swap changes ≥ 20% (ignores R),"R-swap Δ 7.3%, C-swap Δ 90.9%"
+0,seed_instability,False,any seed-SD ≥ 5pp,all stable

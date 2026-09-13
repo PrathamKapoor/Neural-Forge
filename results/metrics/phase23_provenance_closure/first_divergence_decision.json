@@ -1,0 +1,21 @@
+{
+  "first_divergence_established": false,
+  "first_divergence_stage": "SPLIT",
+  "earliest_demonstrated_divergence_sequence": [
+    "checkpoint_identity (AMBIGUOUS \u2014 portfolio, no single reference)",
+    "split_identity (UNVERIFIED \u2014 no manifest)",
+    "predictions_availability (MISSING original; reconstructed available)",
+    "metric_evaluation (VERIFIED divergence independently from reconstructed predictions; Phase21 broken)"
+  ],
+  "reason_not_exact_sequence": "Ambiguous checkpoint identity (portfolio architecture) and unverified split prevent exact sequencing; metric divergence verified independently but only relative to reconstructed predictions, not original historical predictions",
+  "program_case": "CASE_G_PARTIAL",
+  "status_details": {
+    "reconstruction_class": "PARTIAL",
+    "checkpoint_identity_class": "AMBIGUOUS",
+    "split_identity_class": "UNVERIFIED",
+    "predictions_class": "RECONSTRUCTED_NOT_ORIGINAL",
+    "metric_divergence_confirmed_independently": true,
+    "historical_exact_replay_possible": false,
+    "previous_unsupported_claim_corrected": true
+  }
+}

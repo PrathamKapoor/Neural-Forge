@@ -1,0 +1,16 @@
+seed,condition,params,rel_params
+11,graph,3866,1776
+11,baseline,6464,1776
+11,depth3,10016,5328
+11,rel_focused,10016,5328
+11,rel_first,10016,5328
+23,graph,3866,1776
+23,baseline,6464,1776
+23,depth3,10016,5328
+23,rel_focused,10016,5328
+23,rel_first,10016,5328
+37,graph,3866,1776
+37,baseline,6464,1776
+37,depth3,10016,5328
+37,rel_focused,10016,5328
+37,rel_first,10016,5328

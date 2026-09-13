@@ -1,0 +1,8 @@
+seed,category,failed,criterion,observed
+0,fusion_information_loss,False,pre→fused probe drop ≥5pp on a component,worst -1.7pp
+0,scale_domination,False,max/min branch RMS ≥ 3x,2.40x
+0,destructive_interaction,False,worst pair interaction ≤ −3pp,-2.5pp
+0,insufficient_joint_information,False,oracle RC/FRC gains both < 2pp,"RC +0.3pp, FRC +6.1pp"
+0,compositional_transfer_failure,False,R gain ≥ 2pp but RC and FRC gains < 1pp,"R +1.9pp, RC -0.6pp, FRC -3.3pp"
+0,seed_instability,True,any seed-SD ≥ 5pp,oracle/F+R+C
+0,order_sensitivity,True,same-final-expert orientation effect ≥ 5pp on R,8.9pp (seed-consistency in H4 evidence)

@@ -1,0 +1,4 @@
+seed,construction_version,samples_per_family,total_samples,input_shape,input_dtype,label_shape,label_dtype,family_distribution,label_dist_0,label_dist_1,sha256_X_first32,sha256_y_first32,status
+11,phase19-repaired-v1,120,840,"(840, 12, 8)",torch.float32,"(840,)",torch.int64,"['C', 'F', 'FC', 'FR', 'FRC', 'R', 'RC']",430,410,868b3ae4bea61c97aa8f43f0e66eada2,960e10a06ff702c04ef88da827569e62,IDENTICAL_PER_SEED_DETERMINISTIC
+23,phase19-repaired-v1,120,840,"(840, 12, 8)",torch.float32,"(840,)",torch.int64,"['C', 'F', 'FC', 'FR', 'FRC', 'R', 'RC']",413,427,5d2718d0409f9ea2e7f0ea05a1c1f844,4079cd74010cfa5fe21c34b5e23b8310,IDENTICAL_PER_SEED_DETERMINISTIC
+37,phase19-repaired-v1,120,840,"(840, 12, 8)",torch.float32,"(840,)",torch.int64,"['C', 'F', 'FC', 'FR', 'FRC', 'R', 'RC']",408,432,e77445fee96e637803ed708890a6e686,6e3341b5199daa998995fdb68e4b000e,IDENTICAL_PER_SEED_DETERMINISTIC

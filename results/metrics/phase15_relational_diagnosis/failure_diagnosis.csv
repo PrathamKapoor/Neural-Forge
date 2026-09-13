@@ -1,0 +1,11 @@
+category,failed,criterion,observed
+depth_failure,False,best depth R gain <= 0pp,+4.7pp
+aggregation_failure,False,best aggregation R gain <= 0pp,+4.2pp
+capacity_failure,False,capacity R gain <= 0pp,+3.9pp
+topology_failure,False,candidate relational-destruction drop on R <= 0pp,+3.6pp
+representation_prediction_gap,True,candidate probe-final gap >= 5pp,21.7pp
+compositional_transfer_failure,True,R gain >= 2pp but RC and FRC gains < 1pp,"R +4.7pp, RC -0.3pp, FRC +0.6pp"
+seed_instability,True,any condition R seed-SD >= 5pp,depth/depth2; aggregation/agg_max
+compute_regression,True,candidate params growth > 50%,+55.0%
+latency_regression,False,candidate latency > 1.5x baseline,1.46x
+branch_interference,False,candidate drops F or C by >= 3pp vs baseline,not observed

@@ -1,0 +1,4 @@
+seed,mean_k,agreement_F,recovery_F,agreement_R,recovery_R,agreement_C,recovery_C,agreement_FR,recovery_FR,agreement_RC,recovery_RC,agreement_FC,recovery_FC,agreement_FRC,recovery_FRC
+11,2,0.0,1.0,0.0,1.0,0.0,0.041666666666666664,0.0,0.725,0.0,0.675,0.0,0.025,0.0,0.041666666666666664
+23,2,0.0,0.75,0.0,0.008333333333333333,0.0,0.0,0.0,0.75,0.0,0.0,0.0,1.0,0.0,0.0
+37,2,0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.575,0.0,0.0,0.0,1.0,0.0,1.0

@@ -1,0 +1,13 @@
+seed,policy,estimated_flops_per_sample
+11,k=1,9164.0
+11,fixed_k=2_uniform,18092.0
+11,sequential_2,17040.0
+11,adaptive_k_learned,61972.0
+23,k=1,9164.0
+23,fixed_k=2_uniform,18092.0
+23,sequential_2,17040.0
+23,adaptive_k_learned,61972.0
+37,k=1,9164.0
+37,fixed_k=2_uniform,18092.0
+37,sequential_2,17040.0
+37,adaptive_k_learned,61972.0

@@ -1,0 +1,15 @@
+name,accuracy,flops,is_non_dominated,dominated_by
+Fixed MLP,0.6653,8928.0,True,
+Fixed Graph,0.5750,8112.0,True,
+Fixed Attention V1,0.4579,39168.0,False,Fixed MLP;Fixed Graph;Random Router;Learned Router (Phase 8A);Oracle Router;Cost-Aware (λ=0.000);Cost-Aware (λ=0.003);Cost-Aware (λ=0.010);Cost-Aware (λ=0.030);Cost-Aware (λ=0.100);Cost-Aware (λ=0.300);Cost-Aware (λ=1.000)
+Fixed Attention V2,0.6699,46296.0,False,Learned Router (Phase 8A);Oracle Router;Cost-Aware (λ=0.000);Cost-Aware (λ=0.003);Cost-Aware (λ=0.010);Cost-Aware (λ=0.030);Cost-Aware (λ=0.100);Cost-Aware (λ=0.300);Cost-Aware (λ=1.000)
+Random Router,0.5972,26542.7,False,Fixed MLP;Oracle Router;Cost-Aware (λ=0.100);Cost-Aware (λ=0.300);Cost-Aware (λ=1.000)
+Learned Router (Phase 8A),0.9042,26920.7,False,Oracle Router;Cost-Aware (λ=0.003);Cost-Aware (λ=0.010)
+Oracle Router,0.9051,21112.0,True,
+Cost-Aware (λ=0.000),0.9042,26920.7,False,Oracle Router;Cost-Aware (λ=0.003);Cost-Aware (λ=0.010)
+Cost-Aware (λ=0.003),0.9042,26900.4,False,Oracle Router;Cost-Aware (λ=0.010)
+Cost-Aware (λ=0.010),0.9051,26890.0,False,Oracle Router
+Cost-Aware (λ=0.030),0.9032,26785.8,False,Oracle Router;Cost-Aware (λ=0.100);Cost-Aware (λ=0.300)
+Cost-Aware (λ=0.100),0.9037,24744.0,False,Oracle Router
+Cost-Aware (λ=0.300),0.9032,22009.5,False,Oracle Router
+Cost-Aware (λ=1.000),0.7917,13203.4,True,

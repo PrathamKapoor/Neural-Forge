@@ -1,0 +1,5 @@
+component,required,status,exact_identity,evidence,notes
+Train_Split,yes,UNVERIFIED,UNAVAILABLE,No split manifest file found in phase20/phase21 artifacts; split mechanism recoverable only from protocol description,No historical split indices available; split identity cannot be established for exact reproduction
+Validation_Split,yes,UNVERIFIED,UNAVAILABLE,Same as train split,Same limitation
+Test_Split,yes,UNVERIFIED,UNAVAILABLE,Same as train split; no separate test split artifact saved,Historical evaluation may have used same dataset or derived split; unrecoverable
+Split_Algorithm,yes,INFERRED_ONLY,INFERRED_FROM_CODE,Protocol notes describe family filtering and sample selection; exact algorithm recoverable from source,No saved historical split artifact; algorithm recoverable but exact historical application unrecoverable

@@ -1,0 +1,25 @@
+{
+  "phase": "Phase 14 \u2014 Relational Readout, Fusion, and Prediction-Head Bottleneck Diagnosis",
+  "timestamp": "2026-09-07T06:21:58Z",
+  "python_version": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "torch_version": "2.13.0+cpu",
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "evaluated_families": [
+    "F",
+    "R",
+    "C",
+    "FR",
+    "RC",
+    "FC",
+    "FRC"
+  ],
+  "samples_per_type": 120,
+  "jointco_epochs": 40,
+  "head_epochs": 10,
+  "protocol": "Frozen JointCo encoder (Phase 13, 40 epochs mixed F+R+C) + trainable small diagnostic head. The JointCo expert is NOT jointly retrained. The diagnostic varies pooling strategy, head capacity, and which internal representation the head reads from."
+}

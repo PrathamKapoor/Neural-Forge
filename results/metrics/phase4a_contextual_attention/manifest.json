@@ -1,0 +1,13 @@
+{
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "train_lengths": [
+    8,
+    12
+  ],
+  "unseen_test_length": 16,
+  "attention_audit": "one head, no mask, no positional encoding; residual projection then mean-pooling classifier"
+}

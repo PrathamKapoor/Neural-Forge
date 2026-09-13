@@ -1,0 +1,31 @@
+{
+  "phase": "Phase 21 \u2014 RC Relational Capacity and Decision Conversion Diagnosis",
+  "timestamp": "2026-09-13T07:57:12Z",
+  "python_version": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "torch_version": "2.13.0+cpu",
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "evaluated_families": [
+    "F",
+    "R",
+    "C",
+    "FR",
+    "RC",
+    "FC",
+    "FRC"
+  ],
+  "benchmark": "phase19-repaired-v1",
+  "epochs": 40,
+  "batch_size": 60,
+  "stages": [
+    "reproduce",
+    "capacity",
+    "diagnose",
+    "finalize"
+  ],
+  "protocol": "Depth-1/2/4 trained on repaired F+R+C with the exact Phase 20 joint protocol (AdamW 0.003/1e-4, best-val, frozen); depth-3 and portfolio weights reused read-only from Phase 20 cache. All diagnostics frozen."
+}

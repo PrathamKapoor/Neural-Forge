@@ -1,0 +1,59 @@
+{
+  "timestamp_utc": "2026-09-05T16:41:46.774250+00:00",
+  "experiment_name": "Phase 8B Compute-Aware Learned Routing",
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "lambdas": [
+    0.0,
+    0.003,
+    0.01,
+    0.03,
+    0.1,
+    0.3,
+    1.0
+  ],
+  "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "torch": "2.13.0+cpu",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "device": "cpu",
+  "scientific_disclaimer": "Oracle routing is an upper-bound/control condition and does not demonstrate that a learned router can recover the same selection policy.",
+  "historical_accounting_audit": {
+    "phase7_reported_random_flops": 25931.0,
+    "phase8a_reported_random_flops": 25491.0,
+    "theoretical_random_expert_flops": 25626.0,
+    "theoretical_random_total_flops_with_router": 26678.0,
+    "discrepancy_explanation": "The discrepancy between Phase 7 (25,931) and Phase 8A (25,491) reflects empirical sample means over finite test populations (720 samples) across different random generator states, which fluctuate around the exact theoretical uniform expectation of 25,626 FLOPs. In Phase 8B, all router conditions consistently include the explicit router evaluation overhead (1,052 FLOPs/sample)."
+  },
+  "input_contract": {
+    "shape": [
+      12,
+      8
+    ],
+    "marker_channel": 4,
+    "marker_value": 1.0,
+    "router_representation": "torch.cat([x.mean(dim=1), x.std(dim=1)], dim=-1) (16 dims)",
+    "permutation_invariant": true
+  },
+  "router_architecture": {
+    "type": "SampleLevelRouter",
+    "layers": "Linear(16, 16) -> Tanh -> Linear(16, 4)",
+    "parameters": 340,
+    "selection_mechanism": "Straight-through hard routing with soft-probability surrogate cost gradient"
+  },
+  "normalized_costs": {
+    "mlp": 0.21077975838472585,
+    "graph": 0.19354566190757794,
+    "attention": 0.8494550984202078,
+    "attention_v2": 1.0
+  },
+  "reference_cost": 47348.0,
+  "verdict": {
+    "case": "Case E",
+    "description": "Adding an explicit computational cost penalty (\u03bb sweep) produces a strictly controllable Pareto frontier spanning from unconstrained accuracy-first (90.4%, 26,921 FLOPs) to balanced operating points (90.3%, 26,786 FLOPs) and low-compute operating points (79.2%, 13,203 FLOPs).",
+    "routing_gate_status": "OPEN FOR PHASE 9 \u2014 compute-aware sample-level routing confirmed and validated",
+    "justification": "Empirical evidence confirms hypothesis H8B: computation can become an explicit learned routing decision variable. The router smoothly shifts from expensive specialists (AttentionBlockV2) to efficient specialists (MLP) on easier tasks before shedding expensive contextual computation, generating useful counterfactual sacrifices while preserving high accuracy."
+  }
+}

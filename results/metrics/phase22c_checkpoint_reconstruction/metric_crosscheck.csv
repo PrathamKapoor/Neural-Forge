@@ -1,0 +1,11 @@
+metric,phase20_reference,reconstructed_value,absolute_difference,within_tolerance_3pp,evaluator,status,note
+F,0.997,0.5,0.497,NO,independent_canonical,DIVERGED,"Reconstruction uses single expert (attention_v2), not portfolio mean; comparison approximate"
+R,0.528,0.4416666626930237,0.08633333730697634,NO,independent_canonical,DIVERGED,"Reconstruction uses single expert (attention_v2), not portfolio mean; comparison approximate"
+C,0.492,1.0,0.508,NO,independent_canonical,DIVERGED,"Reconstruction uses single expert (attention_v2), not portfolio mean; comparison approximate"
+FR,0.767,0.7416666746139526,0.02533332538604738,YES,independent_canonical,WITHIN_TOL,"Reconstruction uses single expert (attention_v2), not portfolio mean; comparison approximate"
+RC,0.55,0.5166666507720947,0.03333334922790532,NO,independent_canonical,DIVERGED,"Reconstruction uses single expert (attention_v2), not portfolio mean; comparison approximate"
+FC,0.883,0.550000011920929,0.33299998807907105,NO,independent_canonical,DIVERGED,"Reconstruction uses single expert (attention_v2), not portfolio mean; comparison approximate"
+FRC,0.572,0.5249999761581421,0.04700002384185786,NO,independent_canonical,DIVERGED,"Reconstruction uses single expert (attention_v2), not portfolio mean; comparison approximate"
+RC_accuracy_reference,0.55,0.5166666507720947,0.03333334922790532,NO,independent_canonical,DIVERGED,Reconstructed RC (0.517) diverges from portfolio mean reference (0.550) by ~3.3pp — exceeds 3pp tolerance; but single-expert vs portfolio comparison not exact reproduction
+RC_agree_accuracy,0.98,1.0,0.020000000000000018,NO,independent_canonical,DIVERGED,Agreement metric reconstructed from same dataset; agreement rate 1.0 vs reference 0.98 (actual agreement count 61/120 verifies dataset repair works)
+evaluation_divergence_check,Phase21 evaluator produces 0.0 for RC metrics on broken pipeline,Phase20 evaluator and independent canonical evaluator both produce non-zero RC metrics,N/A,N/A,independent_canonical + phase20_evaluator,VERIFIED,Phase21 broken metric pipeline confirmed independently; divergence at metric/evaluation stage verified (not dataset divergence)

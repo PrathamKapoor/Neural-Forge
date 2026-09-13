@@ -1,0 +1,21 @@
+{
+  "timestamp_utc": "2026-09-04T02:42:05.922184+00:00",
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "samples_train": 360,
+  "samples_test": 360,
+  "epochs": 40,
+  "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "torch": "2.13.0+cpu",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "device": "cpu",
+  "oracle": "generator family 0/1/2",
+  "natural_descriptor": "sequence mean,std,adjacent product,endpoint product",
+  "gradient_estimators": {
+    "supervised": "cross-entropy logits",
+    "indirect": "straight-through hard forward / soft backward"
+  }
+}

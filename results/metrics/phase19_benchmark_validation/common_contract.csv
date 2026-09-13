@@ -1,0 +1,22 @@
+seed,input_shape,marker_present,finite
+11,"[32, 12, 8]",True,True
+11,mlp,True,"[32, 2]"
+11,graph,True,"[32, 2]"
+11,attention,True,"[32, 2]"
+11,attention_v2,True,"[32, 2]"
+11,joint,True,"[32, 2]"
+11,joint_co,True,"[32, 2]"
+23,"[32, 12, 8]",True,True
+23,mlp,True,"[32, 2]"
+23,graph,True,"[32, 2]"
+23,attention,True,"[32, 2]"
+23,attention_v2,True,"[32, 2]"
+23,joint,True,"[32, 2]"
+23,joint_co,True,"[32, 2]"
+37,"[32, 12, 8]",True,True
+37,mlp,True,"[32, 2]"
+37,graph,True,"[32, 2]"
+37,attention,True,"[32, 2]"
+37,attention_v2,True,"[32, 2]"
+37,joint,True,"[32, 2]"
+37,joint_co,True,"[32, 2]"

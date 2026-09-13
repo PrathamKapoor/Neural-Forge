@@ -1,0 +1,128 @@
+{
+  "adaptive_soft": {
+    "accuracy": 0.6354166865348816,
+    "estimated_compute": 1570.88427734375,
+    "average_active_modules": 3.0,
+    "oracle_route_agreement": 0.3072916567325592,
+    "routing": {
+      "utilization": {
+        "mlp": 0.5131946206092834,
+        "graph": 0.48255228996276855,
+        "attention": 0.004253021907061338
+      },
+      "entropy": 0.710868775844574,
+      "single_module_collapse": false,
+      "all_module_like": false,
+      "low_diversity": false
+    },
+    "latency": {
+      "batch_latency_ms": 2.505510000628419,
+      "samples_per_second": 25543.701675087246
+    }
+  },
+  "adaptive_hard": {
+    "accuracy": 0.6145833134651184,
+    "estimated_compute": 1446.3125,
+    "average_active_modules": 1.0,
+    "oracle_route_agreement": 0.3072916567325592,
+    "routing": {
+      "utilization": {
+        "mlp": 0.6614583134651184,
+        "graph": 0.3385416567325592,
+        "attention": 0.0
+      },
+      "entropy": -0.0,
+      "single_module_collapse": false,
+      "all_module_like": false,
+      "low_diversity": false
+    },
+    "latency": {
+      "batch_latency_ms": 2.9499950003810227,
+      "samples_per_second": 21694.952022540285
+    }
+  },
+  "mlp": {
+    "accuracy": 0.6197916865348816,
+    "estimated_compute": 1296.0,
+    "average_active_modules": 1.0,
+    "oracle_route_agreement": 0.3333333432674408,
+    "routing": {
+      "utilization": {
+        "mlp": 1.0,
+        "graph": 0.0,
+        "attention": 0.0
+      },
+      "entropy": -0.0,
+      "single_module_collapse": true,
+      "all_module_like": false,
+      "low_diversity": true
+    },
+    "latency": {
+      "batch_latency_ms": 2.0064150012331083,
+      "samples_per_second": 31897.688145606317
+    }
+  },
+  "graph": {
+    "accuracy": 0.640625,
+    "estimated_compute": 1740.0,
+    "average_active_modules": 1.0,
+    "oracle_route_agreement": 0.3333333432674408,
+    "routing": {
+      "utilization": {
+        "mlp": 0.0,
+        "graph": 1.0,
+        "attention": 0.0
+      },
+      "entropy": -0.0,
+      "single_module_collapse": true,
+      "all_module_like": false,
+      "low_diversity": true
+    },
+    "latency": {
+      "batch_latency_ms": 1.6364000010071322,
+      "samples_per_second": 39110.24197055171
+    }
+  },
+  "attention": {
+    "accuracy": 0.6041666865348816,
+    "estimated_compute": 15552.0,
+    "average_active_modules": 1.0,
+    "oracle_route_agreement": 0.3333333432674408,
+    "routing": {
+      "utilization": {
+        "mlp": 0.0,
+        "graph": 0.0,
+        "attention": 1.0
+      },
+      "entropy": -0.0,
+      "single_module_collapse": true,
+      "all_module_like": false,
+      "low_diversity": true
+    },
+    "latency": {
+      "batch_latency_ms": 1.9539900007657707,
+      "samples_per_second": 32753.494119682462
+    }
+  },
+  "fixed_hybrid": {
+    "accuracy": 0.6197916865348816,
+    "estimated_compute": 6196.0,
+    "average_active_modules": 3.0,
+    "oracle_route_agreement": 0.3333333432674408,
+    "routing": {
+      "utilization": {
+        "mlp": 0.3333333432674408,
+        "graph": 0.3333333432674408,
+        "attention": 0.3333333432674408
+      },
+      "entropy": 1.0986124277114868,
+      "single_module_collapse": false,
+      "all_module_like": true,
+      "low_diversity": true
+    },
+    "latency": {
+      "batch_latency_ms": 2.1188100014114752,
+      "samples_per_second": 30205.63427460013
+    }
+  }
+}

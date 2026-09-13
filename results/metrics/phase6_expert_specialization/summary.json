@@ -1,0 +1,1474 @@
+{
+  "experiment": "Phase 6 common-input-contract expert revalidation",
+  "capacity": {
+    "depths": {
+      "mlp": 3,
+      "graph": 2,
+      "attention": 1,
+      "attention_v2": 3
+    },
+    "parameter_counts": {
+      "mlp": 3914,
+      "graph": 3866,
+      "attention": 3314,
+      "attention_v2": 3914
+    },
+    "max_relative_gap": 0.1532958610117527
+  },
+  "marker_neutrality": {
+    "marker_to_label": {
+      "feature": {
+        "mean_accuracy": 0.49722222487131756,
+        "std_accuracy": 0.031273161375851274,
+        "per_seed": [
+          0.4791666567325592,
+          0.5333333611488342,
+          0.4791666567325592
+        ],
+        "neutral": true
+      },
+      "relational": {
+        "mean_accuracy": 0.4999999900658925,
+        "std_accuracy": 0.023199012112116786,
+        "per_seed": [
+          0.5041666626930237,
+          0.4749999940395355,
+          0.5208333134651184
+        ],
+        "neutral": true
+      },
+      "contextual": {
+        "mean_accuracy": 0.4999999900658925,
+        "std_accuracy": 0.033071876744822745,
+        "per_seed": [
+          0.4625000059604645,
+          0.512499988079071,
+          0.5249999761581421
+        ],
+        "neutral": true
+      }
+    },
+    "marker_to_task_family": {
+      "mean_accuracy": 0.322685182094574,
+      "std_accuracy": 0.013981181941616537,
+      "per_seed": [
+        0.3097222149372101,
+        0.3375000059604645,
+        0.32083332538604736
+      ],
+      "neutral": true
+    }
+  },
+  "cells": {
+    "mlp__feature": {
+      "architecture": "mlp",
+      "family": "feature",
+      "per_seed": [
+        {
+          "seed": 11,
+          "validation_accuracy": 1.0,
+          "test_accuracy": 1.0,
+          "test_loss": 0.4761894419789314,
+          "training_seconds": 1.6966973999515176,
+          "parameters": 3914,
+          "estimated_forward_flops": 8928.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 2.12399999727495,
+          "samples_per_second": 28248.587606863846,
+          "peak_python_memory_bytes": 2528.0
+        },
+        {
+          "seed": 23,
+          "validation_accuracy": 1.0,
+          "test_accuracy": 1.0,
+          "test_loss": 0.3853079378604889,
+          "training_seconds": 1.526417000044603,
+          "parameters": 3914,
+          "estimated_forward_flops": 8928.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 2.0110500045120716,
+          "samples_per_second": 29835.16066998912,
+          "peak_python_memory_bytes": 2528.0
+        },
+        {
+          "seed": 37,
+          "validation_accuracy": 1.0,
+          "test_accuracy": 1.0,
+          "test_loss": 0.3589104935526848,
+          "training_seconds": 1.2556040000054054,
+          "parameters": 3914,
+          "estimated_forward_flops": 8928.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 1.7276800004765391,
+          "samples_per_second": 34728.65344476433,
+          "peak_python_memory_bytes": 2552.0
+        }
+      ],
+      "mean_test_accuracy": 1.0,
+      "std_test_accuracy": 0.0
+    },
+    "graph__feature": {
+      "architecture": "graph",
+      "family": "feature",
+      "per_seed": [
+        {
+          "seed": 11,
+          "validation_accuracy": 1.0,
+          "test_accuracy": 1.0,
+          "test_loss": 0.30203142017126083,
+          "training_seconds": 1.2153631999972276,
+          "parameters": 3866,
+          "estimated_forward_flops": 8112.0,
+          "activation_elements": 864.0,
+          "batch_latency_ms": 1.9408599997404963,
+          "samples_per_second": 30914.130853344566,
+          "peak_python_memory_bytes": 2024.0
+        },
+        {
+          "seed": 23,
+          "validation_accuracy": 1.0,
+          "test_accuracy": 1.0,
+          "test_loss": 0.2669231966137886,
+          "training_seconds": 1.1400902000023052,
+          "parameters": 3866,
+          "estimated_forward_flops": 8112.0,
+          "activation_elements": 864.0,
+          "batch_latency_ms": 1.8418700026813895,
+          "samples_per_second": 32575.588892078245,
+          "peak_python_memory_bytes": 2024.0
+        },
+        {
+          "seed": 37,
+          "validation_accuracy": 1.0,
+          "test_accuracy": 1.0,
+          "test_loss": 0.34126437455415726,
+          "training_seconds": 1.1516143000335433,
+          "parameters": 3866,
+          "estimated_forward_flops": 8112.0,
+          "activation_elements": 864.0,
+          "batch_latency_ms": 2.2635200002696365,
+          "samples_per_second": 26507.386721943098,
+          "peak_python_memory_bytes": 2024.0
+        }
+      ],
+      "mean_test_accuracy": 1.0,
+      "std_test_accuracy": 0.0
+    },
+    "attention__feature": {
+      "architecture": "attention",
+      "family": "feature",
+      "per_seed": [
+        {
+          "seed": 11,
+          "validation_accuracy": 0.75,
+          "test_accuracy": 0.75,
+          "test_loss": 0.6049399673938751,
+          "training_seconds": 1.087174899992533,
+          "parameters": 3314,
+          "estimated_forward_flops": 39168.0,
+          "activation_elements": 576.0,
+          "batch_latency_ms": 1.5584299981128424,
+          "samples_per_second": 38500.285590405794,
+          "peak_python_memory_bytes": 2728.0
+        },
+        {
+          "seed": 23,
+          "validation_accuracy": 0.75,
+          "test_accuracy": 0.75,
+          "test_loss": 0.6843801736831665,
+          "training_seconds": 1.145673299964983,
+          "parameters": 3314,
+          "estimated_forward_flops": 39168.0,
+          "activation_elements": 576.0,
+          "batch_latency_ms": 1.6134199977386743,
+          "samples_per_second": 37188.08498970781,
+          "peak_python_memory_bytes": 2728.0
+        },
+        {
+          "seed": 37,
+          "validation_accuracy": 0.75,
+          "test_accuracy": 0.75,
+          "test_loss": 0.6843274980783463,
+          "training_seconds": 1.0691014000331052,
+          "parameters": 3314,
+          "estimated_forward_flops": 39168.0,
+          "activation_elements": 576.0,
+          "batch_latency_ms": 1.499529997818172,
+          "samples_per_second": 40012.53731989388,
+          "peak_python_memory_bytes": 2728.0
+        }
+      ],
+      "mean_test_accuracy": 0.75,
+      "std_test_accuracy": 0.0
+    },
+    "attention_v2__feature": {
+      "architecture": "attention_v2",
+      "family": "feature",
+      "per_seed": [
+        {
+          "seed": 11,
+          "validation_accuracy": 1.0,
+          "test_accuracy": 1.0,
+          "test_loss": 0.32212741672992706,
+          "training_seconds": 1.4316475000232458,
+          "parameters": 3914,
+          "estimated_forward_flops": 46296.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 3.3758599951397628,
+          "samples_per_second": 17773.248916241257,
+          "peak_python_memory_bytes": 3160.0
+        },
+        {
+          "seed": 23,
+          "validation_accuracy": 1.0,
+          "test_accuracy": 0.9958333333333333,
+          "test_loss": 0.31850504875183105,
+          "training_seconds": 1.399234400014393,
+          "parameters": 3914,
+          "estimated_forward_flops": 46296.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 3.113319998374209,
+          "samples_per_second": 19272.031153666278,
+          "peak_python_memory_bytes": 3160.0
+        },
+        {
+          "seed": 37,
+          "validation_accuracy": 0.75,
+          "test_accuracy": 0.75,
+          "test_loss": 0.5858339816331863,
+          "training_seconds": 1.3967543999897316,
+          "parameters": 3914,
+          "estimated_forward_flops": 46296.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 3.3863899996504188,
+          "samples_per_second": 17717.982868539617,
+          "peak_python_memory_bytes": 3160.0
+        }
+      ],
+      "mean_test_accuracy": 0.9152777777777777,
+      "std_test_accuracy": 0.14314991494286033
+    },
+    "mlp__relational": {
+      "architecture": "mlp",
+      "family": "relational",
+      "per_seed": [
+        {
+          "seed": 11,
+          "validation_accuracy": 0.6,
+          "test_accuracy": 0.5958333333333333,
+          "test_loss": 0.6683946698904037,
+          "training_seconds": 1.1220445000217296,
+          "parameters": 3914,
+          "estimated_forward_flops": 8928.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 1.6581700008828193,
+          "samples_per_second": 36184.46840074036,
+          "peak_python_memory_bytes": 2552.0
+        },
+        {
+          "seed": 23,
+          "validation_accuracy": 0.6166666666666667,
+          "test_accuracy": 0.5625,
+          "test_loss": 0.6814951151609421,
+          "training_seconds": 1.1611575999995694,
+          "parameters": 3914,
+          "estimated_forward_flops": 8928.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 1.3945499958936125,
+          "samples_per_second": 43024.631728282104,
+          "peak_python_memory_bytes": 2552.0
+        },
+        {
+          "seed": 37,
+          "validation_accuracy": 0.6083333333333333,
+          "test_accuracy": 0.6291666666666667,
+          "test_loss": 0.6627780050039291,
+          "training_seconds": 1.3204024999868125,
+          "parameters": 3914,
+          "estimated_forward_flops": 8928.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 1.6829100030008703,
+          "samples_per_second": 35652.53037477428,
+          "peak_python_memory_bytes": 2552.0
+        }
+      ],
+      "mean_test_accuracy": 0.5958333333333333,
+      "std_test_accuracy": 0.033333333333333326
+    },
+    "graph__relational": {
+      "architecture": "graph",
+      "family": "relational",
+      "per_seed": [
+        {
+          "seed": 11,
+          "validation_accuracy": 0.75,
+          "test_accuracy": 0.7166666666666667,
+          "test_loss": 0.6135217994451523,
+          "training_seconds": 1.0233200999791734,
+          "parameters": 3866,
+          "estimated_forward_flops": 8112.0,
+          "activation_elements": 864.0,
+          "batch_latency_ms": 1.7882400017697364,
+          "samples_per_second": 33552.54324957547,
+          "peak_python_memory_bytes": 2024.0
+        },
+        {
+          "seed": 23,
+          "validation_accuracy": 0.8,
+          "test_accuracy": 0.725,
+          "test_loss": 0.6174673289060593,
+          "training_seconds": 1.0161672999965958,
+          "parameters": 3866,
+          "estimated_forward_flops": 8112.0,
+          "activation_elements": 864.0,
+          "batch_latency_ms": 1.6770699992775917,
+          "samples_per_second": 35776.68196667126,
+          "peak_python_memory_bytes": 2024.0
+        },
+        {
+          "seed": 37,
+          "validation_accuracy": 0.7083333333333334,
+          "test_accuracy": 0.725,
+          "test_loss": 0.6245288550853729,
+          "training_seconds": 1.034482899995055,
+          "parameters": 3866,
+          "estimated_forward_flops": 8112.0,
+          "activation_elements": 864.0,
+          "batch_latency_ms": 1.642800000263378,
+          "samples_per_second": 36523.009490127006,
+          "peak_python_memory_bytes": 2024.0
+        }
+      ],
+      "mean_test_accuracy": 0.7222222222222222,
+      "std_test_accuracy": 0.004811252243246864
+    },
+    "attention__relational": {
+      "architecture": "attention",
+      "family": "relational",
+      "per_seed": [
+        {
+          "seed": 11,
+          "validation_accuracy": 0.5416666666666666,
+          "test_accuracy": 0.5208333333333334,
+          "test_loss": 0.6912002712488174,
+          "training_seconds": 0.9894219000125304,
+          "parameters": 3314,
+          "estimated_forward_flops": 39168.0,
+          "activation_elements": 576.0,
+          "batch_latency_ms": 1.8432300013955683,
+          "samples_per_second": 32551.55349824606,
+          "peak_python_memory_bytes": 2728.0
+        },
+        {
+          "seed": 23,
+          "validation_accuracy": 0.5833333333333334,
+          "test_accuracy": 0.49166666666666664,
+          "test_loss": 0.6933758705854416,
+          "training_seconds": 1.1302722000400536,
+          "parameters": 3314,
+          "estimated_forward_flops": 39168.0,
+          "activation_elements": 576.0,
+          "batch_latency_ms": 1.9347900000866503,
+          "samples_per_second": 31011.11748422975,
+          "peak_python_memory_bytes": 2728.0
+        },
+        {
+          "seed": 37,
+          "validation_accuracy": 0.6,
+          "test_accuracy": 0.5333333333333333,
+          "test_loss": 0.6982558071613312,
+          "training_seconds": 0.9765539999934845,
+          "parameters": 3314,
+          "estimated_forward_flops": 39168.0,
+          "activation_elements": 576.0,
+          "batch_latency_ms": 1.591529999859631,
+          "samples_per_second": 37699.57211318156,
+          "peak_python_memory_bytes": 2728.0
+        }
+      ],
+      "mean_test_accuracy": 0.5152777777777777,
+      "std_test_accuracy": 0.02138167266436203
+    },
+    "attention_v2__relational": {
+      "architecture": "attention_v2",
+      "family": "relational",
+      "per_seed": [
+        {
+          "seed": 11,
+          "validation_accuracy": 0.525,
+          "test_accuracy": 0.475,
+          "test_loss": 0.6979270130395889,
+          "training_seconds": 1.4487231000093743,
+          "parameters": 3914,
+          "estimated_forward_flops": 46296.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 3.4095300012268126,
+          "samples_per_second": 17597.73340560455,
+          "peak_python_memory_bytes": 3160.0
+        },
+        {
+          "seed": 23,
+          "validation_accuracy": 0.5583333333333333,
+          "test_accuracy": 0.5041666666666667,
+          "test_loss": 0.6937151402235031,
+          "training_seconds": 1.4920931999804452,
+          "parameters": 3914,
+          "estimated_forward_flops": 46296.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 3.3494199975393713,
+          "samples_per_second": 17913.549224665345,
+          "peak_python_memory_bytes": 3160.0
+        },
+        {
+          "seed": 37,
+          "validation_accuracy": 0.5416666666666666,
+          "test_accuracy": 0.5333333333333333,
+          "test_loss": 0.6934643685817719,
+          "training_seconds": 1.3812116999761201,
+          "parameters": 3914,
+          "estimated_forward_flops": 46296.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 3.229170001577586,
+          "samples_per_second": 18580.62597221189,
+          "peak_python_memory_bytes": 3160.0
+        }
+      ],
+      "mean_test_accuracy": 0.5041666666666667,
+      "std_test_accuracy": 0.029166666666666674
+    },
+    "mlp__contextual": {
+      "architecture": "mlp",
+      "family": "contextual",
+      "per_seed": [
+        {
+          "seed": 11,
+          "validation_accuracy": 0.55,
+          "test_accuracy": 0.4375,
+          "test_loss": 0.7001737058162689,
+          "training_seconds": 1.135981699975673,
+          "parameters": 3914,
+          "estimated_forward_flops": 8928.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 1.7335399985313416,
+          "samples_per_second": 34611.257917805255,
+          "peak_python_memory_bytes": 2552.0
+        },
+        {
+          "seed": 23,
+          "validation_accuracy": 0.575,
+          "test_accuracy": 0.4666666666666667,
+          "test_loss": 0.7041253745555878,
+          "training_seconds": 1.263786799972877,
+          "parameters": 3914,
+          "estimated_forward_flops": 8928.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 1.5541700005996972,
+          "samples_per_second": 38605.81530775153,
+          "peak_python_memory_bytes": 2552.0
+        },
+        {
+          "seed": 37,
+          "validation_accuracy": 0.5333333333333333,
+          "test_accuracy": 0.5041666666666667,
+          "test_loss": 0.6948328763246536,
+          "training_seconds": 1.1984785000095144,
+          "parameters": 3914,
+          "estimated_forward_flops": 8928.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 1.846960000693798,
+          "samples_per_second": 32485.81451545318,
+          "peak_python_memory_bytes": 2552.0
+        }
+      ],
+      "mean_test_accuracy": 0.46944444444444444,
+      "std_test_accuracy": 0.033420026154211004
+    },
+    "graph__contextual": {
+      "architecture": "graph",
+      "family": "contextual",
+      "per_seed": [
+        {
+          "seed": 11,
+          "validation_accuracy": 0.5583333333333333,
+          "test_accuracy": 0.4583333333333333,
+          "test_loss": 0.7075363993644714,
+          "training_seconds": 1.1368482999969274,
+          "parameters": 3866,
+          "estimated_forward_flops": 8112.0,
+          "activation_elements": 864.0,
+          "batch_latency_ms": 3.0244799971114844,
+          "samples_per_second": 19838.120952131514,
+          "peak_python_memory_bytes": 2024.0
+        },
+        {
+          "seed": 23,
+          "validation_accuracy": 0.575,
+          "test_accuracy": 0.4666666666666667,
+          "test_loss": 0.7055613696575165,
+          "training_seconds": 1.0754336999962106,
+          "parameters": 3866,
+          "estimated_forward_flops": 8112.0,
+          "activation_elements": 864.0,
+          "batch_latency_ms": 2.1142799989320338,
+          "samples_per_second": 28378.455091240154,
+          "peak_python_memory_bytes": 2024.0
+        },
+        {
+          "seed": 37,
+          "validation_accuracy": 0.525,
+          "test_accuracy": 0.5291666666666667,
+          "test_loss": 0.693367063999176,
+          "training_seconds": 1.1214524999959394,
+          "parameters": 3866,
+          "estimated_forward_flops": 8112.0,
+          "activation_elements": 864.0,
+          "batch_latency_ms": 1.9493899948429316,
+          "samples_per_second": 30778.85910912064,
+          "peak_python_memory_bytes": 2024.0
+        }
+      ],
+      "mean_test_accuracy": 0.4847222222222222,
+      "std_test_accuracy": 0.038714888513239884
+    },
+    "attention__contextual": {
+      "architecture": "attention",
+      "family": "contextual",
+      "per_seed": [
+        {
+          "seed": 11,
+          "validation_accuracy": 0.5583333333333333,
+          "test_accuracy": 0.4583333333333333,
+          "test_loss": 0.7064109742641449,
+          "training_seconds": 1.0599762999918312,
+          "parameters": 3314,
+          "estimated_forward_flops": 39168.0,
+          "activation_elements": 576.0,
+          "batch_latency_ms": 1.9762300013098866,
+          "samples_per_second": 30360.838546237403,
+          "peak_python_memory_bytes": 2728.0
+        },
+        {
+          "seed": 23,
+          "validation_accuracy": 0.5583333333333333,
+          "test_accuracy": 0.4875,
+          "test_loss": 0.7025750130414963,
+          "training_seconds": 1.0499093999969773,
+          "parameters": 3314,
+          "estimated_forward_flops": 39168.0,
+          "activation_elements": 576.0,
+          "batch_latency_ms": 1.5066599997226149,
+          "samples_per_second": 39823.18506567265,
+          "peak_python_memory_bytes": 2728.0
+        },
+        {
+          "seed": 37,
+          "validation_accuracy": 0.525,
+          "test_accuracy": 0.5125,
+          "test_loss": 0.6953473389148712,
+          "training_seconds": 1.0205686000408605,
+          "parameters": 3314,
+          "estimated_forward_flops": 39168.0,
+          "activation_elements": 576.0,
+          "batch_latency_ms": 1.56309999874793,
+          "samples_per_second": 38385.26009088416,
+          "peak_python_memory_bytes": 2728.0
+        }
+      ],
+      "mean_test_accuracy": 0.4861111111111111,
+      "std_test_accuracy": 0.027110029577698785
+    },
+    "attention_v2__contextual": {
+      "architecture": "attention_v2",
+      "family": "contextual",
+      "per_seed": [
+        {
+          "seed": 11,
+          "validation_accuracy": 1.0,
+          "test_accuracy": 0.9916666666666667,
+          "test_loss": 0.032984438352286816,
+          "training_seconds": 1.520502100000158,
+          "parameters": 3914,
+          "estimated_forward_flops": 46296.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 3.2117199967615306,
+          "samples_per_second": 18681.578736782696,
+          "peak_python_memory_bytes": 3160.0
+        },
+        {
+          "seed": 23,
+          "validation_accuracy": 0.9916666666666667,
+          "test_accuracy": 0.9916666666666667,
+          "test_loss": 0.039622921496629715,
+          "training_seconds": 1.4216529999976046,
+          "parameters": 3914,
+          "estimated_forward_flops": 46296.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 3.3981200016569346,
+          "samples_per_second": 17656.821998853426,
+          "peak_python_memory_bytes": 3160.0
+        },
+        {
+          "seed": 37,
+          "validation_accuracy": 1.0,
+          "test_accuracy": 0.9958333333333333,
+          "test_loss": 0.01224541652482003,
+          "training_seconds": 1.3961736999917775,
+          "parameters": 3914,
+          "estimated_forward_flops": 46296.0,
+          "activation_elements": 1152.0,
+          "batch_latency_ms": 3.816200001165271,
+          "samples_per_second": 15722.446407860985,
+          "peak_python_memory_bytes": 3160.0
+        }
+      ],
+      "mean_test_accuracy": 0.9930555555555556,
+      "std_test_accuracy": 0.002405626121623432
+    }
+  },
+  "matrix": {
+    "mlp": [
+      1.0,
+      0.5958333333333333,
+      0.46944444444444444
+    ],
+    "graph": [
+      1.0,
+      0.7222222222222222,
+      0.4847222222222222
+    ],
+    "attention": [
+      0.75,
+      0.5152777777777777,
+      0.4861111111111111
+    ],
+    "attention_v2": [
+      0.9152777777777777,
+      0.5041666666666667,
+      0.9930555555555556
+    ]
+  },
+  "specialization": {
+    "winners": [
+      "mlp",
+      "graph",
+      "attention_v2"
+    ],
+    "margins": {
+      "feature": 0.0,
+      "relational": 0.126388888889,
+      "contextual": 0.506944444444
+    },
+    "means": {
+      "mlp": 0.6884259259259259,
+      "graph": 0.7356481481481482,
+      "attention": 0.5837962962962963,
+      "attention_v2": 0.8041666666666667
+    }
+  },
+  "controls": {
+    "structural_controls": {
+      "mlp__feature": {
+        "original_accuracy": 1.0,
+        "controlled_accuracy": 1.0,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 1.0
+          },
+          {
+            "seed": 23,
+            "accuracy": 1.0
+          },
+          {
+            "seed": 37,
+            "accuracy": 1.0
+          }
+        ]
+      },
+      "graph__feature": {
+        "original_accuracy": 1.0,
+        "controlled_accuracy": 1.0,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 1.0
+          },
+          {
+            "seed": 23,
+            "accuracy": 1.0
+          },
+          {
+            "seed": 37,
+            "accuracy": 1.0
+          }
+        ]
+      },
+      "attention__feature": {
+        "original_accuracy": 0.75,
+        "controlled_accuracy": 0.75,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.75
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.75
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.75
+          }
+        ]
+      },
+      "attention_v2__feature": {
+        "original_accuracy": 0.9152777777777777,
+        "controlled_accuracy": 0.9152777777777777,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 1.0
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.9958333333333333
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.75
+          }
+        ]
+      },
+      "mlp__relational": {
+        "original_accuracy": 0.5958333333333333,
+        "controlled_accuracy": 0.5958333333333333,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.5958333333333333
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.5625
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.6291666666666667
+          }
+        ]
+      },
+      "graph__relational": {
+        "original_accuracy": 0.7222222222222222,
+        "controlled_accuracy": 0.5388888888888889,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.5041666666666667
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.5916666666666667
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.5208333333333334
+          }
+        ]
+      },
+      "attention__relational": {
+        "original_accuracy": 0.5152777777777777,
+        "controlled_accuracy": 0.5152777777777777,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.5208333333333334
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.49166666666666664
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.5333333333333333
+          }
+        ]
+      },
+      "attention_v2__relational": {
+        "original_accuracy": 0.5041666666666667,
+        "controlled_accuracy": 0.5041666666666667,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.475
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.5041666666666667
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.5333333333333333
+          }
+        ]
+      },
+      "mlp__contextual": {
+        "original_accuracy": 0.46944444444444444,
+        "controlled_accuracy": 0.46944444444444444,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.42083333333333334
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.49166666666666664
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.49583333333333335
+          }
+        ]
+      },
+      "graph__contextual": {
+        "original_accuracy": 0.4847222222222222,
+        "controlled_accuracy": 0.48333333333333334,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.44166666666666665
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.4875
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.5208333333333334
+          }
+        ]
+      },
+      "attention__contextual": {
+        "original_accuracy": 0.4861111111111111,
+        "controlled_accuracy": 0.49027777777777776,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.4583333333333333
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.5
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.5125
+          }
+        ]
+      },
+      "attention_v2__contextual": {
+        "original_accuracy": 0.9930555555555556,
+        "controlled_accuracy": 0.35833333333333334,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.37083333333333335
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.35833333333333334
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.3458333333333333
+          }
+        ]
+      }
+    },
+    "marker_ablation": {
+      "mlp__feature": {
+        "original_accuracy": 1.0,
+        "ablated_accuracy": 1.0,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 1.0
+          },
+          {
+            "seed": 23,
+            "accuracy": 1.0
+          },
+          {
+            "seed": 37,
+            "accuracy": 1.0
+          }
+        ]
+      },
+      "graph__feature": {
+        "original_accuracy": 1.0,
+        "ablated_accuracy": 1.0,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 1.0
+          },
+          {
+            "seed": 23,
+            "accuracy": 1.0
+          },
+          {
+            "seed": 37,
+            "accuracy": 1.0
+          }
+        ]
+      },
+      "attention__feature": {
+        "original_accuracy": 0.75,
+        "ablated_accuracy": 0.75,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.75
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.75
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.75
+          }
+        ]
+      },
+      "attention_v2__feature": {
+        "original_accuracy": 0.9152777777777777,
+        "ablated_accuracy": 0.7722222222222223,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.8166666666666667
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.75
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.75
+          }
+        ]
+      },
+      "mlp__relational": {
+        "original_accuracy": 0.5958333333333333,
+        "ablated_accuracy": 0.5972222222222222,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.6125
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.5583333333333333
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.6208333333333333
+          }
+        ]
+      },
+      "graph__relational": {
+        "original_accuracy": 0.7222222222222222,
+        "ablated_accuracy": 0.725,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.7083333333333334
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.7375
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.7291666666666666
+          }
+        ]
+      },
+      "attention__relational": {
+        "original_accuracy": 0.5152777777777777,
+        "ablated_accuracy": 0.5430555555555555,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.5625
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.5416666666666666
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.525
+          }
+        ]
+      },
+      "attention_v2__relational": {
+        "original_accuracy": 0.5041666666666667,
+        "ablated_accuracy": 0.5055555555555555,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.5
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.48333333333333334
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.5333333333333333
+          }
+        ]
+      },
+      "mlp__contextual": {
+        "original_accuracy": 0.46944444444444444,
+        "ablated_accuracy": 0.46944444444444444,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.425
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.4666666666666667
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.5166666666666667
+          }
+        ]
+      },
+      "graph__contextual": {
+        "original_accuracy": 0.4847222222222222,
+        "ablated_accuracy": 0.49027777777777776,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.4666666666666667
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.4708333333333333
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.5333333333333333
+          }
+        ]
+      },
+      "attention__contextual": {
+        "original_accuracy": 0.4861111111111111,
+        "ablated_accuracy": 0.47777777777777775,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.44166666666666665
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.48333333333333334
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.5083333333333333
+          }
+        ]
+      },
+      "attention_v2__contextual": {
+        "original_accuracy": 0.9930555555555556,
+        "ablated_accuracy": 0.5430555555555555,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.5291666666666667
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.5291666666666667
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.5708333333333333
+          }
+        ]
+      }
+    },
+    "permutation_invariance": {
+      "mlp__feature": {
+        "original_accuracy": 1.0,
+        "permuted_accuracy": 1.0,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 1.0
+          },
+          {
+            "seed": 23,
+            "accuracy": 1.0
+          },
+          {
+            "seed": 37,
+            "accuracy": 1.0
+          }
+        ]
+      },
+      "graph__feature": {
+        "original_accuracy": 1.0,
+        "permuted_accuracy": 1.0,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 1.0
+          },
+          {
+            "seed": 23,
+            "accuracy": 1.0
+          },
+          {
+            "seed": 37,
+            "accuracy": 1.0
+          }
+        ]
+      },
+      "attention__feature": {
+        "original_accuracy": 0.75,
+        "permuted_accuracy": 0.75,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.75
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.75
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.75
+          }
+        ]
+      },
+      "attention_v2__feature": {
+        "original_accuracy": 0.9152777777777777,
+        "permuted_accuracy": 0.9152777777777777,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 1.0
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.9958333333333333
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.75
+          }
+        ]
+      },
+      "mlp__relational": {
+        "original_accuracy": 0.5958333333333333,
+        "permuted_accuracy": 0.5958333333333333,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.5958333333333333
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.5625
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.6291666666666667
+          }
+        ]
+      },
+      "graph__relational": {
+        "original_accuracy": 0.7222222222222222,
+        "permuted_accuracy": 0.55,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.525
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.5791666666666667
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.5458333333333333
+          }
+        ]
+      },
+      "attention__relational": {
+        "original_accuracy": 0.5152777777777777,
+        "permuted_accuracy": 0.5152777777777777,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.5208333333333334
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.49166666666666664
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.5333333333333333
+          }
+        ]
+      },
+      "attention_v2__relational": {
+        "original_accuracy": 0.5041666666666667,
+        "permuted_accuracy": 0.5041666666666667,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.475
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.5041666666666667
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.5333333333333333
+          }
+        ]
+      },
+      "mlp__contextual": {
+        "original_accuracy": 0.46944444444444444,
+        "permuted_accuracy": 0.46944444444444444,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.4375
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.4666666666666667
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.5041666666666667
+          }
+        ]
+      },
+      "graph__contextual": {
+        "original_accuracy": 0.4847222222222222,
+        "permuted_accuracy": 0.4847222222222222,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.4583333333333333
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.4708333333333333
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.525
+          }
+        ]
+      },
+      "attention__contextual": {
+        "original_accuracy": 0.4861111111111111,
+        "permuted_accuracy": 0.4861111111111111,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.4583333333333333
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.4875
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.5125
+          }
+        ]
+      },
+      "attention_v2__contextual": {
+        "original_accuracy": 0.9930555555555556,
+        "permuted_accuracy": 0.9930555555555556,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.9916666666666667
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.9916666666666667
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.9958333333333333
+          }
+        ]
+      }
+    },
+    "v2_random_marker_interface_control": {
+      "attention_v2__feature": {
+        "original_accuracy": 0.9152777777777777,
+        "random_marker_accuracy": 0.9152777777777777,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 1.0
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.9958333333333333
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.75
+          }
+        ]
+      },
+      "attention_v2__relational": {
+        "original_accuracy": 0.5041666666666667,
+        "random_marker_accuracy": 0.4791666666666667,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.4708333333333333
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.4875
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.4791666666666667
+          }
+        ]
+      },
+      "attention_v2__contextual": {
+        "original_accuracy": 0.9930555555555556,
+        "random_marker_accuracy": 0.4930555555555556,
+        "per_seed": [
+          {
+            "seed": 11,
+            "accuracy": 0.45416666666666666
+          },
+          {
+            "seed": 23,
+            "accuracy": 0.55
+          },
+          {
+            "seed": 37,
+            "accuracy": 0.475
+          }
+        ]
+      }
+    }
+  },
+  "historical_comparison": {
+    "phase3_baseline": {
+      "mlp": [
+        1.0,
+        0.6083333333333333,
+        0.46805555555555556
+      ],
+      "graph": [
+        1.0,
+        0.7138888888888889,
+        0.46944444444444444
+      ],
+      "attention": [
+        0.75,
+        0.5180555555555556,
+        0.4847222222222222
+      ]
+    },
+    "phase6_matrix": {
+      "mlp": [
+        1.0,
+        0.5958333333333333,
+        0.46944444444444444
+      ],
+      "graph": [
+        1.0,
+        0.7222222222222222,
+        0.4847222222222222
+      ],
+      "attention": [
+        0.75,
+        0.5152777777777777,
+        0.4861111111111111
+      ],
+      "attention_v2": [
+        0.9152777777777777,
+        0.5041666666666667,
+        0.9930555555555556
+      ]
+    },
+    "interpretation": "Phase 3 values reflect the historical contract without query marker. Phase 6 evaluates all experts under a common neutral-marker interface supporting V2."
+  },
+  "routing_gate": {
+    "status": "closed",
+    "reason": "Learned routing remains closed until expert comparison, specialization, and oracle values are formally established under the common contract."
+  },
+  "manifest": {
+    "timestamp_utc": "2026-09-05T11:02:31.537558+00:00",
+    "experiment_name": "Phase 6 common-input-contract expert revalidation",
+    "seeds": [
+      11,
+      23,
+      37
+    ],
+    "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+    "torch": "2.13.0+cpu",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "device": "cpu",
+    "git_commit": null,
+    "shape": [
+      12,
+      8
+    ],
+    "common_input_contract": {
+      "sequence_length": 12,
+      "input_dim": 8,
+      "marker_channel": 4,
+      "marker_value": 1.0,
+      "marker_neutrality": "Verified at chance on label and task family"
+    },
+    "training": {
+      "optimizer": "AdamW",
+      "lr": 0.003,
+      "weight_decay": 0.0001,
+      "epochs": 25,
+      "batch_size": 60,
+      "early_stopping": "best validation accuracy"
+    },
+    "capacity": {
+      "depths": {
+        "mlp": 3,
+        "graph": 2,
+        "attention": 1,
+        "attention_v2": 3
+      },
+      "parameter_counts": {
+        "mlp": 3914,
+        "graph": 3866,
+        "attention": 3314,
+        "attention_v2": 3914
+      },
+      "max_relative_gap": 0.1532958610117527
+    }
+  }
+}

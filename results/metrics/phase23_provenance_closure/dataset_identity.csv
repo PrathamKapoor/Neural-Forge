@@ -1,0 +1,2 @@
+seed,construction_version,samples_family,total_samples,input_shape,dtype,sha256_X_first32,sha256_y_first32,status,notes
+dataset,phase19-repaired-v1,120,840,(840,12,8),float32,868b3ae4bea61c97aa8f43f0e66eada2,960e10a06ff702c04ef88da827569e62,VERIFIED_DETERMINISTIC,Seed 11 deterministic; seed 23/37 different but same procedure; no historical dataset artifact saved separately; dataset module is the authoritative source

@@ -1,0 +1,4 @@
+seed,linear_head_params,small_nonlinear_head_params,rel_only_params,frozen_encoder_params
+11,50,650,50,n/a (same as jointco)
+23,50,650,50,n/a (same as jointco)
+37,50,650,50,n/a (same as jointco)

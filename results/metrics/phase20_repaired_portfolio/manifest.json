@@ -1,0 +1,38 @@
+{
+  "phase": "Phase 20 \u2014 Clean Portfolio Re-evaluation on Repaired Mixed Benchmark",
+  "timestamp": "2026-09-08T01:26:59Z",
+  "python_version": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "torch_version": "2.13.0+cpu",
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "benchmark_version": "phase19-repaired-v1",
+  "evaluated_families": [
+    "F",
+    "R",
+    "C",
+    "FR",
+    "RC",
+    "FC",
+    "FRC"
+  ],
+  "samples_per_type": 120,
+  "expert_epochs": 40,
+  "router_epochs": 30,
+  "portfolio": [
+    "mlp",
+    "graph",
+    "attention",
+    "attention_v2",
+    "joint",
+    "joint_co",
+    "depth3"
+  ],
+  "stages": [
+    "finalize"
+  ],
+  "protocol": "Fresh training on repaired data (mirrored protocols); pre-repair checkpoints invalid (carrier moved ch0\u2192ch5) and never used. Router machinery reused unchanged (num_experts=7 per Phase 12 4\u21925 precedent). Router frozen w.r.t. architecture/loss/temperature."
+}

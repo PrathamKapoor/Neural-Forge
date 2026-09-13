@@ -1,0 +1,73 @@
+seed,construction,family,component,statistic,carrier_channel,later_transformation,observable_rate
+11,original,F,F,|mean(ch0)| offset magnitude,0,contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c),0.7987709045410156
+11,original,R,R,"sign(mean(ch*roll(ch,-1)))",0,contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c),0.9833333492279053
+11,original,C,C,query-key cosine match,0:3,feature common-mode offsets (repaired) / none (original),1.0
+11,original,FR,R,"sign(mean(ch*roll(ch,-1)))",0,contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c),0.8666666746139526
+11,original,FR,F,|mean(ch0)| offset magnitude,0,contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c),0.796979546546936
+11,original,RC,R,"sign(mean(ch*roll(ch,-1)))",0,contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c),0.40833333134651184
+11,original,RC,C,query-key cosine match,0:3,feature common-mode offsets (repaired) / none (original),1.0
+11,original,FC,F,|mean(ch0)| offset magnitude,0,contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c),0.11442246288061142
+11,original,FC,C,query-key cosine match,0:3,feature common-mode offsets (repaired) / none (original),1.0
+11,original,FRC,R,"sign(mean(ch*roll(ch,-1)))",0,contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c),0.5166666507720947
+11,original,FRC,F,|mean(ch0)| offset magnitude,0,contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c),0.154872328042984
+11,original,FRC,C,query-key cosine match,0:3,feature common-mode offsets (repaired) / none (original),1.0
+11,repaired,F,F,|mean(ch0)| offset magnitude,0,feature offsets applied after contextual block (common-mode; identity-preserving),0.7987709045410156
+11,repaired,R,R,"sign(mean(ch*roll(ch,-1)))",5,no later write touches ch5 (carrier provably survives),0.9750000238418579
+11,repaired,C,C,query-key cosine match,0:3,feature common-mode offsets (repaired) / none (original),1.0
+11,repaired,FR,R,"sign(mean(ch*roll(ch,-1)))",5,no later write touches ch5 (carrier provably survives),0.9833333492279053
+11,repaired,FR,F,|mean(ch0)| offset magnitude,0,feature offsets applied after contextual block (common-mode; identity-preserving),0.7988406419754028
+11,repaired,RC,R,"sign(mean(ch*roll(ch,-1)))",5,no later write touches ch5 (carrier provably survives),0.9666666388511658
+11,repaired,RC,C,query-key cosine match,0:3,feature common-mode offsets (repaired) / none (original),1.0
+11,repaired,FC,F,|mean(ch0)| offset magnitude,0,feature offsets applied after contextual block (common-mode; identity-preserving),0.8047171235084534
+11,repaired,FC,C,query-key cosine match,0:3,feature common-mode offsets (repaired) / none (original),1.0
+11,repaired,FRC,R,"sign(mean(ch*roll(ch,-1)))",5,no later write touches ch5 (carrier provably survives),0.9833333492279053
+11,repaired,FRC,F,|mean(ch0)| offset magnitude,0,feature offsets applied after contextual block (common-mode; identity-preserving),0.802433967590332
+11,repaired,FRC,C,query-key cosine match,0:3,feature common-mode offsets (repaired) / none (original),1.0
+23,original,F,F,|mean(ch0)| offset magnitude,0,contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c),0.799633264541626
+23,original,R,R,"sign(mean(ch*roll(ch,-1)))",0,contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c),0.9833333492279053
+23,original,C,C,query-key cosine match,0:3,feature common-mode offsets (repaired) / none (original),1.0
+23,original,FR,R,"sign(mean(ch*roll(ch,-1)))",0,contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c),0.8666666746139526
+23,original,FR,F,|mean(ch0)| offset magnitude,0,contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c),0.7795630097389221
+23,original,RC,R,"sign(mean(ch*roll(ch,-1)))",0,contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c),0.550000011920929
+23,original,RC,C,query-key cosine match,0:3,feature common-mode offsets (repaired) / none (original),1.0
+23,original,FC,F,|mean(ch0)| offset magnitude,0,contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c),0.13768844306468964
+23,original,FC,C,query-key cosine match,0:3,feature common-mode offsets (repaired) / none (original),1.0
+23,original,FRC,R,"sign(mean(ch*roll(ch,-1)))",0,contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c),0.574999988079071
+23,original,FRC,F,|mean(ch0)| offset magnitude,0,contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c),0.13985317945480347
+23,original,FRC,C,query-key cosine match,0:3,feature common-mode offsets (repaired) / none (original),1.0
+23,repaired,F,F,|mean(ch0)| offset magnitude,0,feature offsets applied after contextual block (common-mode; identity-preserving),0.799633264541626
+23,repaired,R,R,"sign(mean(ch*roll(ch,-1)))",5,no later write touches ch5 (carrier provably survives),0.9916666746139526
+23,repaired,C,C,query-key cosine match,0:3,feature common-mode offsets (repaired) / none (original),1.0
+23,repaired,FR,R,"sign(mean(ch*roll(ch,-1)))",5,no later write touches ch5 (carrier provably survives),0.9833333492279053
+23,repaired,FR,F,|mean(ch0)| offset magnitude,0,feature offsets applied after contextual block (common-mode; identity-preserving),0.7988738417625427
+23,repaired,RC,R,"sign(mean(ch*roll(ch,-1)))",5,no later write touches ch5 (carrier provably survives),0.9916666746139526
+23,repaired,RC,C,query-key cosine match,0:3,feature common-mode offsets (repaired) / none (original),1.0
+23,repaired,FC,F,|mean(ch0)| offset magnitude,0,feature offsets applied after contextual block (common-mode; identity-preserving),0.799029529094696
+23,repaired,FC,C,query-key cosine match,0:3,feature common-mode offsets (repaired) / none (original),1.0
+23,repaired,FRC,R,"sign(mean(ch*roll(ch,-1)))",5,no later write touches ch5 (carrier provably survives),0.9833333492279053
+23,repaired,FRC,F,|mean(ch0)| offset magnitude,0,feature offsets applied after contextual block (common-mode; identity-preserving),0.7991762757301331
+23,repaired,FRC,C,query-key cosine match,0:3,feature common-mode offsets (repaired) / none (original),1.0
+37,original,F,F,|mean(ch0)| offset magnitude,0,contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c),0.8002074956893921
+37,original,R,R,"sign(mean(ch*roll(ch,-1)))",0,contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c),0.9666666388511658
+37,original,C,C,query-key cosine match,0:3,feature common-mode offsets (repaired) / none (original),1.0
+37,original,FR,R,"sign(mean(ch*roll(ch,-1)))",0,contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c),0.8833333253860474
+37,original,FR,F,|mean(ch0)| offset magnitude,0,contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c),0.8093503713607788
+37,original,RC,R,"sign(mean(ch*roll(ch,-1)))",0,contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c),0.4833333194255829
+37,original,RC,C,query-key cosine match,0:3,feature common-mode offsets (repaired) / none (original),1.0
+37,original,FC,F,|mean(ch0)| offset magnitude,0,contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c),0.12347019463777542
+37,original,FC,C,query-key cosine match,0:3,feature common-mode offsets (repaired) / none (original),1.0
+37,original,FRC,R,"sign(mean(ch*roll(ch,-1)))",0,contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c),0.574999988079071
+37,original,FRC,F,|mean(ch0)| offset magnitude,0,contextual block overwrites ch0:3 AFTER relational add (destroys R carrier when has_c),0.1422112137079239
+37,original,FRC,C,query-key cosine match,0:3,feature common-mode offsets (repaired) / none (original),1.0
+37,repaired,F,F,|mean(ch0)| offset magnitude,0,feature offsets applied after contextual block (common-mode; identity-preserving),0.8002074956893921
+37,repaired,R,R,"sign(mean(ch*roll(ch,-1)))",5,no later write touches ch5 (carrier provably survives),1.0
+37,repaired,C,C,query-key cosine match,0:3,feature common-mode offsets (repaired) / none (original),1.0
+37,repaired,FR,R,"sign(mean(ch*roll(ch,-1)))",5,no later write touches ch5 (carrier provably survives),0.9916666746139526
+37,repaired,FR,F,|mean(ch0)| offset magnitude,0,feature offsets applied after contextual block (common-mode; identity-preserving),0.7996675372123718
+37,repaired,RC,R,"sign(mean(ch*roll(ch,-1)))",5,no later write touches ch5 (carrier provably survives),0.9583333134651184
+37,repaired,RC,C,query-key cosine match,0:3,feature common-mode offsets (repaired) / none (original),1.0
+37,repaired,FC,F,|mean(ch0)| offset magnitude,0,feature offsets applied after contextual block (common-mode; identity-preserving),0.8034386038780212
+37,repaired,FC,C,query-key cosine match,0:3,feature common-mode offsets (repaired) / none (original),1.0
+37,repaired,FRC,R,"sign(mean(ch*roll(ch,-1)))",5,no later write touches ch5 (carrier provably survives),0.9833333492279053
+37,repaired,FRC,F,|mean(ch0)| offset magnitude,0,feature offsets applied after contextual block (common-mode; identity-preserving),0.7981001734733582
+37,repaired,FRC,C,query-key cosine match,0:3,feature common-mode offsets (repaired) / none (original),1.0

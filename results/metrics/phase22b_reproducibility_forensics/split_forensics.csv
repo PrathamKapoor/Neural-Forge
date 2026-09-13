@@ -1,0 +1,4 @@
+seed,split_protocol,train_size,validation_size,test_size,train_indices_recoverable,val_indices_recoverable,test_indices_recoverable,exact_identity,status,evidence_path
+11,"Same dataset seed + family filter (no saved split manifest); split mechanism inferred from protocol docs only, not recoverable from artifacts",UNVERIFIED,UNVERIFIED,UNVERIFIED,NO,UNVERIFIED,docs/protocol notes mention train/val but no saved split file
+23,"Same dataset seed; split mechanism not saved in artifacts",UNVERIFIED,UNVERIFIED,UNVERIFIED,NO,UNVERIFIED,docs/protocol notes only
+37,"Same dataset seed; split mechanism not saved in artifacts",UNVERIFIED,UNVERIFIED,UNVERIFIED,NO,UNVERIFIED,docs/protocol notes only

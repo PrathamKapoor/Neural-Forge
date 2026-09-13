@@ -1,0 +1,38 @@
+{
+  "phase": "Phase 15 \u2014 Relational Substep Capability and Message-Passing Diagnosis",
+  "timestamp": "2026-09-07T15:41:08Z",
+  "python_version": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "torch_version": "2.13.0+cpu",
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "evaluated_families": [
+    "F",
+    "R",
+    "C",
+    "FR",
+    "RC",
+    "FC",
+    "FRC"
+  ],
+  "samples_per_type": 120,
+  "jointco_epochs": 40,
+  "batch_size": 60,
+  "stages": [
+    "baseline",
+    "depth",
+    "gated",
+    "graph",
+    "existing",
+    "finalize"
+  ],
+  "protocol": "Same architecture/dataset/train-protocol/optimizer/budget as Phase 14 JointCo baseline (mixed F+R+C, AdamW lr=0.003, best-val checkpoint, frozen at eval). Only the relational substep varies (depth / aggregation / update capacity). Router frozen.",
+  "gate_thresholds": {
+    "depth_fully_explains_R_gain": 0.05,
+    "depth_fully_explains_gap_close": 0.03,
+    "aggregation_adequate_R_gain": 0.05
+  }
+}

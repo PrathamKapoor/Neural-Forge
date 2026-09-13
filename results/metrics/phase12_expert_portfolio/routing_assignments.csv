@@ -1,0 +1,16 @@
+seed,policy,util_joint,util_graph,util_attention_v2,util_mlp,util_attention
+11,lambda=0.0,655,185,,,
+11,lambda=0.01,641,199,,,
+11,lambda=0.1,651,189,,,
+11,lambda=0.3,627,213,,,
+11,old_portfolio_lambda=0,,149,533,101,57
+23,lambda=0.0,804,,,36,
+23,lambda=0.01,603,180,,57,
+23,lambda=0.1,578,201,,61,
+23,lambda=0.3,571,216,,53,
+23,old_portfolio_lambda=0,,237,480,123,
+37,lambda=0.0,721,89,,30,
+37,lambda=0.01,681,137,,22,
+37,lambda=0.1,675,165,,,
+37,lambda=0.3,606,173,,61,
+37,old_portfolio_lambda=0,,183,531,63,63

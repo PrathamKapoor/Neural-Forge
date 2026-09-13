@@ -1,0 +1,7 @@
+checkpoint_type,status,evidence_path,reason
+single_reference_model,AMBIGUOUS,results/metrics/phase20_repaired_portfolio/partials/,Phase 20 uses portfolio of 7 experts (mlp, graph, attention, attention_v2, joint, joint_co, depth3) plus router; no single reference checkpoint
+attention_v2_best_rc,IDENTIFIED_AS_BEST,docs/architecture/phase20_log.md,Phase 20 log records attention_v2 as best RC (55.0%); checkpoint preserved in partials
+depth3_best_pure_r,IDENTIFIED_AS_BEST,docs/architecture/phase20_log.md,Phase 20 log records depth3 as best pure R (67.5%)
+joint_best_frc,IDENTIFIED_AS_BEST,docs/architecture/phase20_log.md,Phase 20 log records joint_co as best FRC (76.4%)
+router_variants,PRESENT_BUT_NOT_REFERENCED,partials/,Router checkpoints exist but router is evaluated separately from portfolio experts
+reconstruction_target,attention_v2_seed11,PRESENT,Selected best RC expert for reconstruction audit (not claiming it is the only reference)

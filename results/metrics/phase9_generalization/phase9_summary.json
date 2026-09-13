@@ -1,0 +1,590 @@
+{
+  "regime_9a_fresh": {
+    "benchmark_accuracy": {
+      "Accuracy-first (\u03bb=0.01)": 0.9046296296296297,
+      "Balanced (\u03bb=0.10)": 0.9041666666666667,
+      "Compute-first (\u03bb=1.0)": 0.762962962962963,
+      "Fixed Attention V1": 0.45787037037037037,
+      "Fixed Attention V2": 0.6699074074074074,
+      "Fixed Graph": 0.575,
+      "Fixed MLP": 0.6652777777777777,
+      "Oracle Router": 0.9050925925925926,
+      "Unconstrained (\u03bb=0.0)": 0.9041666666666667
+    },
+    "fresh_accuracy": {
+      "Accuracy-first (\u03bb=0.01)": 0.9268518518518518,
+      "Balanced (\u03bb=0.10)": 0.9259259259259259,
+      "Compute-first (\u03bb=1.0)": 0.7782407407407408,
+      "Fixed Attention V1": 0.46944444444444444,
+      "Fixed Attention V2": 0.6777777777777777,
+      "Fixed Graph": 0.5888888888888889,
+      "Fixed MLP": 0.6634259259259259,
+      "Oracle Router": 0.9268518518518518,
+      "Unconstrained (\u03bb=0.0)": 0.925
+    },
+    "benchmark_flops": {
+      "Accuracy-first (\u03bb=0.01)": 26037.31111111111,
+      "Balanced (\u03bb=0.10)": 23886.36666666667,
+      "Compute-first (\u03bb=1.0)": 11568.355555555556,
+      "Fixed Attention V1": 39168.0,
+      "Fixed Attention V2": 46296.0,
+      "Fixed Graph": 8112.0,
+      "Fixed MLP": 8928.0,
+      "Oracle Router": 22164.0,
+      "Unconstrained (\u03bb=0.0)": 26920.67777777778
+    },
+    "fresh_flops": {
+      "Accuracy-first (\u03bb=0.01)": 26072.666666666668,
+      "Balanced (\u03bb=0.10)": 23939.022222222222,
+      "Compute-first (\u03bb=1.0)": 11092.566666666668,
+      "Fixed Attention V1": 39168.0,
+      "Fixed Attention V2": 46296.0,
+      "Fixed Graph": 8112.0,
+      "Fixed MLP": 8928.0,
+      "Oracle Router": 22164.0,
+      "Unconstrained (\u03bb=0.0)": 26939.48888888889
+    },
+    "generalization_gap": {
+      "Accuracy-first (\u03bb=0.01)": {
+        "accuracy_gap": -0.022222222222222216,
+        "relative_accuracy_drop": -0.02460059650718388,
+        "flops_shift": 35.355555555555235
+      },
+      "Balanced (\u03bb=0.10)": {
+        "accuracy_gap": -0.021759259259259256,
+        "relative_accuracy_drop": -0.024097163797694103,
+        "flops_shift": 52.65555555555451
+      },
+      "Compute-first (\u03bb=1.0)": {
+        "accuracy_gap": -0.01527777777777776,
+        "relative_accuracy_drop": -0.02122212126814057,
+        "flops_shift": -475.7888888888883
+      },
+      "Fixed Attention V1": {
+        "accuracy_gap": -0.01157407407407407,
+        "relative_accuracy_drop": -0.026328946384967154,
+        "flops_shift": 0.0
+      },
+      "Fixed Attention V2": {
+        "accuracy_gap": -0.007870370370370342,
+        "relative_accuracy_drop": -0.011991999262385486,
+        "flops_shift": 0.0
+      },
+      "Fixed Graph": {
+        "accuracy_gap": -0.013888888888888914,
+        "relative_accuracy_drop": -0.02507806382536719,
+        "flops_shift": 0.0
+      },
+      "Fixed MLP": {
+        "accuracy_gap": 0.0018518518518518452,
+        "relative_accuracy_drop": 0.0027806591389740467,
+        "flops_shift": 0.0
+      },
+      "Oracle Router": {
+        "accuracy_gap": -0.021759259259259256,
+        "relative_accuracy_drop": -0.0240640708859125,
+        "flops_shift": 0.0
+      },
+      "Unconstrained (\u03bb=0.0)": {
+        "accuracy_gap": -0.020833333333333332,
+        "relative_accuracy_drop": -0.02306999307594617,
+        "flops_shift": 18.811111111110222
+      }
+    }
+  },
+  "regime_9b_structural": {
+    "transformations": {
+      "canonical": {
+        "Balanced (\u03bb=0.10)": 0.9259259259259259,
+        "Accuracy-first (\u03bb=0.01)": 0.9268518518518518,
+        "Fixed Graph": 0.5888888888888889,
+        "Oracle Router": 0.9268518518518518
+      },
+      "b1_token_perm": {
+        "Balanced (\u03bb=0.10)": 0.8513888888888889,
+        "Accuracy-first (\u03bb=0.01)": 0.8523148148148147,
+        "Fixed Graph": 0.5208333333333334,
+        "Oracle Router": 0.8523148148148147
+      },
+      "b2_marker_var": {
+        "Balanced (\u03bb=0.10)": 0.8925925925925926,
+        "Accuracy-first (\u03bb=0.01)": 0.8935185185185185,
+        "Fixed Graph": 0.5583333333333333,
+        "Oracle Router": 0.8935185185185185
+      },
+      "b3_seq_len_8": {
+        "Balanced (\u03bb=0.10)": 0.9157407407407407,
+        "Accuracy-first (\u03bb=0.01)": 0.9203703703703704,
+        "Fixed Graph": 0.5888888888888889,
+        "Oracle Router": 0.9212962962962963
+      },
+      "b3_seq_len_16": {
+        "Balanced (\u03bb=0.10)": 0.9083333333333333,
+        "Accuracy-first (\u03bb=0.01)": 0.9111111111111111,
+        "Fixed Graph": 0.5824074074074074,
+        "Oracle Router": 0.9120370370370371
+      },
+      "b4_destructive": {
+        "Balanced (\u03bb=0.10)": 0.8638888888888889,
+        "Accuracy-first (\u03bb=0.01)": 0.8648148148148148,
+        "Fixed Graph": 0.5291666666666667,
+        "Oracle Router": 0.8648148148148148
+      }
+    },
+    "decision_preservation": {
+      "canonical": 1.0,
+      "b1_token_perm": 1.0,
+      "b2_marker_var": 1.0,
+      "b3_seq_len_8": 1.0,
+      "b3_seq_len_16": 1.0,
+      "b4_destructive": 1.0
+    }
+  },
+  "regime_9c_distribution_shift": {
+    "shifts": {
+      "magnitude_scaling": {
+        "clean": {
+          "accuracy": {
+            "Balanced (\u03bb=0.10)": 0.9259259259259259,
+            "Accuracy-first (\u03bb=0.01)": 0.9268518518518518,
+            "Fixed Attention V2": 0.6777777777777777,
+            "Fixed Graph": 0.5888888888888889
+          },
+          "flops": {
+            "Balanced (\u03bb=0.10)": 23939.022222222222,
+            "Accuracy-first (\u03bb=0.01)": 26072.666666666668,
+            "Fixed Attention V2": 46296.0,
+            "Fixed Graph": 8112.0
+          },
+          "decision_preservation": 1.0
+        },
+        "mild": {
+          "accuracy": {
+            "Balanced (\u03bb=0.10)": 0.9162037037037037,
+            "Accuracy-first (\u03bb=0.01)": 0.9162037037037037,
+            "Fixed Attention V2": 0.6722222222222222,
+            "Fixed Graph": 0.5791666666666666
+          },
+          "flops": {
+            "Balanced (\u03bb=0.10)": 23974.0,
+            "Accuracy-first (\u03bb=0.01)": 26072.666666666668,
+            "Fixed Attention V2": 46296.0,
+            "Fixed Graph": 8112.0
+          },
+          "decision_preservation": 0.9990740740740741
+        },
+        "moderate": {
+          "accuracy": {
+            "Balanced (\u03bb=0.10)": 0.9,
+            "Accuracy-first (\u03bb=0.01)": 0.899537037037037,
+            "Fixed Attention V2": 0.6662037037037036,
+            "Fixed Graph": 0.5703703703703704
+          },
+          "flops": {
+            "Balanced (\u03bb=0.10)": 23974.0,
+            "Accuracy-first (\u03bb=0.01)": 26054.98888888889,
+            "Fixed Attention V2": 46296.0,
+            "Fixed Graph": 8112.0
+          },
+          "decision_preservation": 0.9990740740740741
+        },
+        "strong": {
+          "accuracy": {
+            "Balanced (\u03bb=0.10)": 0.8828703703703704,
+            "Accuracy-first (\u03bb=0.01)": 0.8828703703703704,
+            "Fixed Attention V2": 0.6648148148148147,
+            "Fixed Graph": 0.5583333333333333
+          },
+          "flops": {
+            "Balanced (\u03bb=0.10)": 24769.8,
+            "Accuracy-first (\u03bb=0.01)": 26531.36666666667,
+            "Fixed Attention V2": 46296.0,
+            "Fixed Graph": 8112.0
+          },
+          "decision_preservation": 0.9777777777777777
+        }
+      },
+      "additive_noise": {
+        "clean": {
+          "accuracy": {
+            "Balanced (\u03bb=0.10)": 0.9259259259259259,
+            "Accuracy-first (\u03bb=0.01)": 0.9268518518518518,
+            "Fixed Attention V2": 0.6777777777777777,
+            "Fixed Graph": 0.5888888888888889
+          },
+          "flops": {
+            "Balanced (\u03bb=0.10)": 23939.022222222222,
+            "Accuracy-first (\u03bb=0.01)": 26072.666666666668,
+            "Fixed Attention V2": 46296.0,
+            "Fixed Graph": 8112.0
+          },
+          "decision_preservation": 1.0
+        },
+        "mild": {
+          "accuracy": {
+            "Balanced (\u03bb=0.10)": 0.9185185185185185,
+            "Accuracy-first (\u03bb=0.01)": 0.9162037037037036,
+            "Fixed Attention V2": 0.663425925925926,
+            "Fixed Graph": 0.5907407407407408
+          },
+          "flops": {
+            "Balanced (\u03bb=0.10)": 23868.68888888889,
+            "Accuracy-first (\u03bb=0.01)": 26072.666666666668,
+            "Fixed Attention V2": 46296.0,
+            "Fixed Graph": 8112.0
+          },
+          "decision_preservation": 0.9981481481481481
+        },
+        "moderate": {
+          "accuracy": {
+            "Balanced (\u03bb=0.10)": 0.8675925925925926,
+            "Accuracy-first (\u03bb=0.01)": 0.875,
+            "Fixed Attention V2": 0.6365740740740741,
+            "Fixed Graph": 0.5851851851851851
+          },
+          "flops": {
+            "Balanced (\u03bb=0.10)": 22986.766666666666,
+            "Accuracy-first (\u03bb=0.01)": 26143.755555555555,
+            "Fixed Attention V2": 46296.0,
+            "Fixed Graph": 8112.0
+          },
+          "decision_preservation": 0.9393518518518519
+        },
+        "strong": {
+          "accuracy": {
+            "Balanced (\u03bb=0.10)": 0.7694444444444444,
+            "Accuracy-first (\u03bb=0.01)": 0.7726851851851851,
+            "Fixed Attention V2": 0.5833333333333334,
+            "Fixed Graph": 0.5763888888888888
+          },
+          "flops": {
+            "Balanced (\u03bb=0.10)": 21556.533333333333,
+            "Accuracy-first (\u03bb=0.01)": 28239.022222222222,
+            "Fixed Attention V2": 46296.0,
+            "Fixed Graph": 8112.0
+          },
+          "decision_preservation": 0.8657407407407408
+        }
+      },
+      "variance_contrast": {
+        "clean": {
+          "accuracy": {
+            "Balanced (\u03bb=0.10)": 0.9259259259259259,
+            "Accuracy-first (\u03bb=0.01)": 0.9268518518518518,
+            "Fixed Attention V2": 0.6777777777777777,
+            "Fixed Graph": 0.5888888888888889
+          },
+          "flops": {
+            "Balanced (\u03bb=0.10)": 23939.022222222222,
+            "Accuracy-first (\u03bb=0.01)": 26072.666666666668,
+            "Fixed Attention V2": 46296.0,
+            "Fixed Graph": 8112.0
+          },
+          "decision_preservation": 1.0
+        },
+        "mild": {
+          "accuracy": {
+            "Balanced (\u03bb=0.10)": 0.9,
+            "Accuracy-first (\u03bb=0.01)": 0.9092592592592592,
+            "Fixed Attention V2": 0.6722222222222222,
+            "Fixed Graph": 0.5736111111111111
+          },
+          "flops": {
+            "Balanced (\u03bb=0.10)": 23037.155555555557,
+            "Accuracy-first (\u03bb=0.01)": 26055.36666666667,
+            "Fixed Attention V2": 46296.0,
+            "Fixed Graph": 8112.0
+          },
+          "decision_preservation": 0.975925925925926
+        },
+        "moderate": {
+          "accuracy": {
+            "Balanced (\u03bb=0.10)": 0.9083333333333333,
+            "Accuracy-first (\u03bb=0.01)": 0.9083333333333333,
+            "Fixed Attention V2": 0.6722222222222222,
+            "Fixed Graph": 0.575462962962963
+          },
+          "flops": {
+            "Balanced (\u03bb=0.10)": 23974.0,
+            "Accuracy-first (\u03bb=0.01)": 26072.666666666668,
+            "Fixed Attention V2": 46296.0,
+            "Fixed Graph": 8112.0
+          },
+          "decision_preservation": 0.9990740740740741
+        },
+        "strong": {
+          "accuracy": {
+            "Balanced (\u03bb=0.10)": 0.8856481481481482,
+            "Accuracy-first (\u03bb=0.01)": 0.8851851851851852,
+            "Fixed Attention V2": 0.6754629629629629,
+            "Fixed Graph": 0.5541666666666667
+          },
+          "flops": {
+            "Balanced (\u03bb=0.10)": 23974.0,
+            "Accuracy-first (\u03bb=0.01)": 26072.666666666668,
+            "Fixed Attention V2": 46296.0,
+            "Fixed Graph": 8112.0
+          },
+          "decision_preservation": 0.9990740740740741
+        }
+      }
+    }
+  },
+  "regime_9d_mixed": {
+    "families": [
+      "F",
+      "R",
+      "C",
+      "FR",
+      "RC",
+      "FC",
+      "FRC"
+    ],
+    "expert_cross_eval": {
+      "mlp": {
+        "F": 1.0,
+        "R": 0.5138888955116272,
+        "C": 0.4999999900658925,
+        "FR": 0.75,
+        "RC": 0.43611111243565875,
+        "FC": 0.5027777850627899,
+        "FRC": 0.502777765194575
+      },
+      "graph": {
+        "F": 0.5,
+        "R": 0.7666666905085245,
+        "C": 0.5083333253860474,
+        "FR": 0.5361111064751943,
+        "RC": 0.5194444557030996,
+        "FC": 0.49166665474573773,
+        "FRC": 0.5277777910232544
+      },
+      "attention": {
+        "F": 0.43611111243565875,
+        "R": 0.5194444457689921,
+        "C": 0.4805555542310079,
+        "FR": 0.49166666467984516,
+        "RC": 0.4861111044883728,
+        "FC": 0.4666666587193807,
+        "FRC": 0.547222226858139
+      },
+      "attention_v2": {
+        "F": 0.5111111104488373,
+        "R": 0.5444444616635641,
+        "C": 0.9972222248713175,
+        "FR": 0.5111110905806223,
+        "RC": 0.5388888716697693,
+        "FC": 0.5083333253860474,
+        "FRC": 0.805555542310079
+      }
+    },
+    "router_selection": {
+      "F": {
+        "mlp": 0.5833333333333334,
+        "graph": 0.25,
+        "attention": 0.08333333333333333,
+        "attention_v2": 0.08333333333333333
+      },
+      "R": {
+        "mlp": 0.0,
+        "graph": 1.0,
+        "attention": 0.0,
+        "attention_v2": 0.0
+      },
+      "C": {
+        "mlp": 0.005555555555555556,
+        "graph": 0.002777777777777778,
+        "attention": 0.0,
+        "attention_v2": 0.9916666666666667
+      },
+      "FR": {
+        "mlp": 0.10555555555555556,
+        "graph": 0.8222222222222222,
+        "attention": 0.03888888888888889,
+        "attention_v2": 0.03333333333333333
+      },
+      "RC": {
+        "mlp": 0.008333333333333333,
+        "graph": 0.0,
+        "attention": 0.0,
+        "attention_v2": 0.9916666666666667
+      },
+      "FC": {
+        "mlp": 0.002777777777777778,
+        "graph": 0.005555555555555556,
+        "attention": 0.0,
+        "attention_v2": 0.9916666666666667
+      },
+      "FRC": {
+        "mlp": 0.0,
+        "graph": 0.008333333333333333,
+        "attention": 0.0,
+        "attention_v2": 0.9916666666666667
+      }
+    },
+    "router_accuracies": {
+      "F": 1.0,
+      "R": 0.7666666905085245,
+      "C": 0.9944444497426351,
+      "FR": 0.6277777751286825,
+      "RC": 0.5361110965410868,
+      "FC": 0.5055555502573649,
+      "FRC": 0.805555542310079
+    },
+    "single_expert_ceilings": {
+      "F": {
+        "ceiling_accuracy": 1.0,
+        "best_expert": "mlp"
+      },
+      "R": {
+        "ceiling_accuracy": 0.7666666905085245,
+        "best_expert": "graph"
+      },
+      "C": {
+        "ceiling_accuracy": 0.9972222248713175,
+        "best_expert": "attention_v2"
+      },
+      "FR": {
+        "ceiling_accuracy": 0.75,
+        "best_expert": "mlp"
+      },
+      "RC": {
+        "ceiling_accuracy": 0.5833333333333334,
+        "best_expert": "graph"
+      },
+      "FC": {
+        "ceiling_accuracy": 0.5166666706403097,
+        "best_expert": "graph"
+      },
+      "FRC": {
+        "ceiling_accuracy": 0.805555542310079,
+        "best_expert": "attention_v2"
+      }
+    },
+    "failure_diagnoses": {
+      "F": {
+        "failure_mode": "Success \u2014 Robust Generalization",
+        "description": "Router achieves 100.0% >= 85.0% threshold."
+      },
+      "R": {
+        "failure_mode": "Failure D \u2014 Single-Expert Compositional Limitation",
+        "description": "Best single-expert ceiling is bounded at 78.3% < 85.0%. Task genuinely requires multi-expert composition."
+      },
+      "C": {
+        "failure_mode": "Success \u2014 Robust Generalization",
+        "description": "Router achieves 100.0% >= 85.0% threshold."
+      },
+      "FR": {
+        "failure_mode": "Failure D \u2014 Single-Expert Compositional Limitation",
+        "description": "Best single-expert ceiling is bounded at 74.2% < 85.0%. Task genuinely requires multi-expert composition."
+      },
+      "RC": {
+        "failure_mode": "Failure D \u2014 Single-Expert Compositional Limitation",
+        "description": "Best single-expert ceiling is bounded at 60.0% < 85.0%. Task genuinely requires multi-expert composition."
+      },
+      "FC": {
+        "failure_mode": "Failure A \u2014 Expert Incapability",
+        "description": "No existing expert can solve the task (best single expert: 51.7% < 60%)."
+      },
+      "FRC": {
+        "failure_mode": "Failure D \u2014 Single-Expert Compositional Limitation",
+        "description": "Best single-expert ceiling is bounded at 80.8% < 85.0%. Task genuinely requires multi-expert composition."
+      }
+    }
+  },
+  "latency_decomposition": {
+    "Fixed Graph": {
+      "router_overhead_us": 0.0,
+      "expert_exec_us": 34.04908333120855,
+      "total_us": 34.04908333120855
+    },
+    "Accuracy-first (\u03bb=0.01)": {
+      "router_overhead_us": 15.721972221298428,
+      "expert_exec_us": 40.482768519251735,
+      "total_us": 56.204740740550164
+    },
+    "Balanced (\u03bb=0.10)": {
+      "router_overhead_us": 15.721972221298428,
+      "expert_exec_us": 35.88446527803373,
+      "total_us": 51.60643749933216
+    },
+    "Fixed MLP": {
+      "router_overhead_us": 0.0,
+      "expert_exec_us": 30.564722227508252,
+      "total_us": 30.564722227508252
+    },
+    "Fixed Attention V2": {
+      "router_overhead_us": 0.0,
+      "expert_exec_us": 56.8344999990384,
+      "total_us": 56.8344999990384
+    }
+  },
+  "accuracy_flops_points": [
+    {
+      "regime": "Canonical Test",
+      "policy": "Oracle Router",
+      "accuracy": 0.9050925925925926,
+      "flops": 22164.0
+    },
+    {
+      "regime": "Canonical Test",
+      "policy": "Balanced (\u03bb=0.10)",
+      "accuracy": 0.9041666666666667,
+      "flops": 23886.36666666667
+    },
+    {
+      "regime": "Canonical Test",
+      "policy": "Accuracy-first (\u03bb=0.01)",
+      "accuracy": 0.9046296296296297,
+      "flops": 26037.31111111111
+    },
+    {
+      "regime": "Canonical Test",
+      "policy": "Compute-first (\u03bb=1.0)",
+      "accuracy": 0.762962962962963,
+      "flops": 11568.355555555556
+    },
+    {
+      "regime": "Canonical Test",
+      "policy": "Fixed Attention V2",
+      "accuracy": 0.6699074074074074,
+      "flops": 46296.0
+    },
+    {
+      "regime": "Fresh Test (9A)",
+      "policy": "Balanced (\u03bb=0.10)",
+      "accuracy": 0.9259259259259259,
+      "flops": 23939.022222222222
+    },
+    {
+      "regime": "Fresh Test (9A)",
+      "policy": "Accuracy-first (\u03bb=0.01)",
+      "accuracy": 0.9268518518518518,
+      "flops": 26072.666666666668
+    },
+    {
+      "regime": "Fresh Test (9A)",
+      "policy": "Compute-first (\u03bb=1.0)",
+      "accuracy": 0.7782407407407408,
+      "flops": 11092.566666666668
+    },
+    {
+      "regime": "Token Perm (9B)",
+      "policy": "Balanced (\u03bb=0.10)",
+      "accuracy": 0.8513888888888889,
+      "flops": 23939.022222222222
+    },
+    {
+      "regime": "Noise Mod (9C)",
+      "policy": "Balanced (\u03bb=0.10)",
+      "accuracy": 0.8675925925925926,
+      "flops": 22986.766666666666
+    },
+    {
+      "regime": "Mixed Task (9D)",
+      "policy": "Balanced (\u03bb=0.10)",
+      "accuracy": 0.6187499910593033,
+      "flops": 23939.022222222222
+    }
+  ]
+}

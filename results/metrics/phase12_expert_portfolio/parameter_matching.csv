@@ -1,0 +1,7 @@
+expert,parameters,raw_flops
+mlp,3914,8928.0
+graph,3866,8112.0
+attention,3314,39168.0
+attention_v2,3914,46296.0
+joint,4493,14976.0
+control,5114,0.0

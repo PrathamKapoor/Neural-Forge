@@ -1,0 +1,5 @@
+triple,frequency
+Attn V1 + Graph + MLP,0.0
+Attn V2 + Graph + MLP,0.0
+Attn V1 + Attn V2 + MLP,0.0
+Attn V1 + Attn V2 + Graph,0.0

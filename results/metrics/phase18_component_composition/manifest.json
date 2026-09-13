@@ -1,0 +1,26 @@
+{
+  "phase": "Phase 18 \u2014 Component Composition and Decision Semantics Diagnosis",
+  "timestamp": "2026-09-07T19:08:51Z",
+  "python_version": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "torch_version": "2.13.0+cpu",
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "evaluated_families": [
+    "F",
+    "R",
+    "C",
+    "FR",
+    "RC",
+    "FC",
+    "FRC"
+  ],
+  "samples_per_type": 120,
+  "jointco_epochs": 40,
+  "batch_size": 60,
+  "protocol": "Subject: frozen depth-3 JointCo. RC uses R+C semantics per benchmark construction (F retained as negative control). One shared head protocol (Linear/AdamW 1e-2/10 epochs/RNG fork-restore). Router frozen.",
+  "semantic_deviation_note": "Phase 18 text frames RC as F+R; the construction defines RC from R+C (verified: disagree labels equal R 100%). Diagnostics follow the construction."
+}

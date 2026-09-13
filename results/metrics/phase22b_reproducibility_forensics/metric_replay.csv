@@ -1,0 +1,10 @@
+metric,phase20_result,phase21_result,independent_metric,status,note
+rc_accuracy,"0.517 (attention_v2 replay on seed=11 dataset; best from phase20 log=55.0%)","0.000 / MISSING (artifact shows 0.0; pipeline broken)","0.517 (verified replay using loaded attention_v2 checkpoint)",NOT_REPRODUCED,"Phase21 evaluator broken; independent replay from checkpoint produces non-zero value confirming metric divergence at evaluation stage"
+rc_agree_accuracy,1.000 (replay),0.000 (artifact),1.000 (verified replay),NOT_REPRODUCED,"Phase20 replay confirms agreement filter works; Phase21 produces 0.0"
+rc_disagree_accuracy,0.017 (replay),0.000 (artifact),0.017 (verified replay),NOT_REPRODUCED,"Phase20 replay confirms disagreement filter works; Phase21 produces 0.0"
+family_accuracy_f,"0.500 (replay)",MISSING/0.0,"0.500 (verified replay)",NOT_REPRODUCED,"Phase21 family accuracy broken"
+family_accuracy_r,"0.442 (replay)",MISSING/0.0,"0.442 (verified replay)",NOT_REPRODUCED,"Phase21 family accuracy broken"
+family_accuracy_c,"1.000 (replay)",MISSING/0.0,"1.000 (verified replay)",NOT_REPRODUCED,"Phase21 family accuracy broken"
+rc_best_checkpoint,"attention_v2 (documented best RC=55.0%)","MISSING/0.0",NOT_APPLICABLE,NOT_REPRODUCED,"Best RC checkpoint preserved; replay verifies it works; Phase21 can't evaluate it"
+frozen_replay_performed,NOT_POSSIBLE (predictions not saved; replay performed from loaded checkpoint only),CLAIMED_TRUE_IN_PREVIOUS_ARTIFACT,"VERIFIED_FROM_CHECKPOINT_ONLY",REFUTED_PREVIOUS_CLAIM,"Previous phase22b claimed frozen_replay=true; no saved predictions exist; replay only possible by loading checkpoint directly"
+reproduction_gate_phase20_to_21,FAILED_CLOSED (22 divergences per phase21 report; independent replay confirms divergence at metric/evaluation),FAILED_CLOSED,"FAILED_CLOSED (confirmed by replay)",VERIFIED,"Independent replay of Phase20 checkpoint through Phase21 evaluator confirms evaluation pipeline is broken (produces 0.0); divergence is at metric/evaluation stage"

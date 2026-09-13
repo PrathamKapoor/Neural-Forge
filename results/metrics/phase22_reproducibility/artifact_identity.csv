@@ -1,0 +1,11 @@
+artifact_path,type,producer,consumer,hash,status
+results/metrics/phase20_repaired_portfolio/summary.json,artifact,phase20_training,evaluation,REPLACED_WITH_HASH,PRESENT
+results/reports/phase20_repaired_portfolio.md,report,phase20_training,documentation,REPLACED_WITH_HASH,PRESENT
+results/metrics/phase21_rc_diagnosis/summary.json,artifact,phase21_evaluation,evaluation,REPLACED_WITH_HASH,PRESENT
+results/reports/phase21_rc_diagnosis.md,report,phase21_evaluation,documentation,REPLACED_WITH_HASH,PRESENT
+docs/architecture/phase20_log.md,documentation,phase20_analysis,documentation,REPLACED_WITH_HASH,PRESENT
+src/neuroforge/evaluation/phase20_repaired_portfolio.py,code,development,evaluation,REPLACED_WITH_HASH,PRESENT
+src/neuroforge/evaluation/phase21_rc_diagnosis.py,code,development,evaluation,REPLACED_WITH_HASH,PRESENT
+src/neuroforge/training/phase20_repaired_portfolio.py,code,development,training,REPLACED_WITH_HASH,PRESENT
+src/neuroforge/training/phase21_rc_diagnosis.py,code,development,training,REPLACED_WITH_HASH,PRESENT
+src/neuroforge/datasets/phase9_mixed_repaired.py,dataset_definition,development,dataset,REPLACED_WITH_HASH,PRESENT

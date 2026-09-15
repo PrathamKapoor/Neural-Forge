@@ -1,0 +1,22 @@
+{
+  "run_id": "phase29_prediction_recovery_2026-09-15",
+  "phase": 29,
+  "description": "Prediction recovery and exact complementarity (diagnostic only; no architecture change; predictions MISSING honestly preserved; approximate only available)",
+  "predictions_available_for_portfolio": false,
+  "predictions_verified_for_mlp_reference": true,
+  "architecture_change": "NONE",
+  "intervention_gate": "CLOSED",
+  "intervention": "NONE",
+  "historical_p20_replay": "NOT_POSSIBLE",
+  "predictions_source_note": "Phase 26 portfolio predictions.npy MISSING (historical provenance issue; reconstructed predictions clearly labeled; original MISSING). Phase 25B MLP predictions.npy verified (hash cf6afa609...) but covers only one architecture.",
+  "evidence_files": [
+    "reproduction.json",
+    "prediction_reference.json",
+    "checkpoint_inventory.csv",
+    "approximate_vs_exact.csv",
+    "summary.json",
+    "case.json",
+    "intervention_gate.json",
+    "manifest.json"
+  ]
+}

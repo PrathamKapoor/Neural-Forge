@@ -444,3 +444,35 @@ SCIENTIFIC STATE PRESERVED:
 
 HANDOFF_NOTE:
 Phase 28 confirms approximate evidence consistent with multiple competing bottlenecks but does NOT resolve the unique mechanism. The repository remains safe to publish (public, MIT, no secrets, no synthetic artifacts, reproducible setup). No architecture was added; RC remains closed. The next scientific prerequisite before any architecture change remains: complete frozen linear probes (checkpoint.pt evaluation); save exact split manifest for phase19-repaired-v1; preserve original predictions.npy; verify single canonical checkpoint identity.
+
+---
+
+## Phase 29 — Prediction Recovery & Exact Complementarity (COMPLETE, 2026-09-15)
+
+Status: COMPLETE
+Programmatic case: CASE_D_UNRESOLVED (Phase 26 portfolio predictions.npy MISSING prevents exact complementarity; Phase 25B MLP predictions.npy verified provides partial reference; approximate evidence only)
+Architecture: NONE (verified: scripts/phase29_prediction_recovery.py only evaluation/reporting; no src/ changes)
+RC: CLOSED
+Intervention: NONE
+Intervention gate: CLOSED
+PREDICTIONS AVAILABLE (FULL PORTFOLIO): FALSE (honestly preserved: Phase 26 predictions.npy MISSING; reconstructed predictions clearly labeled; original MISSING)
+PREDICTIONS VERIFIED (PARTIAL): TRUE (Phase 25B MLP predictions.npy verified hash cf6afa609...; covers only MLP architecture on phase19-repaired-v1)
+
+VERIFIED ARTIFACTS (results/metrics/phase29_prediction_recovery/ — 7 files, non-empty):
+reproduction.json, prediction_reference.json, checkpoint_inventory.csv, approximate_vs_exact.csv, case.json, hypotheses.json, manifest.json
+NOTE: No synthetic artifacts created; no predictions fabricated; only approximate overlap/complementarity (independence assumption) provided; exact overlap requires predictions.npy per architecture (MISSING for portfolio experts MLP-portfolio, Graph, Attention V2, JointCo-d3).
+
+NOTEBOOK:
+notebooks/35_exact_prediction_recovery.ipynb — regenerated from artifacts; loads prediction_reference.json; clearly states predictions MISSING; no hardcoded scientific claims.
+
+REPORTS:
+results/reports/phase29_prediction_recovery.md (copied to docs/research/)
+
+SCIENCE PRESERVED:
+- Phase 26 predictions.npy MISSING documented honestly (not synthetic failure).
+- Phase 25B MLP predictions.npy verified (hash cf6afa609...).
+- Only approximate overlap/complementarity available; exact requires predictions.npy.
+- No predictions reconstructed and substituted for missing portfolio predictions.
+- No architecture change; RC remains CLOSED; intervention gate CLOSED.
+- Historical Phase 20 replay remains impossible.
+- Scientific response: maintain CLOSED gate; complete provenance prerequisites before any architecture change.

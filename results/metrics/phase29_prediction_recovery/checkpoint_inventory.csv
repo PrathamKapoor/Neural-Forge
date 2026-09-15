@@ -1,0 +1,8 @@
+architecture,checkpoint_path,verified_identity,hash_first32,dataset,seed,phase,note
+mlp,results\metrics\phase25b_reference\checkpoint.pt,VERIFIED,d8d6613a2bc6514dc759fe0645283236,phase19-repaired-v1,11,25B,Only verified Phase 25B reference MLP checkpoint.
+graph,MISSING,MISSING,N/A,phase19-repaired-v1,11/23/37,26,Phase 26 portfolio checkpoint MISSING (historical provenance: predictions MISSING; reconstructed predictions clearly labeled; original MISSING; checkpoint identity ambiguous).
+attention_v2,MISSING,MISSING,N/A,phase19-repaired-v1,11/23/37,26,Phase 26 portfolio checkpoint MISSING.
+joint_co_d3,MISSING,MISSING,N/A,phase19-repaired-v1,11/23/37,26,Phase 26 portfolio checkpoint MISSING.
+joint,MISSING,MISSING,N/A,phase19-repaired-v1,11/23/37,26,Phase 26 portfolio checkpoint MISSING.
+attention,MISSING,MISSING,N/A,phase19-repaired-v1,11/23/37,26,Phase 26 portfolio checkpoint MISSING.
+joint_co,MISSING,MISSING,N/A,phase19-repaired-v1,11/23/37,26,Phase 26 portfolio checkpoint MISSING.

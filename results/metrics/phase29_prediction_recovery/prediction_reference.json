@@ -1,0 +1,39 @@
+{
+  "phase_25b_mlp_predictions": {
+    "available": true,
+    "verified_hash_first32": "cf6afa6097ef64149f7ce843e9cfb5f8",
+    "shape": [
+      840
+    ],
+    "dtype": "int64",
+    "source_path": "results\\metrics\\phase25b_reference\\predictions.npy",
+    "checkpoint_path": "results\\metrics\\phase25b_reference\\checkpoint.pt",
+    "dataset_identity": "phase19-repaired-v1",
+    "dataset_hash_reference": "24149eb21a07505f8fc7c3cf711d175476f5d298e4df47bd1c68bc00a232d4a9",
+    "architecture": "mlp",
+    "seed": 11,
+    "run_id": "phase25b_reference_2026-09-14",
+    "predictions_class": "ORIGINAL_VERIFIED"
+  },
+  "phase_26_portfolio_predictions": {
+    "available": false,
+    "verified": false,
+    "note": "Phase 26 predictions.npy MISSING (as documented in previous provenance audits: predictions MISSING; reconstructed predictions clearly labeled; original MISSING). Full portfolio predictions (mlp_portfolio, graph, attention_v2, joint_co_d3, joint, attention_v1, joint_co) not available for exact overlap/complementarity analysis."
+  },
+  "phase_27_predictions": {
+    "available": false,
+    "verified": false,
+    "note": "Phase 27 is diagnostic; no new predictions generated."
+  },
+  "phase_29_predictions": {
+    "available": false,
+    "verified": false,
+    "reconstructed_from_checkpoint_for_portfolio": false,
+    "reconstruction_attempt_status": "NOT_ATTEMPTED (checkpoint identity ambiguous for portfolio experts; split identity verified but predictions.npy MISSING prevents verification of reconstructed predictions against original).",
+    "historical_replay_status": "NOT_POSSIBLE"
+  },
+  "exact_prediction_matrix_available": false,
+  "exact_complementarity_available": false,
+  "approximate_complementarity_available": true,
+  "evidence_level": "PARTIAL (Phase 25B MLP predictions verified; Phase 26 portfolio predictions MISSING; approximate analysis from family accuracies available)."
+}

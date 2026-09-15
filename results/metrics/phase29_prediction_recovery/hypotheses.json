@@ -1,0 +1,17 @@
+{
+  "run_id": "phase29_prediction_recovery_2026-09-15",
+  "H1_exact_complementarity_exists": "NOT_ESTABLISHED (requires predictions.npy; approximate evidence only)",
+  "H2_exact_oracle_gain_material": "NOT_ESTABLISHED (approximate independence assumption only)",
+  "H3_exact_aggregation_failure": "APPROXIMATE_EVIDENCE_ONLY (aggregation gap negative overall and RC; exact requires predictions.npy)",
+  "H4_exact_rc_recoverable": "NOT_ESTABLISHED (counterfactual aggregate verified; exact per-sample RC disagreement requires predictions.npy)",
+  "H5_exact_redundancy": "NOT_ESTABLISHED (approximate overlap moderate; exact requires predictions.npy)",
+  "H6_exact_calibration_impact": "NOT_AVAILABLE (logits/probabilities not fully available for portfolio; calibration not computed)",
+  "notes": {
+    "H1": "Approximate overlap estimates suggest moderate overlap for some pairs (independence assumption). Exact overlap requires predictions.npy per architecture (Phase 26 portfolio MISSING; Phase 25B MLP only verified).",
+    "H2": "Approximate oracle pair/triple union exists for some pairs (independence assumption). Material gain over best single expert uncertain without exact predictions.npy.",
+    "H3": "Aggregation gap remains negative. Best composition (mlp+graph+attention_v2, 0.7782) < best single expert (joint_co_d3, 0.8091). RC gap negative (0.5417 < 0.6028). Directionally consistent with aggregation limitation. Exact gap requires predictions.npy.",
+    "H4": "Approximate overlap moderate (independence assumption). Pair vs triple shows limited improvement. Exact overlap requires predictions.npy.",
+    "H5": "Not fully tested. RC disagreement exists (counterfactual C > R; RC composition < best single RC). Whether disagreement cases contain recoverable predictions requires predictions.npy.",
+    "H6": "Not available. Logits/probabilities not fully available for portfolio (only Phase 25B MLP predictions.npy available; hard predictions verified, but logit/probability analysis deferred)."
+  }
+}

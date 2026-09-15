@@ -1,0 +1,19 @@
+{
+  "run_id": "phase29_prediction_recovery_2026-09-15",
+  "case": "CASE_D_UNRESOLVED",
+  "case_description": "Phase 26 portfolio predictions.npy MISSING prevents exact complementarity establishment. Approximate evidence from family accuracies supports aggregation limitation and RC component conflict, but exact recoverable information cannot be determined without predictions.npy per architecture. Phase 25B MLP predictions.npy verified provides only partial reference. No architecture added; RC remains CLOSED; intervention gate CLOSED.",
+  "predictions_state": {
+    "phase_25b_mlp_predictions": "VERIFIED",
+    "phase_26_portfolio_predictions": "MISSING",
+    "reconstructed_predictions_substituted": false,
+    "original_predictions_available": false,
+    "exact_portfolio_overlap_available": false
+  },
+  "reconstruction_status": "PARTIAL",
+  "intervention_gate": "CLOSED",
+  "intervention": "NONE",
+  "architecture_change": "NONE",
+  "rc_status": "REMAINS_CLOSED",
+  "historical_p20_replay": "NOT_POSSIBLE",
+  "next_prerequisite_before_intervention": "Preserve original predictions.npy for Phase 26 portfolio (MLP portfolio, Graph, Attention V2, JointCo-d3, Joint, Attention V1, JointCo); complete frozen linear probes; verify single canonical checkpoint identity for the portfolio reference."
+}

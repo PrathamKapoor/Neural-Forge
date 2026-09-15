@@ -1,0 +1,5 @@
+measure,value,source,verified,note
+phase_25b_mlp_accuracy,0.7166666666666667,results/metrics/phase25b_reference/predictions.npy,True,Only MLP predictions verified; full portfolio predictions MISSING.
+phase_28_approx_oracle_pair_exists,True,results/metrics/phase28_oracle_complementarity/oracle_union.csv,False,Approximate independence assumption; exact requires predictions.npy.
+full_portfolio_exact_overlap,False,N/A,False,Not established (predictions.npy MISSING for portfolio experts).
+intervention_gate_open,False,N/A,False,No validated minimal intervention; predictions MISSING prevent unique bottleneck determination.

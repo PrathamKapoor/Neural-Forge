@@ -1,0 +1,31 @@
+{
+  "run_id": "phase29_prediction_recovery_2026-09-15",
+  "status": "COMPLETE",
+  "predictions_available": false,
+  "predictions_available_note": "Phase 25B MLP predictions.npy verified (hash cf6afa609...); covers only MLP architecture on phase19-repaired-v1. Phase 26 portfolio predictions.npy MISSING. Sample IDs shape: (840,).",
+  "checkpoint_inventory_available": true,
+  "checkpoint_inventory_verified": true,
+  "reconstruction_for_mlp_reference": true,
+  "reconstruction_for_portfolio": false,
+  "reconstruction_status": "PARTIAL",
+  "reconstruction_note": "Phase 25B MLP predictions.npy verified (reconstructed from verified checkpoint + verified split + verified dataset). Phase 26 portfolio predictions.npy MISSING; full portfolio exact overlap/complementarity cannot be established without predictions.npy per architecture (MLP portfolio, Graph, Attention V2, JointCo-d3, Joint, Attention V1, JointCo). No predictions fabricated or reconstructed and substituted.",
+  "evidence_files": [
+    "results/metrics/phase25b_reference/predictions.npy",
+    "results/metrics/phase25b_reference/checkpoint.pt",
+    "results/metrics/phase25b_reference/provenance_manifest.json",
+    "results/metrics/phase26_clean_compositional/summary.json",
+    "results/metrics/phase26_clean_compositional/manifest.json",
+    "results/metrics/phase28_oracle_complementarity/approximate_complementarity.csv",
+    "results/metrics/phase28_oracle_complementarity/approximate_error_overlap.csv",
+    "results/metrics/phase28_oracle_complementarity/summary.json"
+  ],
+  "historical_p20_replay": "NOT_POSSIBLE (predictions.npy original MISSING; reconstructed predictions clearly labeled; split identity UNVERIFIED; checkpoint identity AMBIGUOUS)",
+  "limitations": [
+    "Phase 26 portfolio predictions.npy MISSING (historical provenance issue; reconstructed predictions clearly labeled; original MISSING).",
+    "Only Phase 25B MLP predictions.npy available (not full portfolio).",
+    "Full portfolio exact overlap/complementarity requires predictions.npy per architecture (MISSING).",
+    "Only approximate overlap (independence assumption) available from Phase 28 artifacts.",
+    "Frozen linear probes deferred (require checkpoint.pt evaluation for portfolio experts).",
+    "No architecture change; RC remains CLOSED; intervention gate remains CLOSED."
+  ]
+}

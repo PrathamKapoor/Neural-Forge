@@ -1,5 +1,0 @@
-architecture,verified_predictions,TP,FP,TN,FN,note
-mlp,True,391,211,211,27,Only Phase 25B MLP predictions.npy verified; portfolio deferred.
-graph,False,NOT_AVAILABLE,NOT_AVAILABLE,NOT_AVAILABLE,NOT_AVAILABLE,Predictions.npy MISSING.
-attention_v2,False,NOT_AVAILABLE,NOT_AVAILABLE,NOT_AVAILABLE,NOT_AVAILABLE,Predictions.npy MISSING.
-joint_co_d3,False,NOT_AVAILABLE,NOT_AVAILABLE,NOT_AVAILABLE,NOT_AVAILABLE,Predictions.npy MISSING.

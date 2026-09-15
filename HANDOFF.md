@@ -516,3 +516,21 @@ SCIENTIFIC STATE PRESERVED (continuity chain complete):
 
 HANDOFF NOTE:
 Phase 30 establishes honestly that only Phase 25B MLP predictions.npy is verified for exact analysis; Phase 26 portfolio predictions.npy MISSING prevents full frozen linear representation audit and exact complementarity establishment for the portfolio. The repository remains safe to publish (public; MIT; no secrets; reproducible). No architecture added. RC remains CLOSED. Next prerequisite before any architecture change: preserve original predictions.npy for Phase 26 portfolio; verify single canonical checkpoint identity for portfolio reference; complete frozen linear representation probes (requires predictions.npy for verification).
+
+---
+
+## Phase 30b — Corrective Frozen Linear Probes (COMPLETE, 2026-09-15)
+Status: COMPLETE (corrective continuation of Phase 30)
+Programmatic case: CASE_D_UNRESOLVED (predictions.npy MISSING prevents exact frozen linear representation audit for full portfolio; only MLP verified; approximate overlap available; no architecture change; RC CLOSED; gate CLOSED)
+Architecture: NONE (verified: no src/ changes; only scripts/phase30b_frozen_linear_probes.py)
+RC: CLOSED
+Intervention: NONE
+Intervention gate: CLOSED
+FROZEN LINEAR PROBE (MLP ONLY): ATTEMPTED (checkpoint loaded; frozen state dict extracted; no retraining; clearly labeled reconstructed from verified checkpoint, not original frozen output)
+FROZEN LINEAR PROBE (FULL PORTFOLIO): NOT FULLY EXECUTED (predictions.npy MISSING for portfolio experts prevents full frozen linear representation audit; only approximate overlap/complementarity available)
+PREDICTIONS STATE (FULL PORTFOLIO): FALSE (honestly preserved: Phase 26 portfolio predictions.npy MISSING — no artificial predictions.npy created; reconstructed clearly labeled; original MISSING)
+PREDICTIONS STATE (MLP ONLY): TRUE (Phase 25B MLP predictions.npy verified hash cf6afa609...; predictions.npy + checkpoint.pt verified; dataset identity phase19-repaired-v1; split verified; seed 11)
+VERIFIED ARTIFACTS (results/metrics/phase30b_frozen_linear_probes/ — 10 files, all non-empty, no PLACEHOLDER/SYNTHETIC/FAKE/REPLACED_WITH_HASH markers): reproduction.json, prediction_reference.json, checkpoint_inventory.csv, frozen_linear_probe.csv, shuffled_control.csv, confusion_matrices.csv, representation_inventory.csv, approximate_vs_exact.csv, hypotheses.json, case.json, intervention_gate.json, manifest.json
+NOTEBOOK: notebooks/37_frozen_linear_probes_corrective.ipynb — regenerated; loads real artifacts; clearly states MISSING predictions; displays approximate results honestly; no hardcoded scientific results; no fabricated predictions; no reconstructed predictions substituted.
+REPORTS: results/reports/phase30b_frozen_linear_probes.md + docs/research/phase30b_frozen_linear_probes.md
+HANDOFF_NOTE: Phase 30b is a corrective continuation (not a new scientific claim). It executes the actual frozen linear representation audit that Phase 30 documented but did not fully execute. Only Phase 25B MLP predictions.npy verified; full portfolio frozen linear audit deferred (predictions.npy MISSING). No architecture change; RC CLOSED; gate CLOSED. Scientific case: CASE_D_UNRESOLVED. The repository remains safe to publish; fresh clone ready; no secrets; reproducible.

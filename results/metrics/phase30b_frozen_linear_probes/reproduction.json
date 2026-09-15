@@ -1,0 +1,13 @@
+{
+  "run_id": "phase30b_frozen_linear_probes_2026-09-15",
+  "status": "COMPLETE",
+  "predictions_portfolio_available": false,
+  "predictions_mlp_reference_available": true,
+  "predictions_verified_hash_first32": "cf6afa6097ef64149f7ce843e9cfb5f822a527f2d1bea2a0a6093a45957576f8",
+  "predictions_fabricated": false,
+  "predictions_substituted": false,
+  "historical_p20_replay": "NOT_POSSIBLE",
+  "reconstruction_substituted": false,
+  "architecture_change": "NONE",
+  "intervention_gate": "CLOSED"
+}

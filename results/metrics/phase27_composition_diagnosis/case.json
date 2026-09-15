@@ -1,0 +1,24 @@
+{
+  "run_id": "phase27_composition_diagnosis_2026-09-15",
+  "case": "CASE_E_PARTIAL",
+  "reason": "Multiple competing bottlenecks remain unresolved. Aggregation failure (H3) is directionally supported; RC conflict (H6) is supported; representation loss (H1) and selection (H7) are inconclusive or untested; redundancy (H4) partially supported; order (H5) not tested.",
+  "primary_candidate_bottlenecks": [
+    "aggregation_failure",
+    "rc_component_conflict"
+  ],
+  "not_established": [
+    "representation_loss",
+    "expert_selection_failure"
+  ],
+  "untested": [
+    "order_dependence",
+    "representation_compatibility",
+    "full_expert_selection"
+  ],
+  "intervention_gate": "CLOSED",
+  "intervention": "NONE",
+  "architecture_change": "NONE",
+  "rc_status": "REMAINS_CLOSED",
+  "historical_p20_replay": "NOT_POSSIBLE",
+  "note": "This is a diagnostic result, not a failed project. The mechanism responsible for the remaining gap is unresolved and requires additional provenance prerequisites before architecture change."
+}

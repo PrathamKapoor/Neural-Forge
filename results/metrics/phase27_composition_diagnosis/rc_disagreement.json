@@ -1,0 +1,44 @@
+{
+  "run_id": "phase27_composition_diagnosis_2026-09-15",
+  "phase26_rc_counterfactual": {
+    "R_change": 0.27586206896551724,
+    "C_change": 0.6206896551724138,
+    "control_change": 0.29310344827586204,
+    "R_n": 58,
+    "C_n": 58
+  },
+  "expert_rc_disagreement_approximate": {
+    "mlp": {
+      "RC_agree_mean": 0.4193548262119293,
+      "RC_disagree_mean": 0.517241358757019
+    },
+    "graph": {
+      "RC_agree_mean": 0.4032258093357086,
+      "RC_disagree_mean": 0.517241358757019
+    },
+    "attention": {
+      "RC_agree_mean": 0.5483871102333069,
+      "RC_disagree_mean": 0.5517241358757019
+    },
+    "attention_v2": {
+      "RC_agree_mean": 0.8709677457809448,
+      "RC_disagree_mean": 0.1034482792019844
+    },
+    "joint": {
+      "RC_agree_mean": 0.9193548560142517,
+      "RC_disagree_mean": 0.0517241396009922
+    },
+    "joint_co": {
+      "RC_agree_mean": 0.9193548560142517,
+      "RC_disagree_mean": 0.1551724076271057
+    },
+    "joint_co_d3": {
+      "RC_agree_mean": 0.8709677457809448,
+      "RC_disagree_mean": 0.22413793206214905
+    }
+  },
+  "note": "Exact RC disagreement per expert requires per-sample predictions (predictions.npy from phase21 or phase25b). Not available for Phase 26 portfolio; approximate analysis uses RC_agree / RC_disagree from expert_results.csv.",
+  "best_single_rc_ceiling": 0.6027777791023254,
+  "best_composition_rc": 0.5416666766007742,
+  "composition_rc_gap": -0.06111110250155127
+}

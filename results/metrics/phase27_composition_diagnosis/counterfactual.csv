@@ -1,0 +1,6 @@
+measure,value,source,note
+aggregate_R_change,0.27586206896551724,phase26_clean_compositional/counterfactual.json,Aggregate from protocol
+aggregate_C_change,0.6206896551724138,phase26_clean_compositional/counterfactual.json,Aggregate from protocol
+aggregate_R_n,58,phase26_clean_compositional/counterfactual.json,Sample count
+aggregate_C_n,58,phase26_clean_compositional/counterfactual.json,Sample count
+per_expert_counterfactual_available,False,Phase 26 artifacts,Requires per-architecture predictions.npy

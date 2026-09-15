@@ -1,0 +1,27 @@
+{
+  "run_id": "phase27_composition_diagnosis_2026-09-15",
+  "H1": "NOT_FULLY_TESTED",
+  "H2": "PARTIALLY_SUPPORTED",
+  "H3": "SUPPORTED_DIRECTIONALLY",
+  "H4": "PARTIALLY_SUPPORTED",
+  "H5": "NOT_TESTED",
+  "H6": "SUPPORTED",
+  "H7": "INCONCLUSIVE",
+  "notes": {
+    "H1": "No frozen linear probes on intermediate representations performed (requires checkpoint.pt evaluation). Approximate family-level statistics only.",
+    "H2": "Expert family accuracies vary by family, indicating different strengths, but full representation compatibility (norms, cosine similarity) not computed.",
+    "H3": "Best fixed composition (0.7782) does not exceed single-expert ceiling (0.8091) overall. RC gap is negative. Aggregation mechanism is a candidate bottleneck but not uniquely established.",
+    "H4": "Overlap estimates show moderate overlap (approx range). Error overlap not exactly computed (requires predictions.npy). Pair vs triple shows limited improvement.",
+    "H5": "Phase 26 evaluated fixed compositions only; sequential order analysis not executed.",
+    "H6": "Counterfactual sensitivity shows C > R. RC composition accuracy (0.5417) below best single (0.6028). RC disagreement patterns exist (RC_disagree > 0 for best single and composition).",
+    "H7": "No router retraining performed in Phase 27 (architecture change = NONE); selection policy uses existing fixed combinations."
+  },
+  "evidence_sources": [
+    "results/metrics/phase26_clean_compositional/summary.json",
+    "results/metrics/phase26_clean_compositional/composition_results.json",
+    "results/metrics/phase26_clean_compositional/counterfactual.json",
+    "results/metrics/phase26_clean_compositional/expert_results.csv",
+    "results/metrics/phase26_clean_compositional/ceiling.json",
+    "results/metrics/phase26_clean_compositional/hypotheses.json"
+  ]
+}

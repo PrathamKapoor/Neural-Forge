@@ -1,0 +1,37 @@
+{
+  "run_id": "phase27_composition_diagnosis_2026-09-15",
+  "phase": "27",
+  "description": "Composition failure localization (diagnostic only)",
+  "architecture_change": "NONE",
+  "intervention_gate": "CLOSED",
+  "intervention": "NONE",
+  "phase25b_reference_path": "results/metrics/phase25b_reference",
+  "phase26_reference_path": "results/metrics/phase26_clean_compositional",
+  "dataset_reference": "phase19-repaired-v1",
+  "reproduction_gate": "PASS",
+  "test_command": "python -m compileall .",
+  "test_result": "PASS",
+  "evidence_artifacts": [
+    "manifest.json",
+    "reproduction.json",
+    "representation_proxy.json",
+    "representation_statistics.csv",
+    "error_overlap.csv",
+    "complementarity.csv",
+    "rc_disagreement.json",
+    "rc_disagreement.csv",
+    "counterfactual.csv",
+    "aggregation.csv",
+    "order_analysis.csv",
+    "oracle_union.csv",
+    "hypotheses.json",
+    "case.json"
+  ],
+  "notes": [
+    "Full frozen linear probes not executed (requires checkpoint evaluation).",
+    "Exact error overlap not computed (requires predictions.npy).",
+    "Sequential order analysis not executed (Phase 26 used fixed compositions only).",
+    "Router retraining not performed; selection analysis inconclusive.",
+    "Historical Phase 20 replay remains impossible."
+  ]
+}

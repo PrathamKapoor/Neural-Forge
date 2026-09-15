@@ -1,0 +1,10 @@
+architecture,RC_agree_mean,RC_disagree_mean,note
+mlp,0.4193548262119293,0.517241358757019,Approximate (average across seeds)
+graph,0.4032258093357086,0.517241358757019,Approximate (average across seeds)
+attention,0.5483871102333069,0.5517241358757019,Approximate (average across seeds)
+attention_v2,0.8709677457809448,0.1034482792019844,Approximate (average across seeds)
+joint,0.9193548560142517,0.0517241396009922,Approximate (average across seeds)
+joint_co,0.9193548560142517,0.1551724076271057,Approximate (average across seeds)
+joint_co_d3,0.8709677457809448,0.22413793206214905,Approximate (average across seeds)
+best_single_ceiling,0.6027777791023254,,From ceiling.json
+best_composition,0.5416666766007742,,From composition_results.json

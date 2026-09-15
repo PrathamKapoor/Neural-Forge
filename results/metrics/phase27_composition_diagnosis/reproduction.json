@@ -1,0 +1,13 @@
+{
+  "run_id": "phase27_composition_diagnosis_2026-09-15",
+  "phase26_reference_ok": true,
+  "phase25b_reference_ok": true,
+  "reproduced_best_single_expert": "joint_co_d3",
+  "reproduced_single_expert_ceiling": 0.8091269841269841,
+  "reproduced_best_composition": "mlp+graph+attention_v2",
+  "reproduced_composition_accuracy": 0.7781746031746032,
+  "reproduced_rc_r_change": 0.27586206896551724,
+  "reproduced_rc_c_change": 0.6206896551724138,
+  "reproduction_status": "PASS",
+  "note": "Reproduction derived from saved artifacts (not retrained)."
+}

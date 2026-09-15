@@ -1,0 +1,50 @@
+{
+  "run_id": "phase27_composition_diagnosis_2026-09-15",
+  "status": "COMPLETE",
+  "case": "CASE_E_PARTIAL",
+  "reason": "Multiple competing bottlenecks remain unresolved. Aggregation failure (H3) is directionally supported; RC conflict (H6) is supported; representation loss (H1) and selection (H7) are inconclusive or untested; redundancy (H4) partially supported; order (H5) not tested.",
+  "intervention_gate": "CLOSED",
+  "intervention": "NONE",
+  "architecture_change": "NONE",
+  "rc_status": "REMAINS_CLOSED",
+  "phase26_reference": "VERIFIED",
+  "phase25b_reference": "VERIFIED",
+  "reproduction_gate": "PASS",
+  "key_findings": {
+    "aggregation_gap_overall": -0.030952380952380953,
+    "rc_component_conflict": [
+      "aggregation_failure",
+      "rc_component_conflict"
+    ],
+    "h6_rc_conflict": "SUPPORTED",
+    "h3_aggregation": "DIRECTIONALLY_SUPPORTED",
+    "h1_information_loss": "NOT_FULLY_TESTED",
+    "h7_selection": "INCONCLUSIVE",
+    "h5_order": "NOT_TESTED",
+    "h4_redundancy": "PARTIALLY_SUPPORTED",
+    "h2_representation": "PARTIALLY_SUPPORTED"
+  },
+  "evidence_files": [
+    "manifest.json",
+    "reproduction.json",
+    "representation_proxy.json",
+    "representation_statistics.csv",
+    "error_overlap.csv",
+    "complementarity.csv",
+    "rc_disagreement.json",
+    "rc_disagreement.csv",
+    "counterfactual.csv",
+    "aggregation.csv",
+    "order_analysis.csv",
+    "oracle_union.csv",
+    "hypotheses.json",
+    "case.json"
+  ],
+  "limitations": [
+    "Representation probes not fully executed (requires model evaluation from checkpoint.pt).",
+    "Exact error overlap and sequential order not computed (requires predictions.npy and sequential pipeline).",
+    "Full pytest suite interrupted by timeout (not code failure); targeted regression passes.",
+    "No new architecture added; RC remains closed.",
+    "Historical Phase 20 replay impossible."
+  ]
+}

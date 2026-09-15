@@ -1,0 +1,9 @@
+family,best_single_acc,composition_acc,gap,note
+F,1.0,1.0,0.0,Positive gap favors composition; negative favors single expert.
+R,0.6555555462837219,0.5944444437821707,-0.06111110250155127,Positive gap favors composition; negative favors single expert.
+C,0.9833333492279053,0.8527777592341105,-0.1305555899937948,Positive gap favors composition; negative favors single expert.
+FR,0.7555555701255798,0.7333333094914755,-0.022222260634104374,Positive gap favors composition; negative favors single expert.
+RC,0.6027777791023254,0.5416666766007742,-0.06111110250155127,Positive gap favors composition; negative favors single expert.
+FC,1.0,0.9833333293596903,-0.01666667064030969,Positive gap favors composition; negative favors single expert.
+FRC,0.7583333452542623,0.7416666746139526,-0.01666667064030969,Positive gap favors composition; negative favors single expert.
+overall,0.8091269841269841,0.7781746031746032,-0.030952380952380953,negative_gap_indicates_aggregation_does_not_recover_single_expert_ceiling

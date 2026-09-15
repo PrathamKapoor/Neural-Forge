@@ -1,0 +1,4 @@
+composition_pair,pair_overall,triple_overall,pair_rc,triple_rc,note
+mlp+attention_v2,0.7694444444444445,0.7781746031746032,0.5111111104488373,0.5416666766007742,No sequential order evaluation performed in Phase 26.
+mlp+graph,0.7400793650793651,0.7781746031746032,0.5666666527589163,0.5416666766007742,No sequential order evaluation performed in Phase 26.
+graph+attention_v2,0.7686507936507937,0.7781746031746032,0.5250000059604645,0.5416666766007742,No sequential order evaluation performed in Phase 26.

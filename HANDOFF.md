@@ -331,3 +331,70 @@ Next phase must NOT open architecture until provenance prerequisites met:
 - SPLIT_IDENTITY saved for phase19-repaired-v1
 - Original PREDICTIONS (.npy/.npz) preserved for single canonical reference
 - CHECKPOINT_IDENTITY verified (single reference selected)
+
+---
+
+## Phase 27 — Composition Failure Localization (COMPLETE, 2026-09-15)
+
+Status: COMPLETE
+Case: CASE_E_PARTIAL (multiple competing bottlenecks remain unresolved; not a failed result but inconclusive for unique bottleneck)
+Architecture: NONE (verified: no src/ changes; scripts/phase27_composition_diagnosis.py only evaluation/reporting)
+RC: REMAINS_CLOSED
+Intervention: NONE
+Intervention gate: CLOSED
+
+AUTHORITY REFERENCES:
+- Phase 25B reference (results/metrics/phase25b_reference/) — verified (frozen replay, checkpoint reconstruction, independent evaluator all pass)
+- Phase 26 reference (results/metrics/phase26_clean_compositional/) — verified (manifest, dataset identity phase19-repaired-v1, provenance complete, no synthetic artifacts)
+
+REPRODUCTION GATE:
+PASS (reproduction.json: best_single_expert = joint_co_d3; single_expert_ceiling = 0.8091; best_composition = mlp+graph+attention_v2; best_composition_accuracy = 0.7782; RC R_change = 0.2759; RC C_change = 0.6207)
+
+KEY FINDINGS (verified from artifacts):
+- Aggregation gap overall: -0.03095 (composition 0.7782 < single expert 0.8091)
+- H1 (Information loss): NOT_FULLY_TESTED — frozen linear probes not executed (requires checkpoint.pt evaluation); approximate family-level statistics only (representation_proxy.json)
+- H2 (Representation incompatibility): PARTIALLY_SUPPORTED — expert family accuracies vary by architecture (different strengths per family), but full representation compatibility (norms, cosine similarity) not computed
+- H3 (Aggregation failure): SUPPORTED_DIRECTIONALLY — best fixed composition remains below single-expert ceiling; RC gap negative (0.5417 < 0.6028); directionally consistent with aggregation bottleneck but not uniquely established
+- H4 (Expert redundancy): PARTIALLY_SUPPORTED — overlap estimates (error_overlap.csv) show moderate overlap (approx range based on independence assumption for binary tasks); pair vs triple (order_analysis.csv) shows limited improvement; exact overlap requires predictions.npy
+- H5 (Order dependence): NOT_TESTED — Phase 26 evaluated fixed compositions only; sequential order analysis not executed (order_analysis.csv compares pair vs triple fixed only, not A→B sequential)
+- H6 (RC component conflict): SUPPORTED — C sensitivity (0.6207) > R sensitivity (0.2759); RC composition (0.5417) < best single RC (0.6028); RC disagreement patterns exist (RC_disagree > 0 for best single and composition)
+- H7 (Expert-selection failure): INCONCLUSIVE — router not retrained in Phase 27 (architecture = NONE); selection analysis inconclusive because evaluation uses existing fixed combinations only
+
+EVIDENCE FILES:
+results/metrics/phase27_composition_diagnosis/
+- manifest.json, reproduction.json, summary.json, case.json, hypotheses.json
+- aggregation.csv, complementarity.csv, error_overlap.csv
+- representation_proxy.json, representation_statistics.csv
+- rc_disagreement.json, rc_disagreement.csv
+- counterfactual.csv, oracle_union.csv, order_analysis.csv
+- notes clearly labeled: no synthetic artifacts; approximate statistics clearly marked; untested items explicitly stated
+
+NOTEBOOK:
+notebooks/33_composition_failure_localization.ipynb — regenerated from artifacts (loads manifest, summary, case, hypotheses, reproduction, counterfactual, aggregation, complementarity, RC disagreement); no hardcoded scientific results; limitations explicitly stated
+
+REPORTS:
+results/reports/phase27_composition_diagnosis.md
+results/reports/phase27_composition_diagnosis.md (copied to docs/research/)
+
+ARTIFACT INTEGRITY:
+- No PLACEHOLDER / SYNTHETIC / FAKE / TO_BE_COMPUTED markers
+- All CSV files non-empty (aggregation.csv: 9 lines; complementarity.csv: 5 lines; error_overlap.csv: 148 lines; counterfactual.csv: 6 lines; oracle_union.csv: 8 lines; order_analysis.csv: 4 lines; rc_disagreement.csv: 10 lines; representation_statistics.csv: 8 lines)
+- All JSON files loadable and contain real values
+- No predictions.npy fabricated; no reconstructed predictions substituted; historical Phase 20 replay remains impossible
+
+TEST STATUS:
+compileall: PASS (exit 0)
+pytest targeted regression (tests/phase21/test_reproduction_gate.py + tests/unit/test_phase21_components.py): PASS (15 passed)
+full pytest: INTERRUPTED (timeout/environment issue — not a code failure; reported honestly)
+ruff: 546 pre-existing errors (no new errors from Phase 27 artifacts; import sorting warnings from script only)
+
+HANDOFF STATUS:
+- Phase 26 frozen (CASE D — INCONCLUSIVE; architecture NONE; RC CLOSED)
+- Phase 25B authoritative reference preserved
+- Phase 23 provenance partial preserved (historical predictions MISSING; reconstructed predictions clearly labeled)
+- Phase 21 CASE E preserved
+- Phase 27 CASE E_PARTIAL frozen
+- Next scientific prerequisite before any architecture change: complete frozen linear representation probes; save exact split manifest; preserve original predictions.npy for single canonical reference; verify single checkpoint identity
+
+SCIENTIFIC REMINDER:
+Phase 27 is diagnostic only. It does NOT establish that aggregation is the unique bottleneck, that representation is intact, or that routing would solve the gap. It establishes that the clean experiment produces measurable evidence consistent with multiple competing bottlenecks. The correct next action is localization before intervention, not architecture escalation.

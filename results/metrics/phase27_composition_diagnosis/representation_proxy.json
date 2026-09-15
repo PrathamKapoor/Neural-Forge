@@ -1,0 +1,48 @@
+{
+  "method": "approximate_capability_from_expert_family_accuracies",
+  "note": "Full frozen linear probes on intermediate representations require loading checkpoint.pt and evaluating forward passes. Not performed here to avoid timeout and architecture change. Approximate statistics computed from expert_summary family means.",
+  "family_statistics": {
+    "F": {
+      "mean": 0.9642857142857143,
+      "max": 1.0,
+      "min": 0.75,
+      "count": 7
+    },
+    "R": {
+      "mean": 0.5654761904761905,
+      "max": 0.6555555462837219,
+      "min": 0.4861111144224803,
+      "count": 7
+    },
+    "C": {
+      "mean": 0.7630952369599114,
+      "max": 0.9833333492279053,
+      "min": 0.49166665474573773,
+      "count": 7
+    },
+    "FR": {
+      "mean": 0.7218253967307863,
+      "max": 0.7555555701255798,
+      "min": 0.6500000059604645,
+      "count": 7
+    },
+    "RC": {
+      "mean": 0.5265873017765227,
+      "max": 0.6027777791023254,
+      "min": 0.48888887961705524,
+      "count": 7
+    },
+    "FC": {
+      "mean": 0.9071428605488369,
+      "max": 1.0,
+      "min": 0.6583333412806193,
+      "count": 7
+    },
+    "FRC": {
+      "mean": 0.7003968329656692,
+      "max": 0.7583333452542623,
+      "min": 0.5388888915379842,
+      "count": 7
+    }
+  }
+}

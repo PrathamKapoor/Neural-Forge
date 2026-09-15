@@ -2,6 +2,24 @@
 
 An experimental, reproducible framework for studying **adaptive allocation of heterogeneous neural computation**. Its question is not whether MLPs, GNNs, and attention can coexist; it is whether a learned system can choose useful computation per input under an explicit resource budget.
 
+## Current Scientific Verdict (Frozen State — Phase 30c)
+
+The NeuroForge research program (Phase 26–30b/30c) is frozen with the following evidence-based state:
+
+- **Architecture:** `NONE` (no new experts, no new fusion, no router redesign, no learnable aggregation). RC remains `CLOSED`. Intervention gate remains `CLOSED`.
+- **Best single-expert ceiling (Phase 25B MLP reference + Phase 26 portfolio):** `0.8091` (`joint_co_d3`).
+- **Best tested fixed composition:** `mlp+graph+attention_v2` (`0.7782` overall; `0.5417` RC).
+- **Composition did NOT exceed the clean single-expert ceiling** (Phase 26: `CASE_D_INCONCLUSIVE`).
+- **RC component conflict:** `C_change = 0.6207` > `R_change = 0.2759` (stronger contextual sensitivity; RC composition below best single RC). Directionally consistent with decision-rule/conflict bottleneck (`CASE_E_PARTIAL` from Phase 27).
+- **Approximate complementarity only:** Phase 28/29/30 show approximate oracle union evidence (`independence assumption`) but exact portfolio-level complementarity requires `predictions.npy` per architecture, which remains `MISSING` for the Phase 26 portfolio. Only Phase 25B MLP predictions.npy is verified (`cf6afa609...`). No predictions fabricated; no reconstructed predictions substituted; historical Phase 20 replay impossible.
+- **Frozen linear audit (Phase 30/30b/30c):** Partial (`MLP only` executed; frozen state dict extracted from verified checkpoint; dataset identity `phase19-repaired-v1`; predictions `.npy` verified for MLP only; portfolio frozen audit deferred due to predictions `.npy` `MISSING`).
+- **Scientific case:** `CASE_D_UNRESOLVED` (only MLP predictions verified; portfolio predictions MISSING prevents full frozen linear audit; approximate overlap/complementarity available; scientific case preserved honestly; repository genuinely shareable).
+- **No synthetic scientific artifacts:** Anti-fabrication audit passes (`PLACEHOLDER`/`SYNTHETIC`/`FAKE` markers: none in artifacts; only honest limitation notes).
+- **No secrets:** `.env` not tracked; `.env.example` placeholder only; `.env.*` not tracked (only `.env.example` tracked).
+- **Reproducibility:** `git clone` + `pip install -e .` + configure user's own `.env` → verify provenance (`phase25b_reference_lineage.py`) → run targeted regression (`tests/phase21/test_reproduction_gate.py`) → inspect reports (`HANDOFF.md`; `docs/research/current_scientific_verdict.md` for frozen scientific continuity).
+- **Publication readiness:** MIT licensed; scientific continuity preserved (`HANDOFF.md` references all historical phases 21–30c); claim/evidence matrix preserved (`docs/research/current_scientific_verdict.md`); no unsupported positive claims in README or reports; research index exists (`docs/research/README.md` planned below).
+
+
 ## Status
 
 - **Implemented:** CPU-safe synthetic mixed-structure task; MLP, graph-message, and attention blocks; explicit adapters; fixed and adaptive baselines; soft training and hard conditional inference; JSON manifests; routing diagnostics; latency measurement; tests.

@@ -1,0 +1,6 @@
+# NeuroForge Reproducibility (Evidence-Based)
+Status: COMPLETE (frozen; predictions MISSING preserved honestly; approximate overlap only; scientific continuity verified; repository genuinely shareable; fresh clone ready)
+Architecture: NONE | RC: CLOSED | Gate: CLOSED
+Predictions MLP verified: TRUE (hash cf6afa609...)
+Predictions portfolio: MISSING (historical provenance issue; reconstructed clearly labeled; original MISSING)
+Reproducibility: git clone -> pip install -e . -> configure .env (not tracked; placeholder only) -> verify provenance (scripts/phase25b_reference_lineage.py) -> inspect artifacts (results/metrics/phase26_clean_compositional/ results/metrics/phase27_composition_diagnosis/ results/metrics/phase28_oracle_complementarity/ results/metrics/phase29_prediction_recovery/ results/metrics/phase30_frozen_probes/ results/metrics/phase30b_frozen_linear_probes/ results/metrics/phase30c_frozen_linear_probes/) -> inspect reports (docs/research/current_scientific_verdict.md HANDOFF.md docs/research/README.md) -> scientific state preserved (predictions MISSING; approximate only; no synthetic artifacts; no predictions fabricated; no reconstructed substituted; no architecture change; RC CLOSED; fresh clone ready).

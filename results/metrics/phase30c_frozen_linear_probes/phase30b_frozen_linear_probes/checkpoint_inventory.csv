@@ -1,0 +1,8 @@
+architecture,checkpoint_path,identity,hash_32,dataset,seed,pred_available,note
+mlp,results\metrics\phase25b_reference\checkpoint.pt,VERIFIED,d8d6613a2bc6514dc759fe0645283236,phase19-repaired-v1,11,True,Only Phase 25B MLP verified; Phase 26 portfolio MISSING.
+graph,MISSING (no .pt in phase26_clean_compositional),AMBIGUOUS,N/A,phase19-repaired-v1,11/23/37,False,Phase 26 portfolio .pt MISSING; identity ambiguous.
+attention_v2,MISSING (no .pt in phase26_clean_compositional),AMBIGUOUS,N/A,phase19-repaired-v1,11/23/37,False,Phase 26 portfolio .pt MISSING; identity ambiguous.
+joint_co_d3,MISSING (no .pt in phase26_clean_compositional),AMBIGUOUS,N/A,phase19-repaired-v1,11/23/37,False,Phase 26 portfolio .pt MISSING; identity ambiguous.
+joint,MISSING (no .pt in phase26_clean_compositional),AMBIGUOUS,N/A,phase19-repaired-v1,11/23/37,False,Phase 26 portfolio .pt MISSING; identity ambiguous.
+attention,MISSING (no .pt in phase26_clean_compositional),AMBIGUOUS,N/A,phase19-repaired-v1,11/23/37,False,Phase 26 portfolio .pt MISSING; identity ambiguous.
+joint_co,MISSING (no .pt in phase26_clean_compositional),AMBIGUOUS,N/A,phase19-repaired-v1,11/23/37,False,Phase 26 portfolio .pt MISSING; identity ambiguous.

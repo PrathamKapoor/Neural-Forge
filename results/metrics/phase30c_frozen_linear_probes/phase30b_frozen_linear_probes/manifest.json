@@ -1,0 +1,35 @@
+{
+  "run_id": "phase30b_frozen_linear_probes_2026-09-15",
+  "phase": "30b (corrective continuation of Phase 30)",
+  "status": "COMPLETE",
+  "predictions_available_for_portfolio": false,
+  "predictions_available_for_mlp_reference": true,
+  "frozen_linear_probe_executed_full_portfolio": false,
+  "frozen_linear_probe_executed_mlp_only": true,
+  "no_predictions_fabricated": true,
+  "no_predictions_reconstructed_substituted": true,
+  "historical_p20_replay": "NOT_POSSIBLE",
+  "architecture_change": "NONE",
+  "intervention_gate": "CLOSED",
+  "intervention": "NONE",
+  "evidence_artifacts_list": [
+    "reproduction.json",
+    "prediction_reference.json",
+    "checkpoint_inventory.csv",
+    "representation_inventory.csv",
+    "frozen_linear_probe.csv",
+    "shuffled_control.csv",
+    "confusion_matrices.csv",
+    "approximate_vs_exact.csv",
+    "hypotheses.json",
+    "case.json",
+    "intervention_gate.json",
+    "manifest.json"
+  ],
+  "notes": [
+    "Phase 30b executes the actual frozen linear representation attempt that Phase 30 documented but did not fully execute.",
+    "Only Phase 25B MLP predictions.npy verified (hash cf6afa609...). Phase 26 portfolio predictions.npy MISSING (historical provenance issue; reconstructed clearly labeled; original MISSING).",
+    "Only MLP frozen linear probe executed (verified checkpoint loaded; frozen state dict extracted; no retraining). Portfolio frozen probes deferred (predictions.npy MISSING for portfolio experts).",
+    "No predictions fabricated or reconstructed and substituted. No architecture change; RC CLOSED; gate CLOSED."
+  ]
+}

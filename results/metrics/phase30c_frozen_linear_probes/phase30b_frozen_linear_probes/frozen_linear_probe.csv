@@ -1,0 +1,7 @@
+measure,value,verified,note
+sklearn_available,True,False,LogisticRegression available for linear probe if dataset features available.
+verified_predictions_accuracy,0.7166666666666667,True,Only Phase 25B MLP predictions.npy verified; portfolio predictions.npy MISSING prevents full frozen linear representation audit.
+frozen_checkpoint_loaded,True,False,Phase 25B MLP checkpoint loaded (verified identity; hash d8d6613...; dataset phase19-repaired-v1; seed 11). Frozen state dict extracted (no retraining; no architecture change; no weight modification).
+frozen_linear_probe_accuracy_verified_for_portfolio,False,False,Not available (predictions.npy MISSING for portfolio experts). Only MLP predictions.npy verified.
+frozen_linear_probe_accuracy_for_mlp_approximate_or_deferred,True,False,Only basic checkpoint extraction performed; full frozen linear representation accuracy verification deferred (requires feature dataset + predictions.npy for verification).
+dataset_identity,phase19-repaired-v1,True,Verified against Phase 25B manifest and dataset identity file.

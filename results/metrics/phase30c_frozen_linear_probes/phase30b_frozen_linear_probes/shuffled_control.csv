@@ -1,0 +1,2 @@
+control,status,value,note
+deterministic_shuffle_control_mlp_only,EXECUTED,"original_accuracy=0.7167, shuffled_accuracy=0.5071, seed=42",Only MLP predictions.npy verified; full portfolio shuffled control deferred (predictions.npy MISSING for portfolio).

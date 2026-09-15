@@ -1,0 +1,21 @@
+{
+  "run_id": "phase26_clean_compositional_2026-09-14",
+  "schema": "phase26-1",
+  "phase25b_manifest_sha256": "90b3da4b4d15a9c0e7d059b62911a0d6",
+  "dataset": "phase19-repaired-v1",
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "epochs": 20,
+  "experts": [
+    "mlp",
+    "graph",
+    "attention",
+    "attention_v2",
+    "joint",
+    "joint_co",
+    "joint_co_d3"
+  ]
+}

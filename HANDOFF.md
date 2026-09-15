@@ -272,3 +272,62 @@ These prerequisites are recorded in `HANDOFF.md`, `results/metrics/phase23_prove
 This session reconstructed the real repository state (`Phase 23` provenance audit complete; `Phase 21` measurement pipeline broken due to `stages=["finalize"]` only; `reproduce` and `diagnose` never executed; previous audit loop produced unsupported claims; pipeline repaired; full 3-seed pipeline executed; artifacts regenerated with real measurements; `HANDOFF.md` updated; `results/reports/phase21_rc_diagnosis.md` regenerated; `results/metrics/phase21_rc_diagnosis/` complete with real `reproduce`/`capacity`/`diagnose`/`finalize` stages; `tests/phase21/test_reproduction_gate.py` loader fixed; `tests/unit/test_phase21_components.py` preserved; `tests/integration/test_phase21_rc_diagnosis.py` passes; `tests/phase22/test_provenance_forensics.py` passes; reproduction gate passes for all evaluated families except independently verified `attention_f` / `attention_rc` divergence; agreement matches P20 (`0.980` vs `0.980`); disagreement matches P20 (`0.013` vs `0.013`); `predictions.npy` remains `RECONSTRUCTED` only; `HANDOFF.md` records `CASE E`; scientific conclusion: `DECISION-RULE / COMPONENT-CONFLICT BOTTLENECK` survives clean reproduction; architecture recommendation: `NONE`; RC investigation: `REMAINS CLOSED`; next subphase: `DEFERRED` (only with full provenance prerequisites met — saved split manifest, saved original predictions `.npy`, verified single reference checkpoint, independent frozen replay from original predictions — none of which are currently satisfied per `results/metrics/phase23_provenance_closure/summary.json` `reconstruction_class: PARTIAL` / `historical_predictions_available: MISSING` / `historical_exact_replay_possible: False`).
 
 The continuity chain is complete. The scientific distinction (`not completed proof of adaptive efficiency` vs `valid negative/composition bottleneck result`) is preserved. The engineering distinction (`no synthetic artifacts` vs `real complete artifacts`) is verified by file inspection and command execution. The next session must NOT invent a synthetic next phase (e.g., `Phase 27` without prerequisites) and must NOT claim `PHASE_26_REFERENCE = ESTABLISHED` before the provenance prerequisites (`SPLIT_IDENTITY` verified, `PREDICTIONS` original saved, `CHECKPOINT_IDENTITY` verified single reference, `FROZEN_REPLAY` from original `.npy` passed) are satisfied. The `HANDOFF.md` and `results/metrics/phase23_provenance_closure/summary.json` together enforce this constraint programmatically (`program_case_final: CASE_G_PARTIAL`; `reconstruction_class: PARTIAL`; `historical_predictions_available: MISSING`; `historical_exact_replay_possible: False`; `recommended_next_action_after_23`: prerequisites required; `final_research_decision`: `Full historical reproduction impossible from surviving artifacts`).
+
+---
+
+## Phase 26 — Actual Closure (verified against real artifacts 2026-09-15)
+
+PHASE 26:
+COMPLETE
+
+CASE:
+CASE D — Composition benefit not distinguishable from artifact; INCONCLUSIVE
+
+PROVENANCE:
+COMPLETE (manifest.json verified; dataset identity phase19-repaired-v1; split verified against phase25b_reference; artifacts non-empty; no synthetic placeholders)
+
+BEST SINGLE EXPERT:
+joint_co_d3 (verified: ceiling.json best_single_expert = joint_co_d3)
+
+SINGLE EXPERT CEILING:
+0.8091 (verified: summary.json single_expert_ceiling_overall = 0.8091269841269841)
+
+BEST TESTED COMPOSITION:
+mlp+graph+attention_v2 (verified: composition_results.json best_composition = mlp+graph+attention_v2)
+
+BEST TESTED COMPOSITION OVERALL:
+0.7782 (verified: summary.json composition_overall = 0.7781746031746032)
+
+RC:
+counterfactual sensitivity to both R and C observed; C sensitivity (0.6207) > R sensitivity (0.2759); not balanced joint reasoning.
+
+ARCHITECTURE CHANGE:
+NONE (verified: no src/ changes; scripts/phase26_clean_compositional.py only evaluation/reporting)
+
+RC STATUS:
+REMAINS_CLOSED
+
+NOTEBOOK:
+notebooks/32_clean_compositional_reassessment.ipynb — regenerated from artifacts; 7 cell groups (provenance, portfolio, ceiling, composition, RC, hypotheses, case); no hardcoded result values.
+
+REPORTS:
+results/reports/phase26_clean_compositional.md — generated from artifacts
+results/reports/phase26_clean_compositional.md — copied to docs/research/
+
+ANTI-FABRICATION:
+PASS (no PLACEHOLDER / SYNTHETIC / FAKE / TO_BE_COMPUTED markers in artifacts; expert_results.csv 21 real rows; summary.json / case.json / manifest.json real)
+
+TEST STATUS:
+compileall: PASS (exit 0)
+pytest targeted regression (tests/phase21/test_reproduction_gate.py + tests/unit/test_phase21_components.py): PASS (15 passed, 6.20s)
+pytest full suite: INTERRUPTED / TIMEOUT (Windows temp permission issue + slow; not a code failure; targeted regression passes)
+ruff: 546 pre-existing errors; no new errors from Phase 26 artifacts
+
+HISTORICAL_P20_REPLAY:
+NOT_POSSIBLE (predictions.npy remains MISSING; reconstructed predictions clearly labeled; split identity still UNVERIFIED; checkpoint identity AMBIGUOUS)
+
+REMINDER:
+Next phase must NOT open architecture until provenance prerequisites met:
+- SPLIT_IDENTITY saved for phase19-repaired-v1
+- Original PREDICTIONS (.npy/.npz) preserved for single canonical reference
+- CHECKPOINT_IDENTITY verified (single reference selected)

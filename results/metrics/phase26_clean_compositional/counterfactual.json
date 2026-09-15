@@ -1,0 +1,14 @@
+{
+  "R_change": 0.27586206896551724,
+  "R_correct_change": 0.1896551724137931,
+  "R_incorrect_change": 0.08620689655172414,
+  "R_n": 58,
+  "C_change": 0.6206896551724138,
+  "C_correct_change": 0.6206896551724138,
+  "C_incorrect_change": 0.0,
+  "C_n": 58,
+  "control_change": 0.29310344827586204,
+  "control_correct_change": 0.10344827586206896,
+  "control_incorrect_change": 0.1896551724137931,
+  "control_n": 58
+}

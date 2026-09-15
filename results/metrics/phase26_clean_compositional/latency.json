@@ -1,0 +1,4 @@
+{
+  "latency_ms_batch60": 8.68761000019731,
+  "notes": "wall-clock CPU forward over 60-sample batch"
+}

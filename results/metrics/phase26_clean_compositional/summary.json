@@ -1,0 +1,54 @@
+{
+  "run_id": "phase26_clean_compositional_2026-09-14",
+  "status": "COMPLETE",
+  "phase25b_anchor_ok": true,
+  "dataset": "phase19-repaired-v1",
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "epochs": 20,
+  "best_single_expert": "joint_co_d3",
+  "single_expert_ceiling_overall": 0.8091269841269841,
+  "best_composition": "mlp+graph+attention_v2",
+  "composition_overall": 0.7781746031746032,
+  "composition_mixed_mean": 0.7499999975164732,
+  "composition_pure_mean": 0.8157407343387604,
+  "ceiling_per_family": {
+    "F": 1.0,
+    "R": 0.6555555462837219,
+    "C": 0.9833333492279053,
+    "FR": 0.7555555701255798,
+    "RC": 0.6027777791023254,
+    "FC": 1.0,
+    "FRC": 0.7583333452542623,
+    "overall": 0.8091269841269841
+  },
+  "case": {
+    "case": "CASE D",
+    "reason": "composition benefit not distinguishable from artifact; INCONCLUSIVE"
+  },
+  "hypotheses": {
+    "H1": "PARTIALLY_SUPPORTED",
+    "H2": "NOT_SUPPORTED",
+    "H3": "NOT_SUPPORTED",
+    "H4": "SUPPORTED",
+    "H5": "NOT_SUPPORTED",
+    "H6": "SUPPORTED",
+    "H7": "NOT_TESTED",
+    "H8": "NOT_TESTED",
+    "metrics": {
+      "mixed_ceiling": 1.0,
+      "gain_mixed": -0.009722230335076576,
+      "gain_pure": -0.05925927228397798,
+      "best_single_rc": 0.6027777791023254,
+      "composition_rc": 0.5416666766007742,
+      "rc_change": {
+        "R_change": 0.27586206896551724,
+        "C_change": 0.6206896551724138
+      }
+    }
+  },
+  "elapsed_seconds": 88.0
+}

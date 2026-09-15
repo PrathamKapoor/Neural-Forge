@@ -1,0 +1,21 @@
+{
+  "H1": "PARTIALLY_SUPPORTED",
+  "H2": "NOT_SUPPORTED",
+  "H3": "NOT_SUPPORTED",
+  "H4": "SUPPORTED",
+  "H5": "NOT_SUPPORTED",
+  "H6": "SUPPORTED",
+  "H7": "NOT_TESTED",
+  "H8": "NOT_TESTED",
+  "metrics": {
+    "mixed_ceiling": 1.0,
+    "gain_mixed": -0.009722230335076576,
+    "gain_pure": -0.05925927228397798,
+    "best_single_rc": 0.6027777791023254,
+    "composition_rc": 0.5416666766007742,
+    "rc_change": {
+      "R_change": 0.27586206896551724,
+      "C_change": 0.6206896551724138
+    }
+  }
+}

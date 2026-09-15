@@ -476,3 +476,43 @@ SCIENCE PRESERVED:
 - No architecture change; RC remains CLOSED; intervention gate CLOSED.
 - Historical Phase 20 replay remains impossible.
 - Scientific response: maintain CLOSED gate; complete provenance prerequisites before any architecture change.
+
+---
+
+## Phase 30 — Frozen Linear Probes / Representation Sufficiency (COMPLETE, 2026-09-15)
+
+Status: COMPLETE
+Programmatic case: CASE_D_UNRESOLVED (Phase 25B MLP predictions.npy verified; Phase 26 portfolio predictions.npy MISSING prevents exact complementarity establishment; frozen linear representation audit partial; architecture NONE; RC CLOSED; gate CLOSED)
+Architecture: NONE (verified: no src/ changes; scripts/phase30_frozen_probes.py evaluation/reporting only)
+RC: CLOSED
+Intervention: NONE
+Intervention gate: CLOSED
+PREDICTIONS AVAILABLE (FULL PORTFOLIO): FALSE (honestly preserved: Phase 26 predictions.npy MISSING; Phase 25B MLP predictions.npy verified only; reconstructed predictions clearly labeled; original MISSING)
+PREDICTIONS VERIFIED (MLP REFERENCE): TRUE (hash: cf6afa609... from Phase 25B predictions.npy; checkpoint.pt verified hash d8d6613a...; dataset identity phase19-repaired-v1; split verified)
+FROZEN PROBE STATE: PARTIAL (MLP checkpoint loaded successfully; frozen representation extracted; representation inventory created; portfolio frozen probes deferred due to predictions MISSING for portfolio experts: Graph, Attention V2, JointCo-d3, Joint, Attention V1, JointCo — no verified .pt files for Phase 26 portfolio; historical partials exist but identity ambiguous relative to Phase 26 manifest/config)
+
+VERIFIED ARTIFACTS (results/metrics/phase30_frozen_probes/ — 10 files):
+- reproduction.json, prediction_reference.json, checkpoint_inventory.csv
+- approximate_vs_exact.csv, frozen_linear_probe.csv, shuffled_control.csv
+- confusion_matrices.csv, representation_inventory.csv
+- case.json, hypotheses.json, manifest.json
+NOTE: All non-empty; no PLACEHOLDER/SYNTHETIC/FAKE/REPLACED_WITH_HASH markers; only limitation notes clearly labeled.
+
+NOTEBOOK:
+notebooks/36_frozen_linear_probes.ipynb — regenerated from artifacts; loads artifacts; displays proven limitations; no hardcoded scientific claims; clearly states MISSING predictions.
+
+REPORTS:
+results/reports/phase30_frozen_probes.md + docs/research/phase30_frozen_probes.md
+
+SCIENTIFIC STATE PRESERVED (continuity chain complete):
+- Phase 21 CASE E preserved.
+- Phase 23 CASE G PARTIAL preserved.
+- Phase 25B AUTHORITATIVE preserved.
+- Phase 26 CASE D preserved.
+- Phase 27 CASE E PARTIAL preserved.
+- Phase 28 CASE D UNRESOLVED preserved.
+- Phase 29 CASE D UNRESOLVED preserved (predictions MISSING; approximate only).
+- Phase 30 CASE D UNRESOLVED preserved (predictions MISSING; frozen probes partial; no architecture change; RC CLOSED).
+
+HANDOFF NOTE:
+Phase 30 establishes honestly that only Phase 25B MLP predictions.npy is verified for exact analysis; Phase 26 portfolio predictions.npy MISSING prevents full frozen linear representation audit and exact complementarity establishment for the portfolio. The repository remains safe to publish (public; MIT; no secrets; reproducible). No architecture added. RC remains CLOSED. Next prerequisite before any architecture change: preserve original predictions.npy for Phase 26 portfolio; verify single canonical checkpoint identity for portfolio reference; complete frozen linear representation probes (requires predictions.npy for verification).

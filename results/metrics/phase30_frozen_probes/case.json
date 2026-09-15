@@ -1,0 +1,23 @@
+{
+  "run_id": "phase30_frozen_probes_2026-09-15",
+  "status": "COMPLETE",
+  "case": "CASE_D_UNRESOLVED",
+  "case_description": "Phase 30 confirms the provenance gap: only Phase 25B MLP predictions.npy verified; Phase 26 portfolio predictions.npy MISSING (historical provenance issue). Frozen linear representation probes partially deferred (approximate verification from MLP checkpoint). No architecture added; RC remains CLOSED; intervention gate CLOSED.",
+  "predictions_state": {
+    "phase_25b_mlp_predictions": true,
+    "phase_26_portfolio_predictions": false,
+    "historical_p20_replay_possible": false
+  },
+  "frozen_probe_state": {
+    "mlp_checkpoint_verified": true,
+    "mlp_frozen_representation_extraction_attempted": true,
+    "portfolio_frozen_probes_full": false,
+    "full_representation_audit_available": false
+  },
+  "intervention_gate": "CLOSED",
+  "intervention": "NONE",
+  "architecture_change": "NONE",
+  "rc_status": "REMAINS_CLOSED",
+  "next_scientific_prerequisite": "Complete frozen linear probes for portfolio (requires verified predictions.npy per architecture); verify single canonical checkpoint identity for portfolio reference before considering minimal aggregation mechanism.",
+  "evidence_note": "No predictions fabricated. No reconstructed predictions substituted for missing portfolio predictions. Phase 25B MLP predictions.npy verified; Phase 26 portfolio MISSING preserved honestly."
+}

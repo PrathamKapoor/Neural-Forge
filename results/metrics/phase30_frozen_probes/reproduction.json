@@ -1,0 +1,13 @@
+{
+  "run_id": "phase30_frozen_probes_2026-09-15",
+  "status": "COMPLETE",
+  "predictions_available_for_portfolio": false,
+  "predictions_available_for_mlp_only": true,
+  "predictions_mlp_verified_hash_first32": "cf6afa6097ef64149f7ce843e9cfb5f822a527f2d1bea2a0a6093a45957576f8",
+  "predictions_note": "Phase 26 portfolio predictions.npy MISSING (historical provenance issue; reconstructed predictions clearly labeled; original MISSING). Phase 25B MLP predictions.npy verified only. No predictions fabricated or reconstructed and substituted for missing portfolio predictions.",
+  "checkpoint_inventory_verified": true,
+  "checkpoint_inventory_path": "results/metrics/phase30_frozen_probes/checkpoint_inventory.csv",
+  "historical_p20_replay": "NOT_POSSIBLE",
+  "architecture_change": "NONE",
+  "intervention_gate": "CLOSED"
+}

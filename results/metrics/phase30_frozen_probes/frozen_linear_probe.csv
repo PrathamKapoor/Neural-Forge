@@ -1,0 +1,5 @@
+measure,value,source,verified,note
+verified_predictions_accuracy,NOT_AVAILABLE,results/metrics/phase25b_reference/predictions.npy,False,Only MLP predictions verified; full portfolio predictions MISSING.
+frozen_representation_accuracy,NOT_EXECUTED,results/metrics/phase25b_reference/checkpoint.pt,False,Requires extracting frozen hidden state from checkpoint.pt and training deterministic linear classifier (deferred; see notes in HANDOFF.md and docs/research).
+frozen_linear_probe_success,False,results/metrics/phase25b_reference/checkpoint.pt,False,Only basic verification performed (predictions.npy accuracy). Full frozen representation accuracy requires representation extraction and probe training (deferred).
+architecture_probe_scope,mlp_only_verified,results/metrics/phase25b_reference/,False,"Full portfolio probe (Graph, Attention V2, JointCo-d3, Joint, Attention V1, JointCo) requires predictions.npy per architecture (MISSING for Phase 26 portfolio)."

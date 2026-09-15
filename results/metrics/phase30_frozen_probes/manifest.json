@@ -1,0 +1,35 @@
+{
+  "run_id": "phase30_frozen_probes_2026-09-15",
+  "phase": 30,
+  "status": "COMPLETE",
+  "predictions_available_for_portfolio": false,
+  "predictions_available_for_mlp_reference": true,
+  "frozen_probe_extraction_attempted": true,
+  "frozen_probe_full_portfolio_available": false,
+  "evidence_artifacts_created": true,
+  "synthetic_artifacts_created": false,
+  "no_predictions_fabricated": true,
+  "historical_p20_replay": "NOT_POSSIBLE",
+  "architecture_change": "NONE",
+  "intervention_gate": "CLOSED",
+  "intervention": "NONE",
+  "evidence_artifacts": [
+    "reproduction.json",
+    "prediction_reference.json",
+    "checkpoint_inventory.csv",
+    "approximate_complementarity.csv",
+    "frozen_linear_probe.csv",
+    "shuffled_control.csv",
+    "confusion_matrices.csv",
+    "case.json",
+    "hypotheses.json",
+    "manifest.json"
+  ],
+  "notes": [
+    "Phase 26 portfolio predictions.npy MISSING (historical provenance issue).",
+    "Only Phase 25B MLP predictions.npy verified (hash cf6afa609...).",
+    "Frozen linear representation probes partially executed (MLP checkpoint loaded successfully; full portfolio deferred due to predictions MISSING).",
+    "Approximate overlap/complementarity remains approximate (independence assumption; from family accuracies).",
+    "No architecture change; RC remains CLOSED; intervention gate CLOSED."
+  ]
+}

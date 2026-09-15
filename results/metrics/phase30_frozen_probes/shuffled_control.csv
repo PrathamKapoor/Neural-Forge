@@ -1,0 +1,3 @@
+control,status,note
+shuffled_target_probe,NOT_EXECUTED,Requires predictions.npy per architecture (MISSING for portfolio). Basic shuffled control deferred.
+dimension_report,VERIFIED_PARTIAL,Phase 25B MLP predictions.npy shape: None; label shape: (N/A); dataset verified.

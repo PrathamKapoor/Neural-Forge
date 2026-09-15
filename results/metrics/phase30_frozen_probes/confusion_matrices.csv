@@ -1,0 +1,6 @@
+architecture,verified_predictions,confusion_available,note
+mlp,False,False,Only MLP predictions.npy available; confusion matrix for MLP verified predictions only (not full portfolio).
+graph,False,False,Phase 26 portfolio predictions.npy MISSING; confusion matrix deferred.
+attention_v2,False,False,Phase 26 portfolio predictions.npy MISSING; confusion matrix deferred.
+joint_co_d3,False,False,Phase 26 portfolio predictions.npy MISSING; confusion matrix deferred.
+attention,False,False,Phase 26 portfolio predictions.npy MISSING; confusion matrix deferred.

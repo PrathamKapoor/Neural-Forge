@@ -1,0 +1,17 @@
+{
+  "run_id": "phase30_frozen_probes_2026-09-15",
+  "H1_frozen_linear_probe_available": true,
+  "H2_frozen_probe_accurate": false,
+  "H2_note": "Only MLP frozen representation attempted (checkpoint loaded successfully). Full portfolio frozen linear probe accuracy unavailable (portfolio predictions.npy MISSING). No claims made about other architectures.",
+  "H3_frozen_probe_recoverable_for_mlp": false,
+  "H4_full_frozen_probes_for_portfolio": false,
+  "H5_predictions_available_for_overlap": false,
+  "H5_approximate_overlap_available": true,
+  "notes": {
+    "H1": "Phase 25B MLP frozen linear probe attempted (checkpoint loaded; state dict extracted). Full portfolio frozen probes NOT executed (predictions.npy MISSING prevents verification).",
+    "H2": "No accuracy claims made for frozen probes on portfolio (predictions MISSING prevents verification). Only MLP predictions.npy verified; frozen probe for MLP attempted but accuracy verification deferred.",
+    "H3": "Only Phase 25B MLP predictions.npy verified. Full portfolio predictions MISSING prevents verification of frozen linear recoverability for portfolio experts.",
+    "H4": "Not executed (predictions.npy MISSING prevents full frozen linear probe execution for portfolio).",
+    "H5": "Not available (predictions.npy MISSING). Only approximate overlap from family accuracies (independence assumption) available from Phase 28 artifacts."
+  }
+}

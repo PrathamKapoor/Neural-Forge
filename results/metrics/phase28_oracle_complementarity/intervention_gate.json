@@ -1,0 +1,15 @@
+{
+  "run_id": "phase28_oracle_complementarity_2026-09-15",
+  "gate_status": "CLOSED",
+  "gate_criteria": {
+    "G1_complementarity_evidence": "PARTIAL (approximate only; exact requires predictions.npy)",
+    "G2_oracle_gain_material": "APPROXIMATE (independence assumption; exact requires predictions.npy)",
+    "G3_information_exists": "VERIFIED (Phase 25B predictions.npy for MLP; Phase 26 portfolio predictions.npy MISSING for others; representation probes NOT FULLY EXECUTED)",
+    "G4_aggregation_fails": "SUPPORTED_DIRECTIONALLY (aggregation gap negative overall and RC; fixed compositions only)",
+    "G5_reproducibility": "PASS (Phase 26 artifacts verified; Phase 27 diagnostic artifacts verified; targeted regression passes)"
+  },
+  "intervention_justified": false,
+  "intervention_type": null,
+  "next_action": "Complete frozen linear probes; save exact split manifest; preserve original predictions.npy; verify single checkpoint identity; only then consider minimal learned aggregation/selection intervention.",
+  "architecture_change": "NONE"
+}

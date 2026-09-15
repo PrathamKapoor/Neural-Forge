@@ -1,0 +1,8 @@
+family,best_single_acc,approx_oracle_pair_acc,approx_gain,composition_acc,composition_gap,note
+F,1.0,1.0,0.0,1.0,0.0,Approximate independence assumption; exact requires predictions.npy per architecture
+R,0.6555555462837219,0.8765740721203663,0.22101852583664439,0.5944444437821707,-0.28212962833819566,Approximate independence assumption; exact requires predictions.npy per architecture
+C,0.9833333492279053,0.9995370375889318,0.01620368836102648,0.8527777592341105,-0.14675927835482128,Approximate independence assumption; exact requires predictions.npy per architecture
+FR,0.7555555701255798,0.9375308643594202,0.1819752942338404,0.7333333094914755,-0.20419755486794477,Approximate independence assumption; exact requires predictions.npy per architecture
+RC,0.6027777791023254,0.8300771613235092,0.22729938222118373,0.5416666766007742,-0.288410484722735,Approximate independence assumption; exact requires predictions.npy per architecture
+FC,1.0,1.0,0.0,0.9833333293596903,-0.01666667064030969,Approximate independence assumption; exact requires predictions.npy per architecture
+FRC,0.7583333452542623,0.938912040690581,0.18057869543631866,0.7416666746139526,-0.19724536607662835,Approximate independence assumption; exact requires predictions.npy per architecture

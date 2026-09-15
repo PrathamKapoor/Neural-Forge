@@ -1,0 +1,38 @@
+{
+  "run_id": "phase28_oracle_complementarity_2026-09-15",
+  "phase": 28,
+  "description": "Oracle complementarity and aggregation identifiability (diagnostic only, no architecture change, no predictions fabricated)",
+  "architecture_change": "NONE",
+  "intervention_gate": "CLOSED",
+  "intervention": "NONE",
+  "predictions_available": false,
+  "predictions_note": "Phase 26 portfolio predictions.npy MISSING. Phase 25B MLP predictions.npy verified but does not cover portfolio experts.",
+  "phase25b_reference_path": "results/metrics/phase25b_reference",
+  "phase26_reference_path": "results/metrics/phase26_clean_compositional",
+  "phase27_reference_path": "results/metrics/phase27_composition_diagnosis",
+  "evidence_artifacts_created": true,
+  "synthetic_artifacts_created": false,
+  "syn_scan_result": "NONE FOUND (only honest limitation notes in reports/docs)",
+  "historical_p20_replay": "NOT_POSSIBLE",
+  "evidence_artifacts_list": [
+    "reproduction.json",
+    "prediction_reference.json",
+    "expert_family_accuracy_summary.csv",
+    "oracle_union.csv",
+    "approximate_complementarity.csv",
+    "approximate_error_overlap.csv",
+    "rc_component_sensitivity.csv",
+    "rc_disagreement_approximate.csv",
+    "oracle_gap.csv",
+    "aggregation_gap_detailed.csv",
+    "summary.json",
+    "manifest.json"
+  ],
+  "notes": [
+    "No predictions fabricated.",
+    "No predictions reconstructed and substituted.",
+    "Approximate calculations clearly labeled as independence-assumption approximations.",
+    "No architecture change; no new expert; RC remains CLOSED.",
+    "Full frozen linear representation probes remain deferred (require checkpoint.pt evaluation)."
+  ]
+}

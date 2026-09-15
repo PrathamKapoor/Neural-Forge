@@ -1,0 +1,30 @@
+{
+  "run_id": "phase28_oracle_complementarity_2026-09-15",
+  "case": "CASE_D_UNRESOLVED",
+  "case_description": "Evidence for aggregation failure (Phase 26/27) exists, but the exact recoverable complementarity cannot be uniquely established because Phase 26 portfolio predictions.npy is MISSING. The approximate oracle union suggests potential recoverable information, but exact overlap/complementarity requires predictions.npy per architecture. RC component conflict remains the strongest established finding.",
+  "primary_evidence": [
+    "Aggregation gap negative (composition < single expert overall and RC)",
+    "Approximate oracle pair exists (independence assumption) but gain uncertain without exact predictions",
+    "RC component conflict (C > R counterfactual sensitivity; RC composition < best single RC)",
+    "Partial expert redundancy (family accuracy overlap moderate)"
+  ],
+  "not_established": [
+    "Exact overlap/complementarity (requires predictions.npy per architecture)",
+    "Sequential order dependence (sequential pipeline not executed)",
+    "Full representation information loss (frozen probes not executed)",
+    "Selection bottleneck (router not retrained)"
+  ],
+  "approximate_conclusions": {
+    "oracle_pair_approximate_exists": true,
+    "oracle_triple_approximate_exists": true,
+    "aggregation_gap_overall": -0.030952380952380953,
+    "aggregation_gap_rc": -0.06111110250155127
+  },
+  "intervention_gate": "CLOSED",
+  "intervention": "NONE",
+  "architecture_change": "NONE",
+  "rc_status": "REMAINS_CLOSED",
+  "historical_p20_replay": "NOT_POSSIBLE",
+  "next_prerequisite": "Complete frozen linear representation probes; save exact split manifest; preserve original predictions.npy for single canonical reference; verify single checkpoint identity before opening RC architecture exploration.",
+  "scientific_note": "Phase 28 does not establish a unique bottleneck. It confirms that approximate evidence supports both aggregation limitation (negative gap) and partial complementarity (approximate oracle > best single in some pairs), but exact recoverable information requires predictions.npy per architecture. The correct scientific response remains: continue with provenance prerequisites before any architecture change."
+}

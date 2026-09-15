@@ -1,0 +1,15 @@
+{
+  "run_id": "phase28_oracle_complementarity_2026-09-15",
+  "phase25b_reference_verified": true,
+  "phase26_reference_verified": true,
+  "phase26_predictions_available": false,
+  "phase25b_predictions_available": true,
+  "reproduced_best_single_expert": "joint_co_d3",
+  "reproduced_single_expert_ceiling": 0.8091269841269841,
+  "reproduced_best_composition": "mlp+graph+attention_v2",
+  "reproduced_composition_accuracy": 0.7781746031746032,
+  "reproduced_rc_r_change": 0.27586206896551724,
+  "reproduced_rc_c_change": 0.6206896551724138,
+  "reproduction_status": "PASS",
+  "note": "Phase 26 predictions.npy MISSING (as documented in provenance). Only Phase 25B MLP predictions.npy available. Diagnostics based primarily on expert family accuracies (expert_results.csv), summary statistics, and approximate overlap calculations. No predictions fabricated."
+}

@@ -398,3 +398,49 @@ HANDOFF STATUS:
 
 SCIENTIFIC REMINDER:
 Phase 27 is diagnostic only. It does NOT establish that aggregation is the unique bottleneck, that representation is intact, or that routing would solve the gap. It establishes that the clean experiment produces measurable evidence consistent with multiple competing bottlenecks. The correct next action is localization before intervention, not architecture escalation.
+
+---
+
+## Phase 28 — Oracle Complementarity & Aggregation Identifiability (COMPLETE, 2026-09-15)
+
+Status: COMPLETE
+Programmatic case: CASE_D_UNRESOLVED (evidence approximate; exact recoverable complementarity requires predictions.npy per architecture — Phase 26 portfolio MISSING; Phase 25B MLP predictions.npy verified but covers only one architecture)
+
+ARCHITECTURE: NONE (verified: no src/ changes; scripts/phase28_oracle_complementarity.py only evaluation/reporting)
+RC: CLOSED
+INTERVENTION: NONE
+INTERVENTION GATE: CLOSED
+PREDICTIONS AVAILABLE FOR FULL PORTFOLIO: FALSE (honestly recorded; Phase 25B MLP only verified; Phase 26 portfolio predictions.npy MISSING; reconstructed clearly labeled; original MISSING)
+APPROXIMATE METHODS USED: independence assumption for binary overlap; independence assumption for binary oracle union; family accuracy complementarity from expert_summary.
+
+VERIFIED ARTIFACTS (results/metrics/phase28_oracle_complementarity/ — 15 files, non-empty, no PLACEHOLDER/SYNTHETIC/FAKE markers):
+- reproduction.json, prediction_reference.json, expert_family_accuracy_summary.csv
+- oracle_union.csv (approximate), approximate_complementarity.csv (approximate)
+- approximate_error_overlap.csv (independence assumption; exact requires predictions.npy)
+- rc_component_sensitivity.csv, rc_disagreement_approximate.csv
+- oracle_gap.csv, aggregation_gap_detailed.csv
+- summary.json, manifest.json, case.json, hypotheses.json, intervention_gate.json
+
+NOTEBOOK:
+notebooks/34_oracle_complementarity_identifiability.ipynb — regenerated from artifacts; loads artifacts; displays approximate results clearly; no hardcoded scientific claims; limitations (predictions MISSING, approximate methods) clearly stated.
+
+REPORTS:
+results/reports/phase28_oracle_complementarity.md + docs/research/phase28_oracle_complementarity.md
+
+REMAINING LIMITATIONS (real, not cosmetic):
+- Phase 26 portfolio predictions.npy MISSING (historical provenance issue, not synthetic failure).
+- Only Phase 25B MLP predictions.npy verified (not full portfolio).
+- Approximate overlap/complementarity (independence assumption for binary classification).
+- Frozen linear representation probes deferred (require checkpoint.pt evaluation, not executed).
+- Sequential order analysis requires sequential pipeline execution (not executed; Phase 26 fixed compositions only).
+- No validated minimal intervention exists (intervention gate CLOSED; evidence approximate only; unique bottleneck not established).
+
+SCIENTIFIC STATE PRESERVED:
+- Phase 21 CASE E preserved.
+- Phase 23 CASE G PARTIAL preserved (historical predictions MISSING; reconstructed clearly labeled; split unverified; checkpoint ambiguous).
+- Phase 25B AUTHORITATIVE preserved (frozen replay passed; checkpoint reconstruction passed; independent evaluator passed; predictions.npy verified).
+- Phase 26 CASE D preserved (composition benefit not distinguishable; architecture NONE; RC CLOSED).
+- Phase 27 CASE E PARTIAL preserved (multiple bottlenecks unresolved; aggregation and RC conflict supported directionally; others inconclusive/untested; architecture NONE).
+
+HANDOFF_NOTE:
+Phase 28 confirms approximate evidence consistent with multiple competing bottlenecks but does NOT resolve the unique mechanism. The repository remains safe to publish (public, MIT, no secrets, no synthetic artifacts, reproducible setup). No architecture was added; RC remains closed. The next scientific prerequisite before any architecture change remains: complete frozen linear probes (checkpoint.pt evaluation); save exact split manifest for phase19-repaired-v1; preserve original predictions.npy; verify single canonical checkpoint identity.

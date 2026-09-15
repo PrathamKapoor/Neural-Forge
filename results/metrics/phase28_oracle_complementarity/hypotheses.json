@@ -1,0 +1,19 @@
+{
+  "run_id": "phase28_oracle_complementarity_2026-09-15",
+  "H1_expert_complementarity_exists": "PARTIALLY_SUPPORTED_APPROXIMATE",
+  "H2_oracle_union_exceeds_single": "APPROXIMATE_EVIDENCE_ONLY",
+  "H3_current_aggregation_fails": "SUPPORTED_DIRECTIONALLY",
+  "H4_rc_disagreement_recoverable": "NOT_FULLY_TESTED",
+  "H5_redundancy_significant": "PARTIALLY_SUPPORTED",
+  "H6_calibration_incompatible": "NOT_AVAILABLE",
+  "H7_selection_gap_exists": "NOT_TESTED",
+  "notes": {
+    "H1": "Approximate overlap estimates (independence assumption) show moderate overlap for some pairs (e.g., joint_co_d3 + others). Exact overlap requires predictions.npy per architecture (Phase 26 MISSING).",
+    "H2": "Approximate oracle union (independence assumption) suggests potential recoverable accuracy above best single for some pairs/triples, but exact requires predictions.npy. Phase 25B MLP predictions.npy available but does not cover portfolio.",
+    "H3": "Aggregation gap overall negative (-0.03095) and RC gap negative (-0.0611). Best fixed composition (0.7782) < single expert ceiling (0.8091). Strong directional evidence.",
+    "H4": "Approximate overlap moderate; pair vs triple shows limited improvement; not uniquely established.",
+    "H5": "Not fully tested. RC disagreement patterns exist (counterfactual C > R; RC composition < best single RC; RC_disagree > 0). Whether disagreement cases contain recoverable predictions requires per-sample predictions.npy (MISSING).",
+    "H6": "Logits/probabilities not fully available for all experts. Calibration/scale diagnosis deferred.",
+    "H7": "Not tested. Router not retrained. Selection gap requires predictions.npy per architecture plus validated selection mechanism (not executed)."
+  }
+}

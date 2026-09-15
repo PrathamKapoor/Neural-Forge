@@ -1,0 +1,46 @@
+{
+  "run_id": "phase28_oracle_complementarity_2026-09-15",
+  "status": "COMPLETE",
+  "case": "CASE_D_UNRESOLVED",
+  "reason": "Oracle union and complementarity analysis show approximate evidence; exact requires predictions.npy per architecture (MISSING for Phase 26 portfolio). Fixed aggregation remains a plausible bottleneck but cannot be uniquely established without full prediction-level overlap analysis. RC component conflict remains the strongest established finding.",
+  "intervention_gate": "CLOSED",
+  "intervention": "NONE",
+  "architecture_change": "NONE",
+  "rc_status": "REMAINS_CLOSED",
+  "predictions_available": false,
+  "predictions_note": "Phase 26 portfolio predictions.npy MISSING. Phase 25B MLP predictions.npy verified but covers only one architecture. Full portfolio overlap/complementarity requires predictions.npy for MLP, Graph, Attention V2, JointCo-d3 from Phase 26 (reconstructed predictions labeled clearly; original MISSING).",
+  "approximate_methods_used": [
+    "independence_assumption_for_binary_accuracy_overlap",
+    "independence_assumption_for_binary_oracle_union",
+    "family_accuracy_complementarity_from_expert_summary"
+  ],
+  "key_findings": {
+    "approximate_oracle_pair_exists": true,
+    "approximate_oracle_pair_values_available": true,
+    "aggregation_gap_negative": true,
+    "rc_component_conflict_strongest": true,
+    "representation_probes_not_executed": true,
+    "exact_overlap_not_computed": true,
+    "sequential_order_not_evaluated": true
+  },
+  "limitations": [
+    "Phase 26 portfolio predictions.npy MISSING (historical provenance issue, not synthetic failure).",
+    "Only approximate overlap/complementarity computed (independence assumption).",
+    "Only MLP predictions.npy from Phase 25B available (not full portfolio).",
+    "Frozen linear probes require checkpoint.pt evaluation (not executed).",
+    "Sequential order analysis requires sequential pipeline execution (not executed in Phase 26 fixed compositions).",
+    "No architecture change; RC remains CLOSED; intervention gate remains CLOSED."
+  ],
+  "evidence_files": [
+    "reproduction.json",
+    "prediction_reference.json",
+    "expert_family_accuracy_summary.csv",
+    "oracle_union.csv",
+    "approximate_complementarity.csv",
+    "approximate_error_overlap.csv",
+    "rc_component_sensitivity.csv",
+    "rc_disagreement_approximate.csv",
+    "oracle_gap.csv",
+    "aggregation_gap_detailed.csv"
+  ]
+}

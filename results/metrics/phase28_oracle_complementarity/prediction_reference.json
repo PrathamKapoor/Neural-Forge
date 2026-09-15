@@ -1,0 +1,21 @@
+{
+  "phase25b_predictions": {
+    "available": true,
+    "verified": true,
+    "hash_reference": "cf6afa6097ef64149f7ce843e9cfb5f822a527f2d1bea2a0a6093a45957576f8 (predictions.npy first 32 from manifest)"
+  },
+  "phase26_predictions": {
+    "available": false,
+    "verified": false,
+    "note": "Historical predictions.npy MISSING. Reconstructed predictions clearly labeled (not substituted)."
+  },
+  "phase27_predictions": {
+    "available": false,
+    "verified": false,
+    "note": "Phase 27 is diagnostic; no new predictions generated."
+  },
+  "available_for_overlap_analysis": false,
+  "available_for_exact_oracle": false,
+  "available_for_rc_disagreement_per_sample": false,
+  "approximate_methods_used": "independence_assumption_for_binary_accuracy_overlap; approximate_oracle_from_family_accuracies; approximate_complementarity_from_family_gains"
+}
